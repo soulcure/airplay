@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.swaiotos.skymirror">
+    <!--android:sharedUserId="android.uid.system">-->
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+        </activity>
+
+        <!--1300370340-->
+
+        <service android:name="com.swaiotos.skymirror.sdk.reverse.ReverseCaptureService" />
+        <service android:name="com.swaiotos.skymirror.sdk.capture.MirClientService" />
+
+        <service android:name=".ChannelClientService">
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="ss-clientID"
+                android:value="com.sficast.capture.app" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="key~1234567" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="1" />
+        </service>
+
+    </application>
+
+</manifest>

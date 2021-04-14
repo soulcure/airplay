@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+
+
+    defaultConfig {
+        applicationId "com.skyworth.client"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1002
+        versionName "1.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'platform'
+            keyPassword 'android'
+            storeFile file('./a.keystore')
+            storePassword 'android'
+        }
+        debug {
+            storeFile file('./a.keystore')
+            storePassword 'android'
+            keyPassword 'android'
+            keyAlias = 'platform'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation project(path: ':dpclientsdk')
+    implementation project(path: ':bleClient')
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+//    implementation 'com.clj.fastble:FastBleLib:2.3.4'
+    implementation 'no.nordicsemi.android.support.v18:scanner:1.4.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'cn.com.superLei:blelibrary:3.1.0'
+    implementation'com.orhanobut:logger:2.2.0'
+}

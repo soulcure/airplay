@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_airplay"
+    android:orientation="horizontal"
+    android:padding="70dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/AirplayTextStyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/airplay_title" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shape_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/first" />
+
+            <TextView
+                android:id="@+id/wifi_account_textView"
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/wifi_account" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shape_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/first"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_wifi_name"
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:drawableStart="@mipmap/ic_wifi_name"
+                android:drawablePadding="15dp"
+                android:textColor="#16A4FF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shape_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/second"
+                android:visibility="invisible" />
+
+
+            <TextView
+                android:id="@+id/tv_wifi_pw"
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:drawableStart="@mipmap/ic_wifi_pw"
+                android:drawablePadding="15dp"
+                android:textColor="#16A4FF" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shape_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/second" />
+
+            <TextView
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/web_host" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shape_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/second"
+                android:visibility="invisible" />
+
+
+            <TextView
+                android:id="@+id/tv_host"
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:drawableStart="@mipmap/ic_host"
+                android:drawablePadding="15dp"
+                android:textColor="#16A4FF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/AirplayTextStyleInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shape_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/third" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_app"
+                    style="@style/AirplayTextStyleInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/scan_qr_code" />
+
+                <TextView
+                    android:id="@+id/tv_link_code"
+                    style="@style/AirplayTextStyleInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:drawablePadding="15dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#16A4FF"
+                    android:visibility="invisible"
+                    android:text="@string/link_code"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/img_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/img_info" />
+</LinearLayout>

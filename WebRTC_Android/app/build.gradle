@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+
+def ver_build = getDate()
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.swaiot.webrtc"
+        minSdkVersion 21
+        targetSdkVersion 28
+
+        versionCode Integer.valueOf(ver_build)
+        versionName ver_build
+
+        ndk {
+            abiFilters "armeabi-v7a"  //保留一种架构的CPU
+        }
+    }
+
+    signingConfigs {
+        def path = '../keystores/platform.keystore'
+        releaseConfig {
+            keyAlias "skyworth"
+            keyPassword "android"
+            storeFile file(path)
+            storePassword "android"
+        }
+
+        debugConfig {
+            keyAlias "skyworth"
+            keyPassword "android"
+            storeFile file(path)
+            storePassword "android"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debugConfig
+        }
+    }
+
+    productFlavors {
+        Beta {
+            flavor ->
+                flavorDimensions "Beta"
+                flavor.manifestPlaceholders = [STUN_HOST          : "stun:beta-stun.skyworthiot.com",
+                                               TURN_HOST          : "turn:turn-dev.skyworthiot.com",
+                                               IOT_SERVER_VALUE   : "https://beta.passport.coocaa.com/",
+                                               COOCAA_APIKEY_VALUE: "coocaa2020"]
+                versionName defaultConfig.versionName + ".Beta"
+        }
+
+        Production {
+            flavor ->
+                flavorDimensions "Production"
+                flavor.manifestPlaceholders = [STUN_HOST          : "stun:atum.skyworthiot.com",
+                                               TURN_HOST          : "turn:turn-dev.skyworthiot.com",
+                                               IOT_SERVER_VALUE   : "https://passport.coocaa.com/",
+                                               COOCAA_APIKEY_VALUE: "KSiVM12wRNu1WNN5"]
+                versionName defaultConfig.versionName
+        }
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                outputFileName = 'Airplay_Webrtc' + versionName + '.apk'
+            }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+static def getDate() {
+    def date = new Date()
+    def timeZone = TimeZone.getTimeZone("Asia/Shanghai")
+    def formattedDate = date.format('yyyyMMdd', timeZone)
+    return formattedDate
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'org.webrtc:google-webrtc:1.0.32006'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    implementation 'swaiotos.support:iot-channel-sdk:1.0.92'
+
+    //implementation 'org.java-websocket:Java-WebSocket:1.4.0'
+    //implementation 'com.youth.banner:banner:2.1.0'
+    //implementation 'com.github.bumptech.glide:glide:4.11.0'
+    //implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    //RxJava
+    implementation 'io.reactivex:rxjava:1.1.6'
+    //RxAndroid
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //retrofit依赖Gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    //retrofit依赖RxJava
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'//日志的拦截器
+
+    //适配
+    implementation 'me.jessyan:autosize:1.2.1'
+
+    implementation 'com.airbnb.android:lottie:3.4.4'
+
+
+}

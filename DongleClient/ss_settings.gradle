@@ -1,0 +1,14 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+include ':DongleClient:sdk'
+project(':DongleClient:sdk').projectDir = getProjectDir('sdk')
+
+include ':DongleClient:core'
+project(':DongleClient:core').projectDir = getProjectDir('core')
+
+
+
+//include ':sdk'
+//include ':core'

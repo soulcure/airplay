@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.swaiot.webrtc"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.swaiot.webrtc.WebRTCApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_airplay"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_airplay"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeBlack">
+
+        <meta-data
+            android:name="com.swaiot.webrtc.stun"
+            android:value="${STUN_HOST}" />
+
+        <meta-data
+            android:name="com.swaiot.webrtc.turn"
+            android:value="${TURN_HOST}" />
+
+        <meta-data
+            android:name="IOT_SERVER"
+            android:value="${IOT_SERVER_VALUE}" />
+
+        <meta-data
+            android:name="IOT_APPKEY"
+            android:value="${COOCAA_APIKEY_VALUE}" />
+
+        <activity
+            android:name="com.swaiot.webrtc.ui.AirPlayInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="coocaa.intent.category.MYAPP_DISMISS" />
+                <category android:name="coocaa.intent.category.APP_NO_UNINSTALL" />
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.swaiot.webrtc.ui.WebRTCActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+
+        <service android:name="com.swaiot.webrtc.service.WebRtcClientService">
+
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="ss-clientID"
+                android:value="com.coocaa.webrtc.airplay" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="webrtc-20210114" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="0" />
+        </service>
+
+        <service android:name="com.swaiot.webrtc.service.WebRtcClientVoiceService">
+
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="ss-clientID"
+                android:value="com.coocaa.webrtc.airplay.voice" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="webrtc-20210301" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="0" />
+        </service>
+
+        <service android:name="com.swaiot.webrtc.service.WebRtcVoiceService" />
+
+        <!-- 如果您项目中的所有页面都只需要以高或宽中的一个作为基准进行适配的话, 那就只需要填写高或宽中的一个设计图尺寸即可 -->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="640"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="360"/>
+
+    </application>
+
+</manifest>

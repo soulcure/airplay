@@ -1,0 +1,48 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="swaiotos.channel.iot">
+
+    <!-- Normal Permissions begin -->
+    <uses-permission android:name="android.Manifest.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Dangerous Permissions start -->
+    <!-- STORAGE -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--CAMERA-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Dangerous Permissions end-->
+
+    <!--PHONE-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application>
+        <service
+            android:name="swaiotos.channel.iot.SkyServer"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.coocaa.service.client.BIND" />
+                <action android:name="com.coocaa.service.client.AIDL.BIND" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.skyworthiot.sselib.APPKEY"
+            android:value="30566c583e1a44bda77af87a18429027" />
+
+        <activity
+            android:name="swaiotos.channel.iot.ui.DialogActivity"
+            android:theme="@style/common_style" />
+
+    </application>
+
+
+</manifest>

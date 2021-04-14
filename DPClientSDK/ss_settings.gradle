@@ -1,0 +1,6 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+include ':DPClientSDK:dpclinetsdk'
+project(':DPClientSDK:dpclinetsdk').projectDir = getProjectDir('dpclinetsdk')

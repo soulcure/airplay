@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/speed_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:gravity="left"
+        android:maxLines="1"
+        android:minEms="5"
+        android:text="upload speed"
+        android:textColor="@android:color/white"
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/speed_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speed_up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:gravity="left"
+        android:maxLines="1"
+        android:minEms="5"
+        android:text="download speed"
+        android:textColor="@android:color/white"
+        android:textSize="10dp" />
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao' // 应用插件
+
+android {
+    compileSdkVersion 29
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    implementation project(path: ':sdk')
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    implementation 'org.greenrobot:greendao:3.2.2'
+
+    //RxJava
+    implementation 'io.reactivex:rxjava:1.1.6'
+    //RxAndroid
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //retrofit依赖Gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    //retrofit依赖RxJava
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'//日志的拦截器
+}
+
+
+
+greendao {
+    schemaVersion 1
+    daoPackage 'swaiotos.channel.iot.db.dao'
+    targetGenDir 'src/main/java'
+}
+
+

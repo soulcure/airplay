@@ -1,0 +1,5 @@
+/build
+/libs
+./tvpi_key_store.jks
+./debug.keystore
+

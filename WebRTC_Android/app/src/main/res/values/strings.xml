@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PC镜像</string>
+
+    <string name="pc_airplay">电&#160;脑&#160;投&#160;电&#160;视</string>
+
+    <string name="airplay_title">电脑投电视</string>
+
+    <string name="first">1</string>
+    <string name="second">2</string>
+    <string name="third">3</string>
+
+    <string name="wifi_account">将电脑连接到此网络</string>
+    <string name="wifi_account2">将电脑连接至电视相同的网络</string>
+    <string name="web_host">建议使用谷歌Chrome/微软Edge浏览器，输入网址</string>
+    <string name="scan_qr_code">用【酷开共享屏】APP扫描PC端二维码或输入投屏码\n开始投屏</string>
+    <string name="link_code">投屏码：%1$s</string>
+</resources>

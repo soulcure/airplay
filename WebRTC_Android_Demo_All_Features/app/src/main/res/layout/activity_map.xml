@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="invisible"
+        android:clickable="true" />
+    <ListView
+        android:id="@+id/lv_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:visibility="invisible"
+        android:paddingTop="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:divider="#C0C0C0"
+
+        >
+    </ListView>
+    <ImageButton
+        android:id="@+id/ib_switch_model"
+        android:background="@mipmap/users"
+        android:layout_gravity="top|right"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="30dp">
+    </ImageButton>
+
+
+</FrameLayout>

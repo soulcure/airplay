@@ -1,0 +1,3 @@
+include ':app'
+include ':webrtcsdk'
+rootProject.name = "webrtc_android_mobile"

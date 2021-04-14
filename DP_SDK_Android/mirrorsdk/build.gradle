@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        android.libraryVariants.all {
+            variant -> variant.outputs.all {
+                outputFileName = "sficast_sdk_${buildType.name}.aar"
+            }
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('sficast_key.jks')
+            storePassword 'sf123456'
+            keyAlias = 'sficast'
+            keyPassword 'sf123456'
+        }
+    }
+
+    repositories {
+        flatDir{
+            dirs 'libs'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation project(path: ':dpclientsdk')
+    //implementation 'org.yaml:snakeyaml:1.26'
+
+    compileOnly 'com.google.code.gson:gson:2.8.6'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}

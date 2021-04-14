@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etInputCaptureIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入IP地址"
+        android:text="10.0.0.122" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startScreen"
+        android:text="开启发送镜像服务" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="stopScreen"
+        android:text="关闭发送镜像服务" />
+
+    <EditText
+        android:id="@+id/etInputPlayerIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入IP地址"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="startReverseScreen"
+        android:text="开启接收镜像服务(使用sdkUI)" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="stopReverseScreen"
+        android:text="关闭接收镜像服务" />
+
+</LinearLayout>

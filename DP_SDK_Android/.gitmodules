@@ -1,0 +1,9 @@
+[submodule "dependencies/DPClientSDK"]
+	path = dependencies/DPClientSDK
+	url = git@gitlab.skysri.com:AirPlay/DPClientSDK.git
+[submodule "dependencies/iot-channel-sdk"]
+	path = dependencies/iot-channel-sdk
+	url = git@gitlab.skysri.com:swaiotos/iot-channel-sdk.git
+[submodule "property"]
+	path = property
+	url = git@gitlab.skysri.com:swaiotos/swaiots_property.git

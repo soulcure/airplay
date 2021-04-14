@@ -1,0 +1,5 @@
+rootProject.name='DPClientSDK'
+include ':dpclientsdk'
+include ':demo:demo-server'
+include ':demo:demo-client'
+include ':bleClient'

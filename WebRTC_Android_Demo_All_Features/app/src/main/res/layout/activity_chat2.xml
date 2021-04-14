@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- tools:ignore is needed because lint thinks this can be replaced with a merge. Replacing this
+     with a merge causes the fullscreen SurfaceView not to be centered. -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MergeRootFrame">
+
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/full_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/tv_waiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="等待对方接听..."
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:visibility="invisible">
+
+    </TextView>
+    <LinearLayout
+        android:id="@+id/mengceng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_dark"
+        android:orientation="horizontal"
+        >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:orientation="vertical">
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/pip_surface"
+            android:layout_height="160dp"
+            android:layout_width="90dp"
+            android:fitsSystemWindows="true"
+            />
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/video_surface"
+            android:layout_height="160dp"
+            android:layout_width="90dp"
+            android:fitsSystemWindows="true"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="top|left">
+        <ImageButton
+            android:id="@+id/btn_laba"
+            android:background="@mipmap/waifang"
+            android:layout_gravity="top|left"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+        <ImageButton
+            android:id="@+id/btn_luping"
+            android:background="@mipmap/luping2"
+            android:layout_marginStart="20dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="visible"/>
+        <ImageButton
+            android:id="@+id/btn_local_video"
+            android:background="@mipmap/local_video"
+            android:layout_marginStart="20dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="visible"/>
+        <ImageButton
+            android:id="@+id/btn_file_send"
+            android:background="@mipmap/file"
+            android:layout_marginStart="20dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center|left"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+       <TextView
+           android:id="@+id/tv_msg"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           >
+       </TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/et_send_msg"
+            android:layout_above="@id/btn_data_send">
+        </EditText>
+        <Button
+            android:id="@+id/btn_data_send"
+            android:text="发送"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/buttons_call_container"
+            android:orientation="horizontal"
+            android:layout_above="@+id/capture_format_text_call"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/button_call_switch_camera"
+                android:background="@mipmap/camera"
+                android:contentDescription="@string/switch_camera"
+                android:layout_marginEnd="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="invisible"/>
+            <ImageButton
+                android:id="@+id/btn_call"
+                android:background="@mipmap/connect"
+                android:contentDescription="@string/disconnect_call"
+                android:layout_marginEnd="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"/>
+
+            <ImageButton
+                android:id="@+id/button_call_toggle_mic"
+                android:background="@mipmap/mic"
+                android:contentDescription="@string/toggle_mic"
+                android:layout_marginEnd="0dp"
+                android:layout_width="48dp"
+                android:visibility="invisible"
+                android:layout_height="48dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/contact_name_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/buttons_call_container"
+            android:textSize="12sp"
+            android:layout_margin="8dp"/>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

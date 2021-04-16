@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:id="@+id/tv_program_no_collect_data_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tv_live_no_collect_data_tips"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/tv_program_springview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tv_program_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.liaoinstan.springview.widget.SpringView>
+
+    <com.coocaa.tvpi.view.LoadTipsView
+        android:id="@+id/tv_program_loadtipview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible"/>
+
+    <ProgressBar
+        android:id="@+id/load_progress"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:indeterminateDrawable="@drawable/progressbar_live"
+        android:indeterminateDuration="1000" />
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        kotlin_version="1.3.30"
+        kotlin_coroutines = '1.3.1'
+    }
+
+    repositories {
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter" }
+        maven { url "http://172.20.135.19:8080/nexus/content/repositories/ClientApp/" }
+        google()
+        jcenter()
+        maven {url 'https://developer.huawei.com/repo/'} //华为厂商推送
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.taobao.android:weexplugin-gradle-plugin:1.3'
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:1.3.30"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+        classpath 'com.huawei.agconnect:agcp:1.4.2.300'
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/jcenter" }
+        maven { url "http://172.20.135.19:8080/nexus/content/repositories/ClientApp/" }
+        maven {
+            url "https://jitpack.io"
+            name 'Jjitpack'
+        }
+
+        google()
+        jcenter()
+        maven {url 'https://developer.huawei.com/repo/'} //华为厂商推送
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+    COMPILE_SDK_VERSION = 28
+    MIN_SDK_VERSION = 21
+    TARGET_SDK_VERSION = 28
+    BUILDTOOLS_VERSION = '29.0.3'
+
+    androidJar = getAndroidJar()
+    layoutlibJar = layoutlibJar()
+    fastjson_version = "1.1.71.android"
+    nanohttpd_webserver = '2.3.1'
+
+    gradle.ext.api = 29
+    gradle.ext.buildTools = "29.0.3"
+    gradle.ext.minSdkVersion = 17
+    gradle.ext.targetSdkVersion = gradle.ext.api
+    gradle.ext.layoutlibJar = layoutlibJar()
+    ext.okhttp3_version="3.8.1"
+
+    SWAIOTOS_VERSION = '1.0.70'
+
+    VERSION_NAME = ""
+    try {
+        VERSION_NAME = getProperty("version_name")
+    } catch (Exception e) {
+    }
+    println("VERSION_NAME:" + VERSION_NAME)
+}
+
+
+def layoutlibJar() {
+    def path = getSDKPath(23)
+    def layoutlibPath = path + "/data/layoutlib.jar"
+    println("<CCBuild>layoutlibJar : " + layoutlibPath + '@' + "23")
+    return layoutlibPath
+}
+
+String getSDKPath(int version) {
+    def android_home = System.getenv()['ANDROID_HOME']
+    if (android_home == null || android_home.equals(""))
+        return 'not found android.jar'
+    def compileSdkVersion
+    if (version == -1)
+        compileSdkVersion = 'android-' + COMPILE_SDK_VERSION
+    else
+        compileSdkVersion = 'android-' + version
+    def path = "${android_home}${File.separator}platforms${File.separator}${compileSdkVersion}"
+    println("<CCBuild>getSDKPath : " + path + '@' + compileSdkVersion)
+    return path
+}
+
+String getAndroidJar() {
+    def path = getSDKPath()
+    def androidPath = "${path}${File.separator}android.jar"
+    return androidPath
+}
+
+String getSDKPath() {
+    def android_home = System.getenv()['ANDROID_HOME']
+    if (android_home == null || android_home.equals("")) {
+        android_home = getSDKPathFromLocalProperty()
+    }
+    if (android_home == null || android_home.equals(""))
+        return 'not found android.jar'
+    def compileSdkVersion = 'android-' + COMPILE_SDK_VERSION
+    def path = "${android_home}${File.separator}platforms${File.separator}${compileSdkVersion}"
+    return path
+}
+
+
+private String getSDKPathFromLocalProperty() {
+    def rootDir = rootDir
+    def localProperties = new File(rootDir, "local.properties")
+    if (localProperties.exists()) {
+        Properties properties = new Properties()
+        localProperties.withInputStream {
+            instr -> properties.load(instr)
+        }
+        return properties.getProperty('sdk.dir')
+    }
+    return ""
+}
+
+subprojects {
+    ext {
+    }
+}

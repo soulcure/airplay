@@ -1,0 +1,13 @@
+[
+  {
+    "icon": "file:///android_asset/img/screenshot_ic.png",
+    "id": "com.coocaa.smart.screenshot",
+    "name": "截屏",
+    "target": "index",
+    "type": "np",
+    "runtime": {
+      "RUNTIME_NAV_KEY": "RUNTIME_NAV_FLOAT_NP",
+      "RUNTIME_NETWORK_FORCE_KEY": "FORCE_LAN"
+    }
+  }
+]

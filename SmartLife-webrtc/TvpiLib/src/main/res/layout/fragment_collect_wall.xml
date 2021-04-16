@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/collect_rl_edit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/b_3"
+            android:layout_alignParentTop="true"/>
+
+        <View
+            android:id="@+id/collect_seperator_edit"
+            android:layout_width="@dimen/global_separator_line_width_height"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/b_2"/>
+
+        <TextView
+            android:id="@+id/collect_tv_select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/collect_seperator_edit"
+            android:text="全选"
+            android:textColor="@color/c_1"
+            android:gravity="center"
+            android:textSize="@dimen/s_5"/>
+
+        <TextView
+            android:id="@+id/collect_tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/collect_seperator_edit"
+            android:text="删除"
+            android:textColor="@color/c_5"
+            android:gravity="center"
+            android:textSize="@dimen/s_5"/>
+
+    </RelativeLayout>
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/collect_spring_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/collect_rl_edit"
+        android:visibility="visible">
+
+        <ListView
+            android:id="@+id/lv_collect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/colorBack_151515"
+            android:scrollbars="none"
+            android:dividerHeight="0dp"/>
+    </com.liaoinstan.springview.widget.SpringView>
+
+    <com.coocaa.tvpi.view.LoadTipsView
+        android:id="@+id/load_tips_view_collect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>

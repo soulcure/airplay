@@ -1,0 +1,118 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cocaa.swaiotos.virtualinput">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application>
+
+        <activity
+            android:name="com.coocaa.swaiotos.virtualinput.module.activity.RemoteControlActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.FloatRemote"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.floatvirtualinput"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.swaiotos.virtualinput.utils.permission.PermissionActivity"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen.translucent" />
+        <service
+            android:name="com.coocaa.swaiotos.virtualinput.VirtualInputKeepAliveService"
+            android:enabled="true"
+            android:launchMode="singleInstance"
+            android:exported="true"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.virtualinput.keep_alive" />
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.coocaa.swaiotos.virtualinput.VirtualInputManagerService"
+            android:enabled="true"
+            android:launchMode="singleInstance"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="coocaa.intent.action.VIRTUAL_INPUT_MANAGER" />-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+        </service>
+        <provider
+            android:authorities="com.coocaa.smartscreen.superpreference"
+            android:name="com.coocaa.swaiotos.virtualinput.utils.supersp.SuperSpProvider"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.coocaa.swaiotos.virtualinput.laserpaint.TestLaserPaintActivity"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.finger"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.coocaa.swaiotos.virtualinput.laserpaint.LaserPaintMobileChannelService"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="ss-clientID"
+                android:value="client-laser-client" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="client-laser-client" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="1" />
+        </service>
+        <service android:name="com.coocaa.swaiotos.virtualinput.sensor.pic.PictureControlMobileChannelService"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="ss-clientID"
+                android:value="ss-pic-control-client" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="ss-pic-control-client" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="1" />
+        </service>
+        <service android:name="com.coocaa.swaiotos.virtualinput.sensor.doc.DocControlMobileChannelService"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="ss-clientID"
+                android:value="ss-doc-control-client" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="ss-doc-control-client" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="1" />
+        </service>
+    </application>
+</manifest>

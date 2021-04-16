@@ -1,0 +1,9 @@
+<resources>
+    <string name="err_no_same_wifi">该共享功能需要手机和大屏在同一wifi环境下</string>
+    <string name="loading_web">正在加载小程序</string>
+    <string name="loading_fail">小程序加载有点问题， %1$d s后返回主页</string>
+    <string name="mobile_contents_fail">内容加载失败</string>
+    <string name="mobile_network_fail">网络异常，请重试</string>
+    <string name="btn_retry">再试一次</string>
+    <string name="miniprog_title">H5小程序</string>
+</resources>

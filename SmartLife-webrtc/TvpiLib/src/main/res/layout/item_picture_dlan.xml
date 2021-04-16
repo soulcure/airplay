@@ -1,0 +1,20 @@
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_picture_cover"
+        android:src="@color/b_3"
+        app:layout_aspectRatio="100%"
+        app:layout_widthPercent="100%" />
+
+    <ProgressBar
+        android:id="@+id/item_picture_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/icon_loading_white"
+        android:indeterminateDuration="1000"
+        android:visibility="gone" />
+</android.support.percent.PercentRelativeLayout>

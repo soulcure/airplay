@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_main_bg">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:common_title_right_text="发起群聊"
+        app:common_title_subtitle="通话号码：110"
+        app:common_title_title="视频通话" />
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/springView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginBottom="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.liaoinstan.springview.widget.SpringView>
+
+    <com.coocaa.tvpi.base.mvvm.view.DefaultLoadStateView
+        android:id="@+id/loadStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:visibility="gone" />
+
+</RelativeLayout>

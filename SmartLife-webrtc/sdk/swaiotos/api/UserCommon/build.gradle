@@ -1,0 +1,38 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+
+dependencies {
+    // compileOnly files(getAndroidJar())
+    compileOnly files(androidJar)
+    compile project(':UserApi')
+
+    // implementation project(':base:skysdk')
+    // compile project(':base:skysdk')
+}
+
+
+//String getAndroidJar() {
+//    def path = getSDKPath()
+//    def androidPath = "${path}${File.separator}android.jar"
+//    return androidPath
+//}
+//
+//String getSDKPath() {
+//    def android_home = System.getenv()['ANDROID_HOME']
+//    if (android_home == null || android_home.equals(""))
+//        return 'not found android.jar'
+//    def compileSdkVersion = COMPILE_SDK_VERSION
+//    if (!compileSdkVersion.toString().startsWith("android-")) {
+//        compileSdkVersion = 'android-' + COMPILE_SDK_VERSION
+//    }
+//    def path = "${android_home}${File.separator}platforms${File.separator}${compileSdkVersion}"
+//    println("<CCBuild>getSDKPath : " + path + '@' + COMPILE_SDK_VERSION)
+//    return path
+//}

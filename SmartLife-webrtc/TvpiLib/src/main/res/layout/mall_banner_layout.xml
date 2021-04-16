@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    >
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:riv_corner_radius_top_left="6dp"
+        app:riv_corner_radius_top_right="6dp"
+        app:riv_corner_radius_bottom_left="6dp"
+        app:riv_corner_radius_bottom_right="6dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

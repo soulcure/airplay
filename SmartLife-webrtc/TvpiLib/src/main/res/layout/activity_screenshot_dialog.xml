@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="426dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="截屏"
+            android:textColor="@color/color_111111"
+            android:textSize="@dimen/font_16" />
+
+        <RelativeLayout
+            android:id="@+id/screenshot_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tvTitle" >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/screenshot_iv"
+                android:layout_width="match_parent"
+                android:layout_height="188dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:riv_corner_radius="6dp"
+                android:background="@drawable/bg_screenshot" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/screenshot_anim"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/screenshot_tips_iv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignBottom="@id/screenshot_iv"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/screenshot_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/screenshot_layout"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:enabled="false"
+            android:background="@drawable/bg_white_round_12"
+            android:textColor="@color/color_111111_a20"
+            android:text="@string/screenshotting"/>
+
+        <TextView
+            android:id="@+id/close_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/screenshot_btn"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:background="@drawable/bg_white_round_12"
+            android:textColor="@color/color_111111"
+            android:text="关闭"/>
+
+    </RelativeLayout>
+</RelativeLayout>

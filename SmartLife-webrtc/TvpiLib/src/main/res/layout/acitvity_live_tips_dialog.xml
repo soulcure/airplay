@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="268dp"
+        android:background="@drawable/bg_dialog_update">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/global_horizontal_margin_20"
+            android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_20"
+            android:orientation="horizontal">
+
+            <!-- left btn-->
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/global_horizontal_margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/bg_b_1_round_6"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/dialog_live_tips_cancel"
+                android:textColor="#ff000000"
+                android:textSize="16sp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+
+            <!-- right btn-->
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/bg_long_orange_gradient"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/dialog_live_tips_confirm"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                style="?android:attr/borderlessButtonStyle"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_live_tips_update_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/global_horizontal_margin_20"
+            android:text="@string/dialog_live_tips_title"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_18" />
+
+        <TextView
+            android:id="@+id/tv_live_tips_content_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_live_tips_update_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/global_horizontal_margin_10"
+            android:layout_marginStart="@dimen/global_horizontal_margin_20"
+            android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+            android:text="@string/dialog_live_tips_content_top"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/tv_live_tips_content_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_live_tips_content_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/global_horizontal_margin_10"
+            android:layout_marginStart="@dimen/global_horizontal_margin_20"
+            android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+            android:text="@string/dialog_live_tips_content_bottom"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14" />
+    </RelativeLayout>
+
+</LinearLayout>

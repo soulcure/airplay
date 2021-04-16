@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_video_call_bg">
+
+
+    <com.netease.nimlib.sdk.avchat.video.AVChatSurfaceViewRenderer
+        android:id="@+id/asf_large"
+        android:layout_centerHorizontal="true"
+        android:layout_width="667dp"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_margin="@dimen/global_horizontal_margin_20"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_video_call_asf_bg">
+        <com.netease.nimlib.sdk.avchat.video.AVChatSurfaceViewRenderer
+            android:id="@+id/asf_small"
+            android:layout_width="178dp"
+            android:layout_height="100dp"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/my_video_tip"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_video_tip"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="电视"
+        android:textColor="#ffffffff"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:id="@+id/friend_account"
+        android:layout_below="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/global_horizontal_margin_5"
+        android:paddingLeft="@dimen/global_horizontal_margin_5"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="55036720"
+        android:textColor="#ccffffff"
+        android:textSize="12sp"
+        android:background="@drawable/bg_friend_account"
+        />
+
+    <TextView
+        android:id="@+id/calling_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yunxin_video_call_calling_state"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffffff"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/time_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="126dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/state"
+            android:text="@string/yunixn_video_call_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            />
+
+        <Chronometer
+            android:id="@+id/avchat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/video_close"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@drawable/icon_avchat_camera_open"/>
+
+            <TextView
+                android:id="@+id/video_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关闭摄像头"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_button_height_50">
+            <Button
+                android:id="@+id/audio_close"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@drawable/icon_avchat_unmute"/>
+
+            <TextView
+                android:id="@+id/audio_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="静音"
+                android:layout_gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_button_height_50">
+
+            <Button
+                android:id="@+id/hangup"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@drawable/icon_avchat_hangup"/>
+
+            <TextView
+                android:id="@+id/hangup_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/global_button_height_50"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/switc"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@drawable/icon_avchat_switch"/>
+
+            <TextView
+                android:id="@+id/switch_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="切换摄像头"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/opposite_audio_tip"
+        android:background="@drawable/opposite_audio_tip"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/global_horizontal_margin_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/opposite_video_tip"
+        android:layout_above="@id/opposite_audio_tip"
+        android:background="@drawable/opposite_video_tip"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/net_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above ="@id/opposite_video_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+        android:visibility="gone"
+        android:text="当前通话网络不佳"
+        android:textColor="@color/b_1"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        />
+
+
+</RelativeLayout>

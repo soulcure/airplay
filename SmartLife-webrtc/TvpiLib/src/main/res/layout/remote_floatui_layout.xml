@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#e54c4a4f">
+
+        <ImageView
+            android:id="@+id/img_up_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="@dimen/global_horizontal_margin_20"
+            android:src="@drawable/floatui_arrow_up" />
+
+        <RelativeLayout
+            android:id="@+id/content_one_default_rl"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_toLeftOf="@id/img_up_arrow"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_type_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+                android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                android:scaleType="centerCrop"
+                android:src="@drawable/floatui_default_type_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img_type_icon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="共享屏无内容播放"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="投送内容后，点这里可遥控"
+                    android:textColor="@color/color_white_40"
+                    android:textSize="@dimen/font_12" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/content_two_loading_rl"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_toLeftOf="@id/img_up_arrow">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/img_loading_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                android:src="@drawable/floatui_load_start" />
+
+            <ImageView
+                android:id="@+id/img_load_finish"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_loading_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img_loading_icon"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="内容投送中，请稍后..."
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_15"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp">
+
+    <FrameLayout
+        android:id="@+id/screenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--截图同屏-->
+        <include
+            android:id="@+id/layout_screen_online_imageview"
+            layout="@layout/layout_screen_online_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!--电视AI待机-->
+        <include
+            android:id="@+id/layout_screen_ai_standby"
+            layout="@layout/layout_screen_ai_standby"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!--电视离线-->
+        <include
+            android:id="@+id/layout_screen_offline"
+            layout="@layout/layout_screen_offline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <!--未添加电视-->
+        <include
+            android:id="@+id/layout_screen_no_add_device"
+            layout="@layout/layout_screen_no_add_device"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!--无网络-->
+        <include
+            android:id="@+id/layout_screen_no_internet"
+            layout="@layout/layout_screen_no_internet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="11dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/shape_tv_power"
+        android:layout_alignBottom="@id/screenLayout"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_12"
+        android:textColor="@color/color_white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/screenLayout"
+        android:layout_centerHorizontal="true"
+        android:text="电视画面预览：同步显示当前电视的画面"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_12"
+        android:textColor="@color/color_white"
+        android:layout_below="@id/tvLine1"
+        android:layout_centerHorizontal="true"
+        android:text="（ 每3秒刷新一次电视画面 ）"/>
+</RelativeLayout>

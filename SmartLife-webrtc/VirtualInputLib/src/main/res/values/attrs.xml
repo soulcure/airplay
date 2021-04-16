@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RippleView">
+        <attr name="cColor" format="color"/>
+        <attr name="cIntervalTime" format="integer"/>
+        <attr name="cDiffusionTime" format="integer"/>
+        <attr name="cStartRadius" format="integer"/>
+        <attr name="cEndRadius" format="integer"/>
+        <attr name="cStartAlpha" format="float"/>
+        <attr name="cEndAlpha" format="float"/>
+        <attr name="cStrokeWidth" format="integer"/>
+    </declare-styleable>
+</resources>

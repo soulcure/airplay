@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            //    java.srcDirs = ['AF_PromotionSDK/src/main/java']
+//            resources.srcDirs = ['AF_PromotionSDK/src/res']
+            //    aidl.srcDirs = ['AF_PromotionSDK/src/main/aidl']
+//            renderscript.srcDirs = ['AF_UpgraderSDK/src']
+//            res.srcDirs = ['AF_PromotionSDK/src/res']
+//            assets.srcDirs = ['AF_UpgraderSDK/assets']
+            //jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    api project(':runtime-service')
+    api project(':iot-channel:core')
+}

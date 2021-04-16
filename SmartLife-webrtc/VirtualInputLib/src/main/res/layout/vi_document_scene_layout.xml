@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ctrl_panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/ppt_ctrl_layout"
+        android:layout_width="155dp"
+        android:layout_height="176dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/doc_ctrl_default" />
+
+    <LinearLayout
+        android:id="@+id/pdfword_ctrl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/pdfword_ctrl_up"
+            android:layout_width="315dp"
+            android:layout_height="148dp"
+            android:background="@drawable/vi_doc_ctrl_up_bg_selector"
+            android:gravity="center"
+            android:orientation="vertical"></ImageView>
+
+        <ImageView
+            android:id="@+id/pdfword_ctrl_down"
+            android:layout_width="315dp"
+            android:layout_height="148dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/vi_doc_ctrl_down_bg_selector"
+            android:gravity="center"
+            android:orientation="vertical"></ImageView>
+    </LinearLayout>
+
+</RelativeLayout>

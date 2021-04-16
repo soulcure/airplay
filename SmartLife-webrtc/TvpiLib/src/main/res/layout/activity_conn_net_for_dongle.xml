@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/unConnectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4"
+        android:fitsSystemWindows="true"
+        android:visibility="visible">
+
+        <com.coocaa.tvpi.view.CommonTitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvUnConnectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_start"
+            android:layout_marginTop="20dp"
+            android:text="为共享屏连网"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_24"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+        <TextView
+            android:id="@+id/tvUnConnectSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_start"
+            android:layout_marginTop="5dp"
+            android:text="输入 WiFi 的名称及密码"
+            android:textColor="@color/color_black_a40"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvUnConnectTitle" />
+
+
+        <RelativeLayout
+            android:id="@+id/editLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_start"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/activity_margin_end"
+            android:background="@drawable/bg_white_round_12"
+            app:layout_constraintTop_toBottomOf="@id/tvUnConnectSubtitle">
+
+            <EditText
+                android:id="@+id/etWifiName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#00000000"
+                android:hint="请输入Wi-Fi名称"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="50dp"
+                android:singleLine="true"
+                android:textColor="@color/c_2"
+                android:textCursorDrawable="@drawable/common_edittext_cursor_shape"
+                android:textSize="@dimen/s_4" />
+
+            <Button
+                android:id="@+id/btChangeWifi"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/connect_change_wifi"
+                app:layout_constraintBottom_toBottomOf="@id/etWifiName"
+                app:layout_constraintEnd_toEndOf="@id/etWifiName"
+                app:layout_constraintTop_toTopOf="@id/etWifiName" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/etWifiName"
+                android:background="#f4f4f4" />
+
+            <EditText
+                android:id="@+id/etWifiPassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/line"
+                android:background="#00000000"
+                android:hint="请输入Wi-Fi密码"
+                android:inputType="textVisiblePassword"
+                android:paddingStart="20dp"
+                android:paddingEnd="50dp"
+                android:singleLine="true"
+                android:textColor="@color/c_2"
+                android:textCursorDrawable="@drawable/common_edittext_cursor_shape"
+                android:textSize="@dimen/s_4"
+                app:layout_constraintTop_toBottomOf="@id/etWifiName" />
+
+            <Button
+                android:id="@+id/btClear"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/line"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                android:background="@drawable/connect_clear_psd" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvConnect"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/activity_margin_start"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="@dimen/activity_margin_end"
+            android:background="@drawable/bg_orange_round_12_unable"
+            android:gravity="center"
+            android:text="立即连接"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLayout" />
+
+        <LinearLayout
+            android:id="@+id/bleTipLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvConnect">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/bg_orange_round_12_enable"
+                android:gravity="center"
+                android:text="!"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="需使用蓝牙，才能连接酷开共享屏"
+                android:textColor="#F86239"
+                android:textSize="@dimen/font_14" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/connectingAndResultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_dongle_connecting"
+        android:visibility="gone">
+
+        <SurfaceView
+            android:id="@+id/connectingSurface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivConnectState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/connect_dongle_connecting" />
+
+            <TextView
+                android:id="@+id/tvConnectStateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="正在连接"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_26" />
+
+            <TextView
+                android:id="@+id/tvConnectStateSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Wi-Fi：COOCAA-5G"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_26" />
+
+
+            <Button
+                android:id="@+id/btConnectState"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_dongle_button"
+                android:text="取消"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
+

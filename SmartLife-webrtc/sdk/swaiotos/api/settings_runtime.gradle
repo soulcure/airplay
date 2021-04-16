@@ -1,0 +1,6 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+if (getProjectDir('../core/runtime/settings_api.gradle').exists())
+    apply from: getProjectDir('../core/runtime/settings_api.gradle').absolutePath

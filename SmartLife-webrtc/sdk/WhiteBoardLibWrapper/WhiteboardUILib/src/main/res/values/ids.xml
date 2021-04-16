@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  工具层视图布局id和控件id  -->
+    <item name="whiteboard_toolbar" type="id" />
+    <item name="whiteboard_tv_controller" type="id" />
+    <item name="whiteboard_exit" type="id" />
+
+
+    <!--  工具层左边工具栏布局控件id  -->
+    <item name="whiteboard_toolbar_other_layout" type="id" />
+    <item name="whiteboard_toolbar_paint" type="id" />
+    <item name="whiteboard_toolbar_eraser" type="id" />
+    <item name="whiteboard_toolbar_more" type="id" />
+
+    <!--  工具层左边工具栏画笔布局控件id  -->
+    <item name="whiteboard_toolbar_paint_layout" type="id" />
+    <item name="whiteboard_toolbar_rg_paint_color" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_red" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_orange" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_green" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_blue" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_purple" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_black" type="id" />
+    <item name="whiteboard_toolbar_rg_paint_size" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_size_1" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_size_2" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_size_3" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_size_4" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_size_5" type="id" />
+    <item name="whiteboard_toolbar_rb_paint_size_6" type="id" />
+    <!--  工具层左边工具栏橡皮擦布局控件id  -->
+    <item name="whiteboard_toolbar_eraser_layout" type="id" />
+    <item name="whiteboard_toolbar_rg_eraser_size" type="id" />
+    <item name="whiteboard_toolbar_rb_eraser_size_1" type="id" />
+    <item name="whiteboard_toolbar_rb_eraser_size_2" type="id" />
+    <item name="whiteboard_toolbar_rb_eraser_size_3" type="id" />
+    <item name="whiteboard_toolbar_rb_eraser_size_4" type="id" />
+    <item name="whiteboard_toolbar_rb_eraser_size_5" type="id" />
+    <item name="whiteboard_toolbar_rb_eraser_size_6" type="id" />
+    <item name="whiteboard_toolbar_rb_eraser_clear" type="id" />
+    <!--  工具层左边工具栏更多布局控件id  -->
+    <item name="whiteboard_toolbar_more_layout" type="id" />
+    <item name="whiteboard_toolbar_more_save" type="id" />
+    <item name="whiteboard_toolbar_more_paging" type="id" />
+
+
+    <!--  工具层右边电视显示区域按钮布局和控件id  -->
+    <item name="whiteboard_tv_controller_btn" type="id" />
+    <item name="whiteboard_tv_controller_bg_layout" type="id" />
+    <item name="whiteboard_tv_controller_layout" type="id" />
+    <item name="whiteboard_tv_controller_image" type="id" />
+    <item name="whiteboard_tv_controller_image_overlay" type="id" />
+
+    <!-- 共享屏连接断开 -->
+    <item name="whiteboard_connect_fail_retry" type="id" />
+    <item name="whiteboard_connect_fail_exit" type="id" />
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/smart_browser_tv_open_focus_bg"
+          android:state_enabled="true" />
+    <item android:drawable="@drawable/smart_browser_tv_open_unfocus_bg" />
+</selector>

@@ -1,0 +1,10 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+apply from: getProjectDir('settings_iot_channel.gradle').absolutePath
+apply from: getProjectDir('settings_runtime.gradle').absolutePath
+apply from: getProjectDir('settings_user.gradle').absolutePath
+
+include ':swaiotos-api'
+project(':swaiotos-api').projectDir = getProjectDir(".")

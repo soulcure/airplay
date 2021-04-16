@@ -1,0 +1,74 @@
+[
+  {
+    "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+    "id": "xcx.newryun.com",
+    "name": "神笔画画",
+    "target": "kk/",
+    "type": "https",
+    "runtime": {
+      "RUNTIME_NAV_KEY": "RUNTIME_NAV_FLOAT_NP",
+      "RUNTIME_NETWORK_FORCE_KEY": "FORCE_LAN",
+      "orientation": "0"
+    }
+  },
+  {
+    "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+    "id": "kukai.gohudong.com",
+    "name": "砸金牛",
+    "target": "res/kukai_vue/index.html",
+    "type": "http",
+    "runtime": {
+      "RUNTIME_NAV_KEY": "RUNTIME_NAV_FLOAT_NP",
+      "RUNTIME_NETWORK_FORCE_KEY": "FORCE_LAN"
+    }
+  },
+  {
+    "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+    "id": "com.coocaa.smart.test_jump_h5",
+    "name": "Web和游戏",
+    "target": "index",
+    "type": "np"
+  },
+  {
+    "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+    "id": "com.coocaa.smart.lab.test_mp",
+    "name": "小程序",
+    "target": "index",
+    "type": "np"
+  },
+  {
+    "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+    "id": "com.coocaa.smart.browser",
+    "name": "浏览器",
+    "target": "index",
+    "type": "np"
+  },
+  {
+    "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+    "id": "com.coocaa.smart.lab.device_info",
+    "name": "设备信息",
+    "target": "index",
+    "type": "np"
+  },
+  {
+    "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+    "id": "com.coocaa.smart.whiteboard",
+    "name": "白板",
+    "target": "index",
+    "type": "np"
+  },
+  {
+    "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+    "id": "com.coocaa.smart.notemark",
+    "name": "批注",
+    "target": "index",
+    "type": "np"
+  },
+  {
+  "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+  "id": "com.coocaa.smart.lab.logcat",
+  "name": "日志管理",
+  "target": "index",
+  "type": "np"
+  }
+]

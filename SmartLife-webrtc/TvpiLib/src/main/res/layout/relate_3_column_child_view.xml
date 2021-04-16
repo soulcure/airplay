@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_widthPercent="100%">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/relate_3_column_child_iv_poster"
+        app:layout_widthPercent="100%"
+        app:layout_aspectRatio="71.43%"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="8dp"/>
+
+    <TextView
+        android:id="@+id/relate_3_column_child_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/relate_3_column_child_iv_poster"
+        android:layout_alignLeft="@id/relate_3_column_child_iv_poster"
+        android:layout_alignRight="@id/relate_3_column_child_iv_poster"
+        android:maxLines="2"
+        android:textColor="@color/c_2"
+        android:textSize="@dimen/s_3"
+        android:text=""/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/relate_3_column_child_iv_poster"
+        android:layout_alignBottom="@id/relate_3_column_child_iv_poster"
+        android:textSize="@dimen/font_10"
+        android:textColor="@color/colorText_3c3c3c"
+        android:text=""
+        android:gravity="end"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:visibility="gone"/>
+</androidx.percentlayout.widget.PercentRelativeLayout>

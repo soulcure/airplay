@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/yunxin_icon_user_cover_gray"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/iv_contacts_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorText_cc000000"/>
+
+</LinearLayout>

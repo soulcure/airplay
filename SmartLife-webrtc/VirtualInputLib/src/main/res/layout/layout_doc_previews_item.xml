@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/preview_focus_iv"
+        android:layout_width="104dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/bg_doc_preview_focus"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/default_bg_iv"
+            android:layout_width="100dp"
+            android:layout_height="56dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_doc_preview_gray" />
+
+        <ImageView
+            android:id="@+id/default_icon"
+            android:layout_width="20dp"
+            android:layout_height="26dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/doc_icon_default" />
+
+        <ImageView
+            android:id="@+id/preview_iv"
+            android:layout_width="100dp"
+            android:layout_height="56dp"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/corner_pagenum"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/doc_icon_corner_gray"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_10" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

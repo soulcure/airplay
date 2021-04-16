@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_main_bg">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/long_video_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.coocaa.tvpi.view.LoadTipsView
+        android:id="@+id/long_video_detail_load_tips_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white">
+    </com.coocaa.tvpi.view.LoadTipsView>
+
+    <RelativeLayout
+        android:id="@+id/long_video_actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/status_bar_height"
+        android:layout_height="@dimen/actionbar_height">
+        <ImageView
+            android:id="@+id/long_video_img_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+            android:src="@drawable/icon_back_white" />
+
+        <ImageView
+            android:id="@+id/long_video_collect_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/global_horizontal_margin_10"
+            android:background="@drawable/icon_tab_love_normal_white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/long_video_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_and_actionbar_height"
+        android:paddingTop="@dimen/status_bar_height"
+        android:background="@color/b_2"
+        android:alpha="0">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbar_height">
+            <ImageView
+                android:id="@+id/long_video_toolbar_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+                android:src="@drawable/icon_back_black" />
+            <TextView
+                android:id="@+id/long_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textColor="@color/c_1"
+                android:textSize="@dimen/s_5"
+                android:text="标题"/>
+            <ImageView
+                android:id="@+id/long_video_toolbar_collect_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                android:background="@drawable/icon_tab_love_normal_black"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

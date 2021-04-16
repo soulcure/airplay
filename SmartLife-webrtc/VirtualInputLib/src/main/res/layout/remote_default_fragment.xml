@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ImageView
+            android:id="@+id/img_tv_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/remote_pager_tv_bg" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_tv_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/global_horizontal_margin_10"
+            android:text="共享屏无内容播放"
+            android:textColor="@color/color_white_40"
+            android:textSize="@dimen/font_16" />-->
+
+        <LinearLayout
+            android:id="@+id/btn_ll"
+            android:layout_width="315dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/global_horizontal_margin_20"
+            android:layout_marginBottom="47dp"
+            android:background="@drawable/bg_round_25_white_alpha10"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/img_type_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                android:src="@drawable/remote_pager_default_picture_icon" />
+
+            <TextView
+                android:id="@+id/btn_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="打开「相册投电视」"
+                android:textColor="@color/color_white_40"
+                android:textSize="@dimen/font_16" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/img_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_ll"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/remote_pager_default_tips" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

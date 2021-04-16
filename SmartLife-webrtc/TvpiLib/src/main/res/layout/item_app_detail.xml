@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCover"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/place_holder_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="20dp" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="应用名称"
+        android:textColor="@color/c_1"
+        android:textSize="@dimen/s_7"
+        app:layout_constraintStart_toEndOf="@id/ivCover"
+        app:layout_constraintTop_toTopOf="@id/ivCover" />
+
+
+    <RatingBar
+        android:id="@+id/rbScore"
+        style="@style/rating_bar_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:isIndicator="true"
+        android:maxHeight="30dp"
+        android:minHeight="30dp"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="0.5"
+        app:layout_constraintBottom_toBottomOf="@id/ivCover"
+        app:layout_constraintStart_toEndOf="@id/ivCover" />
+
+    <com.coocaa.tvpi.module.app.widget.AppStateButton
+        android:id="@+id/stateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        app:layout_constraintBottom_toBottomOf="@id/ivCover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivCover" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPreview"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+        app:layout_constraintTop_toBottomOf="@id/ivCover" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="3dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginTop="30dp"
+        android:background="@color/color_main_red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvPreview" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="简介"
+        android:textColor="@color/c_1"
+        android:textSize="@dimen/s_5"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/line"
+        app:layout_constraintTop_toTopOf="@id/line" />
+
+    <TextView
+        android:id="@+id/tvVersionSizeCount"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="1111"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/c_3"
+        android:textSize="@dimen/s_3" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="6dp"
+        android:maxLines="2"
+        android:text="应用简介"
+        app:layout_constraintTop_toBottomOf="@id/tvVersionSizeCount"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        android:textColor="@color/c_3"
+        android:textSize="@dimen/s_3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

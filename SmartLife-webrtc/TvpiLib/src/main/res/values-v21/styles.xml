@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.FloatDotGuide" parent="AppTheme.NoActionBar.Fullscreen.translucent">
+        <item name="android:navigationBarColor">@color/black_80</item>
+    </style>
+    <style name="Theme.ConnectDialogActivity" parent="Theme.DialogActivity">
+        <item name="android:navigationBarColor">@color/transparent</item>
+    </style>
+</resources>

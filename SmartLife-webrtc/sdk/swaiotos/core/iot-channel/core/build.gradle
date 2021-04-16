@@ -1,0 +1,97 @@
+apply plugin: 'com.android.library'
+
+def ver_major = 1
+def ver_minor = 0
+def ver_build = getDate()
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode Integer.valueOf(ver_build)
+        versionName ver_major.toString() + "." + ver_minor.toString() + "." + ver_build
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android.libraryVariants.all { variant ->
+        if (variant.name.equalsIgnoreCase("release")) {
+            variant.outputs.all { output ->
+                def f = output.outputFileName
+                if (f != null && f.endsWith('.aar')) {
+                    def fileName = "iot-core-v${defaultConfig.versionName}.aar"
+                    output.outputFileName = fileName
+                }
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+def getDate() {
+    def date = new Date()
+    def timeZone = TimeZone.getTimeZone("Asia/Shanghai")
+    def formattedDate = date.format('yyMMddHHmm', timeZone)
+    return formattedDate
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation project(':iot-channel-sdk:sdk-admin')
+    implementation 'swaiotos.base:okhttp:+'
+    implementation "com.alibaba:fastjson:1.1.71.android"
+    implementation 'swaiotos:sal:+'
+    api 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+
+
+    implementation 'org.webrtc:google-webrtc:1.0.32006'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+
+//apply plugin: 'maven'
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            pom.artifactId = "core"
+//            pom.groupId = GROUP_ID
+//            pom.packaging = 'aar'
+//            pom.version = VER_NAME
+//            //指定项目部署到的中央库地址，UserName和Password就是Part 1中注册的账号。
+//            repository(url: "http://172.20.135.19:8080/nexus/content/repositories/ClientApp/") {
+//                authentication(userName: 'admin', password: 'admin123')
+//            }
+//            pom.whenConfigured { pom ->
+//                pom.dependencies.forEach { dep ->
+//                    if (dep.getVersion() == "unspecified") {
+//                        println("--modify the dependenies module in pom.xml--->>" + dep.getArtifactId())
+//                        dep.setGroupId(GROUP_ID)
+//                        dep.setVersion(VER_NAME)
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}

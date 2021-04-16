@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_14"
+        android:text="收货人："/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColorHint="@color/color_black_a20"
+        android:textSize="@dimen/font_14"
+        android:textColor="@color/color_black"
+        android:gravity="start|center_vertical"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:background="@null"
+        android:maxLines="1"
+        android:textCursorDrawable="@drawable/mall_edittext_cursor_shape"
+        android:inputType="text"/>
+
+</LinearLayout>

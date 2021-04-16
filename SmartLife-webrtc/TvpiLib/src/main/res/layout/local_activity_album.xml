@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/fff2f2f2">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:common_title_title="相册" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_album_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end"/>
+
+</LinearLayout>

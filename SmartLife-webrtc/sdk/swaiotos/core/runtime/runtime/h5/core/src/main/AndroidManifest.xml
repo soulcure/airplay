@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="swaiotos.runtime.h5">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.tianci.user.permission.READ_CONTENT"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".H5TV2AppletActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+            android:windowSoftInputMode="adjustResize"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="com.coocaa.smartscreen.applet" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".H5FloatAppletActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:process=":h5">
+        </activity>
+        <activity
+            android:name=".H5NPAppletActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:process=":h5">
+        </activity>
+        <activity
+            android:name=".H5FloatNPAppletActivity"
+            android:theme="@style/Theme.H5FloatNP"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:process=":h5">
+        </activity>
+        <activity
+            android:name=".landscape.LandScapeH5FloatNPAppletActivity"
+            android:theme="@style/Theme.H5FloatNP.LandScape"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask"
+            android:process=":h5">
+        </activity>
+        <service
+            android:name="swaiotos.runtime.h5.H5SSClientService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":h5"
+            >
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="ss-clientID"
+                android:value="client-runtime-h5" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="client-runtime-h5" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="7" />
+<!--版本拉平 ，版本5面向全网支持小游戏
+版本6支持手机/tv应用退出同步
+版本7支持新版本遥控器
+-->
+        </service>
+
+        <service
+            android:name=".H5SSChannelClientService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="ss-clientID"
+                android:value="ss-clientID-runtime-h5-channel" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="ss-clientKey-runtime-h5-channel" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="15" />
+        </service>
+
+        <service
+            android:name="swaiotos.runtime.h5.core.os.exts.channel.StateIntentService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.app_status.changed" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

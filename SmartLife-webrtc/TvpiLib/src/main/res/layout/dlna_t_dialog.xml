@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="39dp"
+    android:layout_marginRight="39dp"
+    android:background="@drawable/bg_dlna_t_dialog"
+    android:minWidth="330dp"
+    android:minHeight="190dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="63dp"
+        android:paddingBottom="40dp"
+        android:text="tips"
+        android:textColor="@color/colorText_3c3c3c"
+        android:textSize="@dimen/font_17"/>
+
+
+    <LinearLayout
+        android:id="@+id/doubleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginBottom="@dimen/global_horizontal_margin_20"
+        android:orientation="horizontal">
+
+        <!-- left btn-->
+        <com.coocaa.tvpi.view.STextView
+            android:id="@+id/btnL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:background="@drawable/bg_b_2_round_8_stroke"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="取消"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_17"/>
+
+        <!-- 竖直分割线-->
+        <FrameLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+
+        <!-- right btn-->
+        <com.coocaa.tvpi.view.STextView
+            android:id="@+id/btnR"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/bg_b_8_round_8"
+            android:ellipsize="end"
+            android:text="确定"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_17"/>
+    </LinearLayout>
+
+</LinearLayout>

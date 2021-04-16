@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/icon_bg_lottieview"
+        android:layout_width="307dp"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_bg_lottieview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="将微信或者其他位置的文档添加在这里，方便下次分享"
+        android:textColor="@color/black_80"
+        android:textSize="@dimen/font_16" />
+
+    <TextView
+        android:id="@+id/empty_btn_add_doc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_188cff_round_12"
+        android:gravity="center"
+        android:text="添加常用文档"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

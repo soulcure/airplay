@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="swaiotos.runtime.service">
+
+    <application>
+        <service
+            android:name=".AppletRuntimeService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.SERVICE_APPLET_RUNTIME" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

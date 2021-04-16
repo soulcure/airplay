@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+    android:layout_marginTop="30dp"
+    android:layout_marginRight="@dimen/global_horizontal_margin_15"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:gravity="center_vertical"
+        android:text="留言板"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/c_1"
+        android:textSize="@dimen/s_5"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,345:117"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage"
+        android:src="@drawable/smartscreen_message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

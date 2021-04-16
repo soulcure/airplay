@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sanyan_login_btn_color_normal">#FF5525</color>
+    <color name="sanyan_login_btn_color_press">#66FF5525</color>
+</resources>

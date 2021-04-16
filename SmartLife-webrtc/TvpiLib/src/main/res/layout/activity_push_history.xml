@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/b_2">
+
+    <RelativeLayout
+        android:id="@+id/push_history_rl_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_row_height_60"
+        android:layout_alignParentBottom="true"
+        android:background="@color/b_2"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/b_3"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_separator_line_width_height"
+            android:layout_alignParentTop="true"
+            android:background="@color/b_3"/>
+
+        <View
+            android:id="@+id/push_history_seperator_edit"
+            android:layout_width="@dimen/global_separator_line_width_height"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/b_2"/>
+
+        <TextView
+            android:id="@+id/push_history_tv_select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/push_history_seperator_edit"
+            android:text="全选"
+            android:textSize="@dimen/s_5"
+            android:textColor="@color/c_1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/push_history_tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/push_history_seperator_edit"
+            android:text="删除"
+            android:textSize="@dimen/s_5"
+            android:textColor="@color/c_8"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/push_history_spring_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/push_history_rl_edit"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/push_history_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="25dp"/>
+    </com.liaoinstan.springview.widget.SpringView>
+
+    <com.coocaa.tvpi.view.LoadTipsView
+        android:id="@+id/push_history_loadtipsview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white"/>
+
+</RelativeLayout>

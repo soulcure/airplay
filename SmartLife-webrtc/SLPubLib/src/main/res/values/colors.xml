@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#3F51B5</color>
+
+    <!--新标准化色值start-->
+
+    <!--文本颜色规范-->
+    <!--按钮落焦文本、大标题-->
+    <color name="c_1">#000000</color>
+    <!--一级内容、列表文本、按钮文本-->
+    <color name="c_2">#333333</color>
+    <!--二级内容、列表文本、按钮文本-->
+    <color name="c_3">#666666</color>
+    <!--三级内容、列表文本、按钮文本-->
+    <color name="c_4">#999999</color>
+    <!--不可点击、输入框默认文本-->
+    <color name="c_5">#cccccc</color>
+    <!--按钮文本-->
+    <color name="c_6">#ffffff</color>
+    <!--主题色文本-->
+    <color name="c_7">#fdbe1a</color>
+    <!--警示文本-->
+    <color name="c_8">#ff8886</color>
+    <!--链接跳转文本-->
+    <color name="c_9">#3a75f4</color>
+    <!--主题色文本-->
+    <color name="c_10">#ffd71c</color>
+
+    <color name="c_1_50">#80000000</color>
+    <color name="c_2_30">#4c333333</color>
+    <color name="c_1_80">#cc000000</color>
+    <color name="c_6_50">#80ffffff</color>
+
+    <!--背景模块颜色规范-->
+    <!--一级菜单-->
+    <color name="b_1">#ffffff</color>
+    <!--二级菜单、分割线-->
+    <color name="b_2">#f8f8f8</color>
+    <!--按钮色块-->
+    <color name="b_3">#ececec</color>
+    <!--提示色块-->
+    <color name="b_4">#fff9ec</color>
+    <!--按钮色块-->
+    <color name="b_5">#fdbe1a</color>
+    <!--弹窗遮罩-->
+    <color name="b_6">#7f000000</color>
+    <!--播放器遮罩-->
+    <color name="b_7">#bf000000</color>
+    <!--按钮色块new-->
+    <color name="b_8">#ffd71c</color>
+
+    <color name="b_9">#ff6246</color>
+    <color name="b_10">#FF5525</color>
+    <color name="b_11">#66ff5525</color>
+    <color name="b_12">#FF6F77A1</color>
+    <color name="b_13">#FF2F8DE6</color>
+    <color name="b_14">#0D000000</color>
+    <color name="b_15">#FF646F81</color>
+    <!--直播页使用，特殊色-->
+    <color name="b_tvlive">#1AC0C3D0</color>
+
+    <color name="fff8f8f8">#fff8f8f8</color>
+    <color name="ff4681ff">#4681FF</color>
+    <color name="fff2f2f2">#fff2f2f2</color>
+
+
+    <!--带透明度的颜色-->
+    <color name="white_10">#19ffffff</color>
+    <color name="black_8">#14000000</color>
+    <color name="black_10">#19000000</color>
+    <color name="black_30">#4c000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_80">#cc000000</color>
+    <color name="b_1_30">#4cffffff</color>
+    <color name="b_1_98">#faffffff</color>
+    <color name="b_2_98">#faf8f8f8</color>
+    <color name="b_2_96">#f4f8f8f8</color>
+    <color name="b_5_98">#fafdbe1a</color>
+    <color name="b_5_90">#e5fdbe1a</color>
+    <color name="b_5_3">#08fdbe1a</color>
+    <color name="b_2_60">#99f8f8f8</color>
+    <color name="b_3_80">#ccececec</color>
+    <color name="b_8_50">#80ffd71c</color>
+
+    <!--新标准化色值end-->
+
+    <!--public colors-->
+    <color name="main_color_black">#111111</color>
+    <color name="main_dialog_color_black">#1b1b1b</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_80000000">#80000000</color>
+    <color name="transparent_ffd71c">#88ffd71c</color>
+    <color name="transparent_ff6686">#88ff6686</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#DBDBDB</color>
+
+    <!--loadingDialog-->
+    <color name="loading_dialog_background">#1b1b1b</color>
+
+    <!--文字颜色-->
+    <color name="colorText_333333">#333333</color>
+    <color name="colorText_999999">#999999</color>
+    <color name="colorText_3c3c3c">#3c3c3c</color>
+    <color name="colorText_4a90e2">#4A90E2</color>
+    <color name="colorText_9d9d9d">#9d9d9d</color>
+    <color name="colorText_9b9b9b">#9b9b9b</color>
+    <color name="colorText_ff6686">#FF6686</color>
+    <color name="colorText_ffd71c">#FFD71C</color>
+    <color name="colorText_e6e6e6">#E6E6E6</color>
+    <color name="colorText_666666">#666666</color>
+    <color name="colorText_44D6BA">#44D6BA</color>
+    <color name="colorText_cc000000">#cc000000</color>
+    <color name="colorText_ff000000">#ff000000</color>
+    <color name="colorText_ff39404d">#ff39404d</color>
+    <color name="colorText_FF6131">#FF6131</color>
+    <color name="colorText_3Dff6131">#3Dff6131</color>
+    <color name="colorText_FFFFFFFF">#FFFFFFFF</color>
+    <color name="colorText_2EFFFFFF">#2EFFFFFF</color>
+    <color name="colorText_96FFFFFF">#96FFFFFF</color>
+    <color name="colorText_F86239">#F86239</color>
+    <color name="color_FF8E3E">#FF8E3E</color>
+    <color name="color_FF7E51">#FF7E51</color>
+    <color name="colorText_FF5525">#FF5525</color>
+    <color name="color_FF5ACC69">#FF5ACC69</color>
+    <color name="color_FFF86239">#FFF86239</color>
+    <color name="color_FFF87A39">#FFF87A39</color>
+<!--    <color name=""></color>-->
+
+
+    <!--背景色-->
+    <color name="colorBack_505050">#505050</color>
+    <color name="colorBack_3c3c3c">#3c3c3c</color>
+    <color name="colorBack_e6e6e6">#E6E6E6</color>
+    <color name="colorBack_ff6686">#FF6686</color>
+    <color name="colorBack_9d9d9d">#9d9d9d</color>
+    <color name="colorBack_ffd71c">#FFD71C</color>
+    <color name="colorBack_222222">#222222</color>
+    <color name="colorBack_151515">#151515</color>
+    <color name="colorBack_666666">#666666</color>
+    <color name="colorBack_83c44f">#83c44f</color>
+    <color name="colorBack_83c44f_10">#1A83C44F</color>
+    <color name="colorBack_4d333333">#4d333333</color>
+    <color name="colorBack_FF2E73FF">#FF2E73FF</color>
+
+
+
+    <!--副标题背景色-->
+
+    <color name="color_video_call_bg">#000000</color>
+    <color name="color_video_call_asf_bg">#FF6E778B</color>
+
+
+    <color name="bg_color_f8f8f8">#f8f8f8</color>
+    <color name="bg_color_9d9d9d">#9d9d9d</color>
+
+    <!--验证码页面颜色-->
+    <color name="title_color_ff000000">#ff000000</color>
+    <color name="button_color_ff4681ff">#FF4681FF</color>
+    <color name="button_color_no_press">#664681FF</color>
+    <color name="private_text_color_ff3a5eab">#FF3A5EAB</color>
+    <color name="button_color_FF39ABF8">#FF39ABF8</color>
+
+    <!--主题色-->
+    <color name="color_main_red">#FF5525</color>
+    <color name="color_main_red_a40">#66FF5525</color>
+    <color name="color_main_red_a10">#1aFF5525</color>
+
+    <color name="color_blue">#4681FF</color>
+    <color name="color_yellow">#FF9600</color>
+    <color name="color_yellow_a60">#99FF9600</color>
+    <color name="color_red">#FF5B55</color>
+    <color name="color_red_a10">#1AFF5B55</color>
+    <color name="color_origin">#FF6131</color>
+    <color name="color_origin_unable">#66FF6131</color>
+    <color name="color_green">#83C44F</color>
+    <color name="color_black">#000000</color>
+    <color name="color_black_a80">#CC000000</color>
+    <color name="color_black_a60">#99000000</color>
+    <color name="color_black_a50">#80000000</color>
+    <color name="color_black_a40">#66000000</color>
+    <color name="color_black_a30">#4d000000</color>
+    <color name="color_black_a20">#33000000</color>
+    <color name="color_black_a15">#26000000</color>
+    <color name="color_black_a10">#1A000000</color>
+    <color name="color_black_a7">#14000000</color>
+    <color name="color_black_a5">#0D000000</color>
+    <color name="color_black_unable">#4d000000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_white_a96">#f4ffffff</color>
+    <color name="color_white_80">#CCffffff</color>
+    <color name="color_white_60">#99ffffff</color>
+    <color name="color_white_50">#80ffffff</color>
+    <color name="color_white_40">#66ffffff</color>
+    <color name="color_white_20">#33ffffff</color>
+    <color name="color_white_10">#1Affffff</color>
+    <color name="color_white_a5">#0Dffffff</color>
+    <color name="color_white_main_bg">#fff4f4f4</color>
+    <color name="color_transparent">#00000000</color>
+
+    <color name="color_gary_mine">#FFF4F4F4</color>
+
+    <color name="color_connected">#8DD55D</color>
+    <color name="color_connect_not_same_wifi">#FFC843</color>
+    <color name="color_connect_error">#99ffffff</color>
+
+    <color name="color_111111">#111111</color>
+    <color name="color_111111_a20">#33111111</color>
+
+</resources>

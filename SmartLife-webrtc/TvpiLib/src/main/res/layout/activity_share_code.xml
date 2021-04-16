@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/color_gary_mine"
+    android:paddingBottom="60dp"
+    android:orientation="vertical">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/share_code_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/device_icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_defalut_device"
+                app:riv_corner_radius="35dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/device_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:maxWidth="215dp"
+                    android:singleLine="true"
+                    android:text="共享屏"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/edit_name_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/device_name"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_share_code_edit"/>
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/link_error_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon_link_error"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tv_device_connect_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#FF8DD55D"
+                    android:textSize="@dimen/font_14"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:id="@+id/tv_device_reconnect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/share_code_reconnect"
+                    android:textColor="@color/black_40"
+                    android:textSize="@dimen/font_14"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_disconnect"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_white_round_22"
+                    android:stateListAnimator="@null"
+                    android:text="断开连接"
+                    android:textColor="@color/color_FFF86239"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_14" />
+
+
+                <Button
+                    android:id="@+id/btn_change_device"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/bg_white_round_22"
+                    android:stateListAnimator="@null"
+                    android:text="切换设备"
+                    android:textColor="@color/black_80"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_14" />
+            </LinearLayout>
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/tv_share_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="25dp"
+                android:text="扫描二维码，连接共享屏"
+                android:textColor="@color/color_black_a60"
+                android:textSize="@dimen/font_14"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_round_12">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <ImageView
+                        android:id="@+id/bg_qr_code_img"
+                        android:layout_width="135dp"
+                        android:layout_height="135dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/bg_gray_round_4"/>
+
+                    <ImageView
+                        android:id="@+id/qr_code_img"
+                        android:layout_width="135dp"
+                        android:layout_height="135dp"
+                        android:layout_gravity="center"/>
+
+                    <ProgressBar
+                        android:id="@+id/code_loading_progress"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:indeterminateDrawable="@drawable/progressbar_load_bind_code"
+                        android:indeterminateDuration="1000" />
+
+                    <TextView
+                        android:id="@+id/tv_load_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="加载失败点击重试"
+                        android:textColor="@color/black_40"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:lines="2"
+                        android:maxEms="4"
+                        android:visibility="visible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/loading_code_img"
+                        android:layout_width="135dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/bg_gray_round_4"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/bind_code_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/num_no1_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_bind_code_zero" />
+
+                        <ImageView
+                            android:id="@+id/num_no2_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_bind_code_zero" />
+
+                        <ImageView
+                            android:id="@+id/num_no3_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_bind_code_zero" />
+
+                        <ImageView
+                            android:id="@+id/num_no4_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_bind_code_zero" />
+
+                        <ImageView
+                            android:id="@+id/num_no5_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_bind_code_zero" />
+
+                        <ImageView
+                            android:id="@+id/num_no6_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_bind_code_zero" />
+
+                        <ImageView
+                            android:id="@+id/num_no7_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_bind_code_zero" />
+
+                        <ImageView
+                            android:id="@+id/num_no8_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_bind_code_zero" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="1dp"
+                    android:background="@color/color_black_a10"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_share_code_weixin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_share_code_weixin"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="分享至微信"
+                            android:textColor="@color/black_80"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_black_a10"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_share_code_zoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_share_code_zoom"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="在大屏显示"
+                            android:textColor="@color/black_80"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.coocaa.tvpi.module.share.view.ShareFunctionView
+                android:id="@+id/share_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/global_button_height_50"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:background="@drawable/shape_bg_tab"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_smart_screen"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_smart_screen"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/selector_tab_smart_screen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_smart_screen"
+            android:textColor="@color/colorText_ff39404d"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_smart_family"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_smart_family"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/selector_tab_smart_family" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_smart_family"
+            android:textColor="@color/colorText_ff39404d"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_voice"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_voice"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/selector_tab_voice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_voice"
+            android:textColor="@color/colorText_ff39404d"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_discover"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_discover"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/selector_tab_mall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_discover"
+            android:textColor="@color/colorText_ff39404d"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mine"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_mine"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/selector_tab_mine" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_mine"
+            android:textColor="@color/colorText_ff39404d"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</LinearLayout>

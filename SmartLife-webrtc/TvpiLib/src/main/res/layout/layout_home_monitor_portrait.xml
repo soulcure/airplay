@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/small_surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="375dp"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/view_overlay_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="375dp"
+        android:background="@color/color_multivideo_call_asf_bg"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/small_surface_container"
+        android:background="#ff333333"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:id="@+id/iv_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_monitor_mute_unable" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_screenshot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_monitor_screenshot_unable" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_monitor_audio_unable" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_monitor_fullscreen_unable" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bottom_layout">
+
+        <LinearLayout
+            android:id="@+id/camera_control_layout"
+            android:layout_width="70dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/home_monitor_bg_white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_up"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/iv_down"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/small_surface_container"
+        android:layout_alignBottom="@id/small_surface_container"
+        android:layout_centerHorizontal="true"
+        android:background="@color/c_1">
+
+        <ImageView
+            android:id="@+id/iv_wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="154dp"
+            android:src="@drawable/home_monitor_wait_authorization" />
+
+        <TextView
+            android:id="@+id/tv_tip_line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_wait"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="等待授权中..."
+            android:textColor="@color/c_6"
+            android:textSize="@dimen/s_5" />
+
+        <TextView
+            android:id="@+id/tv_tip_line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tip_line1"
+            android:layout_centerHorizontal="true"
+            android:text="需在电视端进行功能权限的授权"
+            android:textColor="@color/c_6"
+            android:textSize="@dimen/s_5" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/home_monitor_back" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="家庭看护"
+        android:textColor="@color/c_6"
+        android:textSize="@dimen/s_4"
+        android:textStyle="bold" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="1dp"
+        android:format24Hour="yyyy年MM月dd日 hh:mm:ss"
+        android:textColor="@color/c_6"
+        android:textSize="@dimen/s_2"
+        tools:targetApi="jelly_bean_mr1" />
+
+</RelativeLayout>

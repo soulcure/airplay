@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gary_mine">
+
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="44dp">
+
+        <TextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+            android:text="取消"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/s_4"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="修改昵称"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/s_5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/save_btn"
+            android:layout_width="56dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/global_horizontal_margin_15"
+            android:background="@drawable/bg_long_orange_gradient"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s_4" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_rl"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/title_rl"
+        android:layout_marginTop="@dimen/global_horizontal_margin_20"
+        android:layout_marginBottom="@dimen/global_horizontal_margin_20"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/user_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50dp"
+            android:background="@null"
+            android:gravity="left|center_vertical"
+            android:imeOptions="actionDone"
+            android:paddingLeft="@dimen/global_horizontal_margin_20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/shape_edit_text"
+            android:textSize="@dimen/s_4" />
+
+        <ImageView
+            android:id="@+id/delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/global_horizontal_margin_10"
+            android:src="@drawable/icon_edittext_delete" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/row_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_rl"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/bg_black_round_8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+            android:text="昵称不能为空，且最多支持 14 个字符"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/s_3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row_one"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginTop="@dimen/global_horizontal_margin_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/bg_black_round_8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+            android:text="昵称只支持中英文和数字"
+            android:textColor="@color/black_80"
+            android:textSize="@dimen/s_3" />
+
+    </LinearLayout>
+
+</RelativeLayout>

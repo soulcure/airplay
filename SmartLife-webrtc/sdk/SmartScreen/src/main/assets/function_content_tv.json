@@ -1,0 +1,76 @@
+{
+    "code": 0,
+    "data": {
+        "content": [
+            {
+                "name": "照片共享",
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_local_picture.png",
+                "type": "np",
+                "id": "com.coocaa.smart.localpicture",
+                "target": "index"
+            },
+            {
+                "name": "视频共享",
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_local_movie.png",
+                "type": "np",
+                "id": "com.coocaa.smart.localvideo",
+                "target": "index"
+            },
+            {
+                "name": "音乐共享",
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_local_music.png",
+                "type": "np",
+                "id": "com.coocaa.smart.localmusic",
+                "target": "index"
+            },
+            {
+                "name": "看球赛",
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_sports.png",
+                "type": "np",
+                "id": "com.coocaa.smart.sports",
+                "target": "index",
+                "params": {
+                    "classify_id": "_oqy_17",
+                    "source": "iqiyi"
+                }
+            },
+            {
+                "name": "看直播",
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_live.png",
+                "type": "np",
+                "id": "com.coocaa.smart.live",
+                "target": "index"
+            },
+            {
+                "name": "看动画",
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_comic.png",
+                "type": "np",
+                "id": "com.coocaa.smart.comic",
+                "target": "index",
+                "params": {
+                    "classify_id": "_oqy_4",
+                    "source": "iqiyi"
+                }
+            },
+            {
+                "name": "看影视",
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_movie.png",
+                "type": "np",
+                "id": "com.coocaa.smart.moviehome",
+                "target": "index",
+                "params": {
+                    "source": "iqiyi"
+                }
+            },
+            {
+                "name": "视频通话",
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_video_call.png",
+                "type": "np",
+                "id": "com.coocaa.smart.videocall",
+                "target": "index"
+            }
+        ],
+        "version": "1"
+    },
+    "msg": "成功"
+}

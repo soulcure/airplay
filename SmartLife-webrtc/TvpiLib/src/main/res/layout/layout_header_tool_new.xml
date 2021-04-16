@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/scanLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:tint="@color/color_white"
+            android:src="@drawable/icon_header_scan" />
+
+        <TextView
+            android:id="@+id/tv_scan"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="扫一扫"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/mirrorLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_mirror_scree"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:tint="@color/color_white"
+            android:background="@drawable/icon_header_mirror" />
+
+        <TextView
+            android:id="@+id/tv_mirror_screen"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="屏幕镜像"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/pushLocalLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_local_push"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:tint="@color/color_white"
+            android:src="@drawable/icon_header_local_push" />
+
+        <TextView
+            android:id="@+id/tv_local_push"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="本地投屏"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/shortcutLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_shortcut"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:tint="@color/color_white"
+            android:backgroundTint="@color/color_white"
+            android:background="@drawable/icon_header_shortcut"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:id="@+id/tv_shortcut"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="电视截屏"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+</LinearLayout>

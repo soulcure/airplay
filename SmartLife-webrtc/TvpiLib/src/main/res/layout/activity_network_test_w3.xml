@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/doc_player_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gary_mine">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_activity_net_test" />
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff2F8DE6"
+        app:common_title_left_image="@drawable/icon_net_test_back"
+        app:common_title_title="网络检测"
+        app:common_title_title_color="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_below="@id/titleBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/test_img_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10">
+                <ImageView
+                    android:id="@+id/test_type_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_speed_testing_type"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/net_test_type_anim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="35dp"
+                    />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginTop="@dimen/global_horizontal_margin_10"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/test_img_type_layout"
+                android:text="未连接"
+                android:textColor="@color/white"
+                android:maxWidth="215dp"
+                android:singleLine="true"
+                android:textSize="@dimen/font_14"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/device_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/device_name"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/device_active_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                    android:text="激活ID:HDD500"
+                    android:textColor="@color/color_white_80"
+                    android:textSize="@dimen/font_12" />
+
+                <TextView
+                    android:id="@+id/device_mac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:text="MAC:b00247b99ee1"
+                    android:textColor="@color/color_white_80"
+                    android:textSize="@dimen/font_12" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/link_speed_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/device_info_layout"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+                android:layout_marginTop="@dimen/global_horizontal_margin_15"
+                android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                android:background="@drawable/bg_b_1_round_8"
+                android:visibility="invisible">
+
+                <ProgressBar
+                    android:id="@+id/link_test_progress"
+                    android:layout_width="@dimen/global_horizontal_margin_20"
+                    android:layout_height="@dimen/global_horizontal_margin_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:indeterminateDrawable="@drawable/progressbar_white_circle_net_test"
+                    android:indeterminateDuration="1000" />
+
+                <TextView
+                    android:id="@+id/tv_link_speed_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black_80"
+                    android:textSize="@dimen/font_15"
+                    android:textStyle="bold"
+                    android:text="连接检测"/>
+
+                <View
+                    android:id="@+id/link_test_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_link_speed_tip"
+                    android:layout_marginTop="15dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/bg_gray_e6e6e6_round_6"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:id="@+id/link_test_result_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/link_test_line"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_phone_link_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="“手机-云”连接"
+                        android:textColor="@color/black_80"
+                        android:textSize="@dimen/font_14" />
+
+                    <TextView
+                        android:id="@+id/tv_phone_link_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_centerVertical="true"
+                        android:text="500ms"
+                        android:textColor="#FF5ACC69"
+                        android:textSize="@dimen/font_13"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/net_speed_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/link_speed_layout"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                android:background="@drawable/bg_b_1_round_8"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/speed_test_progress"
+                    android:layout_width="@dimen/global_horizontal_margin_20"
+                    android:layout_height="@dimen/global_horizontal_margin_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:indeterminateDrawable="@drawable/progressbar_white_circle_net_test"
+                    android:indeterminateDuration="1000" />
+
+                <TextView
+                    android:id="@+id/tv_net_speed_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black_80"
+                    android:textSize="@dimen/font_15"
+                    android:textStyle="bold"
+                    android:text="传输速度检测"/>
+
+                <View
+                    android:id="@+id/speed_test_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_net_speed_tip"
+                    android:layout_marginTop="15dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/bg_gray_e6e6e6_round_6"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:id="@+id/speed_test_ping_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/speed_test_line"
+                    android:visibility="gone">
+
+
+                    <ProgressBar
+                        android:id="@+id/net_ping_progress"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_centerVertical="true"
+                        android:indeterminateDrawable="@drawable/progressbar_green_circle"
+                        android:indeterminateDuration="1000"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/net_ping_result_img"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_net_ping_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/net_ping_progress"
+                        android:text="PING值"
+                        android:textColor="@color/black_80"
+                        android:textSize="@dimen/font_14"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_net_ping_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:text="time=102ms"
+                        android:textColor="@color/black_40"
+                        android:textSize="@dimen/font_13"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/speed_test_cloud_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/speed_test_ping_layout"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/net_cloud_progress"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:indeterminateDrawable="@drawable/progressbar_green_circle"
+                        android:indeterminateDuration="1000"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/net_cloud_img"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_net_cloud_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/net_cloud_progress"
+                        android:text="检测手机下载速度"
+                        android:textColor="@color/black_80"
+                        android:textSize="@dimen/font_14"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_net_cloud_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:text="time=102ms"
+                        android:textColor="@color/black_40"
+                        android:textSize="@dimen/font_13"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/speed_test_local_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/speed_test_cloud_layout"
+                    android:visibility="gone">
+
+
+
+                    <ProgressBar
+                        android:id="@+id/net_local_progress"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:indeterminateDrawable="@drawable/progressbar_green_circle"
+                        android:indeterminateDuration="1000"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/net_local_img"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_net_local_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/net_local_progress"
+                        android:text="检测局域网下载速度"
+                        android:textColor="@color/black_80"
+                        android:textSize="@dimen/font_14"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_net_local_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:text="time=102ms"
+                        android:textColor="@color/black_40"
+                        android:textSize="@dimen/font_13"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_start_test"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/device_name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="375dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/bg_b_13_round_12"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始检测"
+                    android:textColor="@color/b_1"
+                    android:textSize="@dimen/font_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+

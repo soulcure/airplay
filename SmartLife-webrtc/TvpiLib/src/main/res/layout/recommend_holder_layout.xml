@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:paddingLeft="@dimen/global_horizontal_margin_20"
+        android:paddingRight="@dimen/global_horizontal_margin_20"
+        android:paddingBottom="10dp">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="2.5dp"
+            android:background="@color/b_8"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/recommend_holder_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold"
+            android:textSize="@dimen/s_5"
+            android:textColor="@color/c_1"
+            android:text="标题"
+            />
+
+        <LinearLayout
+            android:id="@+id/recommend_holder_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/s_3"
+                android:textColor="@color/c_3"
+                android:text="更多"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/icon_arrow_right"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recommend_holder_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+[submodule "SVGLib"]
+	path = SVGLib
+	url = http://gitlab.skysri.com/AndroidLab/SVGLib.git
+[submodule "WhiteBoardLib"]
+	path = WhiteBoardLib
+	url = http://gitlab.skysri.com/AndroidLab/WhiteBoardLib.git
+[submodule "WhiteboardUILib"]
+	path = WhiteboardUILib
+	url = http://gitlab.skysri.com/AndroidLab/WhiteboardUILib.git

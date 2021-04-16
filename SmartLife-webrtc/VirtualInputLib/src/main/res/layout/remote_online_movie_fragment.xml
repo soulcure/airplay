@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/state_control_ll"
+        layout="@layout/remote_state_control_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/state_control_ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+        android:layout_marginTop="@dimen/global_horizontal_margin_10"
+        android:layout_marginRight="@dimen/global_horizontal_margin_10"
+        android:background="@drawable/bg_round_12_white_alpha10"
+        android:gravity="center">
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

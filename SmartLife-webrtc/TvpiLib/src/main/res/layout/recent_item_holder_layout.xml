@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/recent_item_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/icon_doc_ppt"
+        app:riv_corner_radius="6dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginRight="60dp"
+        android:layout_toEndOf="@id/recent_item_icon">
+
+        <TextView
+            android:id="@+id/recent_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="文件名"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/recent_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recent_item_title"
+            android:text="2020-12-31"
+            android:textColor="@color/color_black_a40"
+            android:textSize="@dimen/font_10" />
+
+        <TextView
+            android:id="@+id/recent_item_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/recent_item_date"
+            android:layout_toRightOf="@id/recent_item_date"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="0.8M"
+            android:textColor="@color/color_black_a40"
+            android:textSize="@dimen/font_10"  />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="60dp"
+        android:background="#1a000000"/>
+
+    <ImageView
+        android:id="@+id/recent_item_push"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/icon_recent_push" />
+
+</RelativeLayout>

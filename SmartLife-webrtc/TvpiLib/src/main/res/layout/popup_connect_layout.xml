@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="147dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_popup_connect"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/scan_connect_layout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/global_horizontal_margin_5"
+            android:layout_height="52dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/icon_popup_connect_scan"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫码连接"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/code_connect_layout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_popup_connect_code"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数字码连接"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/history_connect_layout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/icon_popup_connect_history"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连接记录"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/novice_guide"
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/icon_popup_guide"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新手引导"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

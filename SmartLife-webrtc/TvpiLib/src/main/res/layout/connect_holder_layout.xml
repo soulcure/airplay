@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/connect_holder_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/connect_holder_device_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:riv_corner_radius="20dp"/>
+
+        <TextView
+            android:id="@+id/connect_holder_device_tvname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/connect_holder_device_icon"
+            android:maxLines="1"
+            android:text="电视名称"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/connect_holder_device_tvinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/connect_holder_device_icon"
+            android:layout_toRightOf="@+id/connect_holder_device_icon"
+            android:layout_marginBottom="1dp"
+            android:maxLines="1"
+            android:text="型号 S8A 激活ID："
+            android:textColor="@color/color_white_60"
+            android:textSize="@dimen/font_14"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/connect_holder_device_state"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignTop="@id/connect_holder_device_icon"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/connect_holder_device_tvname"
+            android:scaleType="centerInside" />
+
+        <!--<TextView
+            android:id="@+id/connect_holder_device_tvmodel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/connect_holder_device_icon"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@+id/connect_holder_device_icon"
+            android:maxLines="1"
+            android:text="型号 S8A"
+            android:textColor="@color/color_black_a50"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/connect_holder_device_activeid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/connect_holder_device_tvmodel"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/connect_holder_device_tvmodel"
+            android:maxWidth="200dp"
+            android:maxLines="1"
+            android:text="激活ID："
+            android:textColor="@color/color_black_a50"
+            android:textSize="@dimen/font_12" />-->
+
+        <ImageView
+            android:id="@+id/connect_holder_device_tick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/smartscreen_device_check" />
+
+
+        <ImageView
+            android:id="@+id/device_change_loading"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_loading_connect"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/connect_holder_device_offline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:maxLines="1"
+            android:text="设备离线"
+            android:textColor="@color/color_black_a15"
+            android:textSize="@dimen/font_14"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/connect_holder_disconnect"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:background="#FFAF33"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_disconnect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/device_list_disconnect_bg"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_below="@id/iv_disconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="断开"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/font_16"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/connect_holder_unbind"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="15dp"
+        android:background="#FF7700" >
+
+        <ImageView
+            android:id="@+id/iv_unbind"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/device_list_unbind_bg"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_unbind"
+            android:layout_centerInParent="true"
+            android:text="移除"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/font_16"/>
+
+    </RelativeLayout>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

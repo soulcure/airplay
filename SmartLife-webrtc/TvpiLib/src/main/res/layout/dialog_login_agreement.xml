@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_top_round_18"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="隐私保护提示"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_22"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="15dp"
+            android:text="亲爱的用户，在登录之前，请您阅读并充分理解共享屏的\n在使用 App 之前，请您阅读并充分理解共享屏的《用户协议》和《隐私协议》，了解您的用户权益与相关数据的处理方法。点击同意表示您已经充分阅读并接受以上协议内容。我们将以业界领先的信息安全保护技术，保护您的个人信息，感谢您对共享屏的信任。"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <com.coocaa.publib.views.STextView
+                android:id="@+id/bt_cancel"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_f4f4f4_round_12"
+                android:gravity="center"
+                android:padding="12dip"
+                android:singleLine="true"
+                android:text="不同意"
+                android:textStyle="bold"
+                android:textColor="@color/color_black_a60"
+                android:textSize="16sp" />
+
+
+            <com.coocaa.publib.views.STextView
+                android:id="@+id/bt_agree"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_yellow_gradient_round_12"
+                android:gravity="center"
+                android:padding="12dip"
+                android:text="同意"
+                android:textStyle="bold"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

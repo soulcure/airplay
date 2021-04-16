@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/checkout_page_bg">
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="335dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="84dp"
+        android:gravity="center"
+        android:layout_gravity="center|top"
+        android:textColor="@color/checkout_price"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <FrameLayout
+        android:id="@+id/ali_pay_item"
+        android:layout_width="335dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_marginTop="206dp"
+        android:layout_gravity="center|top"
+        android:background="@drawable/pay_ali_itembg">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/pay_ali_icon"
+            ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="19dp"
+            android:text="支付宝支付"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+        </TextView>
+        <ImageView
+            android:id="@+id/ali_pay"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="295dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selected_icon"
+            android:focusable="true"
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+        </ImageView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/weixin_pay_item"
+        android:layout_width="335dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_marginTop="267dp"
+        android:layout_gravity="center|top"
+        android:background="@drawable/pay_wechat_itembg">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/pay_wechact_icon"
+            ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="19dp"
+
+            android:text="微信支付"
+            android:textSize="16sp"
+            android:textColor="@color/black">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/wechat_pay"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="295dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/unselected_icon"
+            android:focusable="true">
+
+        </ImageView>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/enter_pay"
+        android:layout_width="335dp"
+        android:layout_height="60dp"
+        android:textSize="17sp"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="65dp"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/checkoutpagebtn"
+        android:angle="270"
+        android:text="确认支付">
+
+    </Button>
+
+
+</FrameLayout>

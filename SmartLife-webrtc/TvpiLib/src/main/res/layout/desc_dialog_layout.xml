@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_dialog_height"
+        android:paddingTop="20dp"
+        android:background="@drawable/bg_bottom_dialog_b1">
+        <ImageView
+            android:id="@+id/desc_close_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/global_horizontal_margin_10"
+            android:background="@drawable/icon_delete"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/desc_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+            android:textStyle="bold"
+            android:textColor="@color/c_2"
+            android:textSize="@dimen/s_8"
+            android:text="简介"/>
+        <com.coocaa.tvpi.module.movie.widget.LongVideoDescView
+            android:id="@+id/desc_body_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/desc_label_tv"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

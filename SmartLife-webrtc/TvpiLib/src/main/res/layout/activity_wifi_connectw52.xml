@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="351dp"
+        android:background="@drawable/bg_top_10_round"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable="true">
+
+        <ImageView
+            android:id="@+id/btClose"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:src="@drawable/icon_close_gray" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="连 WiFi 使用共享屏"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_24"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:text="WiFi 名称 ："
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:id="@+id/ivConnectState"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/tvSubTitle"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/connect_wifi_blue" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignEnd="@id/ivConnectState"
+            android:layout_alignBottom="@id/ivConnectState"
+            android:layout_marginEnd="-4dp"
+            android:layout_marginBottom="6dp"
+            android:indeterminateDrawable="@drawable/progressbar_wifi_connecting"
+            android:indeterminateDuration="1000"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btConnect"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_blue_round_28"
+            android:text="一键连接"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16" />
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

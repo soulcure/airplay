@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/item_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom_dialog"
+        android:clickable="true"
+        >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="选择文档来源"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_20"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/bt_close"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/connect_icon_close"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/source_list_recyclerview"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="21dp"
+            />
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="微信、钉钉等APP中接收的文档，请点击对应APP 如果文档已保存至手机，请点击【手机文件夹】"
+            android:layout_below="@+id/source_list_recyclerview"
+            android:textColor="@color/color_black_a40"
+            android:textSize="@dimen/font_14"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="21dp"
+            />
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="*当前版本支持PPT、PDF、Word格式*"
+            android:layout_below="@+id/title2"
+            android:textColor="#2953FF"
+            android:textSize="@dimen/font_14"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="6dp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

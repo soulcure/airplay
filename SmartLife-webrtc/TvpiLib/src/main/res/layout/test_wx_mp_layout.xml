@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <EditText
+        android:id="@+id/mp_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_black_a80"
+        android:textSize="@dimen/font_16"
+        android:hint="请输入小程序id（必填）">
+    </EditText>
+
+    <EditText
+        android:id="@+id/mp_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_black_a80"
+        android:textSize="@dimen/font_16"
+        android:hint="请输入小程序path（选填）">
+    </EditText>
+
+    <Button
+        android:id="@+id/start_mp"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="@color/color_black_a80"
+        android:textSize="@dimen/font_16" >
+    </Button>
+</LinearLayout>

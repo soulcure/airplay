@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="swaiotos.channel.iot">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application>
+
+        <service
+            android:name=".ss.KeepAliveHelperService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":core" />
+
+        <meta-data
+            android:name="com.skyworthiot.sselib.APPKEY"
+            android:value="30566c583e1a44bda77af87a18429027" />
+    </application>
+
+</manifest>

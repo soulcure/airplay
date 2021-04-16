@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="92dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_collect_rl_root"
+    android:background="@color/b_2"
+    android:paddingLeft="@dimen/global_horizontal_margin_20"
+    android:paddingRight="@dimen/global_horizontal_margin_20">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/item_collect_img_poster"
+        android:layout_width="128dp"
+        android:layout_height="72dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/bg_poster_round"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="8dp"/>
+
+    <ImageView
+        android:id="@+id/item_collect_img_select"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/icon_collect_edit_normal"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/item_collect_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/item_collect_img_poster"
+        android:layout_toLeftOf="@id/item_collect_img_select"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="单行标题"
+        android:textSize="@dimen/s_4"
+        android:textColor="@color/c_3"/>
+
+</RelativeLayout>

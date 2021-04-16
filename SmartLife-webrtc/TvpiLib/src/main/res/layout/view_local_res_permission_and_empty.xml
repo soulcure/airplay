@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_state"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_local_res_empty"
+            android:layout_marginTop="107dp"/>
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/color_black_a60"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDuration="1000"
+        android:indeterminateDrawable="@drawable/progressbar_load_tips"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_no_permission"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_no_permission"
+            android:layout_marginTop="107dp"/>
+
+        <TextView
+            android:id="@+id/tv_permission_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未获得权限，请设置“存储”权限为开启"
+            android:textSize="16sp"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/color_black_a60"/>
+
+        <Button
+            android:id="@+id/bt_open_permission"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="140dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_188cff_round_30"
+            android:text="去开启权限"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16" />
+    </LinearLayout>
+</RelativeLayout>

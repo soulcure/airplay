@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?><!-- iphone风格弹出框 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/t_round_corner"
+    android:minWidth="300dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:orientation="vertical">
+        <!-- 标题 -->
+        <RelativeLayout
+            android:id="@+id/dialog_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="这是标题"
+                android:textColor="#ff000000"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <!-- 水平分割线-->
+        </RelativeLayout>
+
+        <!-- 内容 -->
+
+        <ScrollView
+            android:id="@+id/dialog_content_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dialog_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:ignore="ContentDescription"/>
+
+                <TextView
+                    android:id="@+id/dialog_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/colorText_ff000000"
+                    android:textSize="14sp"/>
+
+            </FrameLayout>
+        </ScrollView>
+
+        <!--单行提示-->
+
+        <TextView
+            android:id="@+id/dialog_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black_8"/>
+        <!-- 确定按钮 -->
+        <com.coocaa.publib.views.STextView
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="@string/t_confirm"
+            android:textColor="#188CFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 双按钮 -->
+    <LinearLayout
+        android:id="@+id/doubleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- left btn-->
+        <com.coocaa.publib.views.STextView
+            android:id="@+id/btnL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="14dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="@string/t_cancel"
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black_8"/>
+        <!-- right btn-->
+        <com.coocaa.publib.views.STextView
+            android:id="@+id/btnR"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="14dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="@string/t_confirm"
+            android:textColor="#188CFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

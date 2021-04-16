@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fff2f2f2"
+    android:fitsSystemWindows="true">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:common_title_title="修改地址"
+        app:common_title_right_text="保存"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        android:paddingStart="@dimen/activity_margin_start"
+        android:paddingEnd="@dimen/activity_margin_end"
+        android:background="@drawable/mall_card_bg">
+
+        <com.coocaa.tvpi.module.mall.view.AddressItemView
+            android:id="@+id/addressItemName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:address_item_name="收货人："
+            app:address_item_hint_text="填写收货人姓名"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_black_a5"/>
+
+        <com.coocaa.tvpi.module.mall.view.AddressItemView
+            android:id="@+id/addressItemPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:address_item_name="手机号："
+            app:address_item_hint_text="填写收货人手机号"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_black_a5"/>
+
+        <com.coocaa.tvpi.module.mall.view.AddressItemView
+            android:id="@+id/addressItemArea"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:address_item_name="所在地区："
+            app:address_item_hint_text="省份、城市、区县"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_black_a5"/>
+
+        <com.coocaa.tvpi.module.mall.view.AddressItemView
+            android:id="@+id/addressItemAreaDesc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:address_item_name="详细地址："
+            app:address_item_hint_text="如街道、小区、楼栋、门牌号等"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/mall_card_bg"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        android:paddingStart="@dimen/activity_margin_start"
+        android:paddingEnd="@dimen/activity_margin_end"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="设为默认地址"
+            android:textSize="@dimen/font_14"
+            android:textColor="@color/color_black" />
+
+        <Switch
+            android:id="@+id/defaultSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/mall_switch_thumb_bg"
+            android:track="@drawable/mall_switch_track_selector"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="删除该地址"
+        android:textColor="@color/color_red"
+        android:textSize="@dimen/font_14"
+        android:gravity="center"
+        android:background="@drawable/mall_card_bg"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end"/>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="240dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/connectInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner"
+        android:layout_marginTop="-25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_yellow_round_25"
+        android:elevation="20dp"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:drawableStart="@drawable/icon_scan_24"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="连接共享屏"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_16" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvConnectProblem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connectInfoLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:text="连接遇到问题？"
+        android:textColor="@color/color_black_a40"
+        android:textSize="@dimen/font_14"
+        android:textStyle="bold" />
+</RelativeLayout>

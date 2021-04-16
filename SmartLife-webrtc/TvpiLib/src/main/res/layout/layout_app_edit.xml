@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editLayout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/color_white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/selectAllLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivSelectedAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_select_all" />
+
+        <TextView
+            android:id="@+id/tvSelectedAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@id/ivSelectedAll"
+            android:text="全选"
+            android:textColor="@color/color_blue"
+            android:textSize="@dimen/font_16" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="14dp"
+        android:layout_gravity="center"
+        android:background="@color/color_black_a10" />
+
+    <RelativeLayout
+        android:id="@+id/uninstallLayout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivUninstall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_uninstall_all_unable" />
+
+        <TextView
+            android:id="@+id/tvUninstall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@id/ivUninstall"
+            android:focusable="true"
+            android:text="卸载"
+            android:textColor="@color/color_origin_unable"
+            android:textSize="@dimen/font_16" />
+    </RelativeLayout>
+</LinearLayout>
+
+

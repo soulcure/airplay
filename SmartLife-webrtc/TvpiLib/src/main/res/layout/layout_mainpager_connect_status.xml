@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:id="@+id/connectInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:elevation="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/bg_white_round_12">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivDeviceIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/icon_connect_device_logo"
+                app:riv_corner_radius="15dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:progressTint="@color/color_black_a80"
+                android:indeterminateDrawable="@drawable/progressbar_connecting_device"
+                android:indeterminateDuration="1000"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvDeviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="55dp"
+                android:layout_marginEnd="40dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="共享屏"
+                android:textColor="@color/color_black_a80"
+                android:textSize="@dimen/font_15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ivConnectError"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/ivArrow"
+                android:background="@drawable/bg_yellow_ffb03c_round_8"
+                android:gravity="center"
+                android:text="!"
+                android:textStyle="bold"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/font_12"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/icon_homepager_arrow" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/connectScanLayout"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:elevation="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_white_round_12">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:background="@drawable/icon_homepager_scan_black" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/notConnectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_white_round_12"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/icon_homepager_scan_black"
+            android:drawablePadding="10dp"
+            android:text="连接共享屏"
+            android:layout_gravity="center"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_17"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</FrameLayout>

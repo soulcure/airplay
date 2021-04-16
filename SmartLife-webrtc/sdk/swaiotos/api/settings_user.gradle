@@ -1,0 +1,12 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+if (getProjectDir('SmartOpenApi/settings.gradle').exists())
+    apply from: getProjectDir('SmartOpenApi/settings.gradle').absolutePath
+if (getProjectDir('UserApi/settings.gradle').exists())
+    apply from: getProjectDir('UserApi/settings.gradle').absolutePath
+if (getProjectDir('UserCommon/settings.gradle').exists())
+    apply from: getProjectDir('UserCommon/settings.gradle').absolutePath
+if (getProjectDir('ShareOpenApi/settings.gradle').exists())
+    apply from: getProjectDir('ShareOpenApi/settings.gradle').absolutePath

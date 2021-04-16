@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/base_info_root_layout"
+        layout="@layout/item_document_info" />
+
+    <TextView
+        android:id="@+id/delete_btn"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#FF5525"
+        android:gravity="center"
+        android:text="@string/delete_str"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/font_16"/>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

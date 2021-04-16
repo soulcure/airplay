@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/bg_item_contacts">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/yunxin_icon_user_cover_gray"
+        android:layout_centerVertical="true"
+        app:riv_corner_radius="25dp"/>
+
+    <ImageView
+        android:id="@+id/ivOnlineFlag"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/yunxin_icon_flag_contacts_normal"
+        android:layout_alignBottom="@id/ivCover"
+        android:layout_alignEnd="@id/ivCover"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        android:maxEms="7"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text=""
+        android:textColor="@color/c_2"
+        android:textSize="@dimen/s_4"
+        android:layout_toStartOf="@id/ivCheck"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@+id/ivCover"/>
+
+    <TextView
+        android:id="@+id/tvRegisterCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="222"
+        android:textColor="@color/c_4"
+        android:textSize="@dimen/s_2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@id/tvName"/>
+
+
+    <ImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/videocall_multichat_uncheck"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
+
+

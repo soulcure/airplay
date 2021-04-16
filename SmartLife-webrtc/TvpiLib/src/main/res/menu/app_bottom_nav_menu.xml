@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_tvapp"
+        android:icon="@drawable/app_tab_tvapp_selector"
+        android:title="已安装应用" />
+
+    <item
+        android:id="@+id/navigation_store"
+        android:icon="@drawable/app_tab_store_selector"
+        android:title="应用商店" />
+
+</menu>

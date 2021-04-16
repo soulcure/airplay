@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/whiteboard_toolbar_eraser_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="25dp"
+    android:layout_marginTop="77dp"
+    android:background="@drawable/bg_tool_fafafa_round_12"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingTop="40dp"
+    android:paddingBottom="37dp"
+    android:visibility="visible">
+
+    <RadioGroup
+        android:id="@id/whiteboard_toolbar_rg_eraser_size"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="42dp"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_eraser_size_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_eraser_size_1"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_eraser_size_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_eraser_size_2"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_eraser_size_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_eraser_size_3"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_eraser_size_4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_eraser_size_4"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_eraser_size_5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_eraser_size_5"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_eraser_size_6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_eraser_size_6"
+            android:button="@null" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/whiteboard_toolbar_rb_eraser_clear"
+        android:layout_width="267dp"
+        android:layout_height="32dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_tool_fafafa_round_16"
+        android:gravity="center"
+        android:text="擦除全部"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+</LinearLayout>
+

@@ -1,0 +1,40 @@
+//apply from:"iot-channel/settings.gradle"
+
+include ':app', ':TvpiLib', ':SLPubLib', ':VirtualInputLib'
+include ':ShareSDK'
+include ':sanyansdk'
+include ':MallLib'
+include ':checkversionlib'
+
+if (new File("ss_settings.gradle").exists())
+    apply from: "ss_settings.gradle"
+
+if (new File("../superApp/settings.gradle").exists())
+     apply from: "../superApp/settings.gradle"
+else if(new File("sdk/weex_smart_life/cc_settings.gradle").exists())
+   apply from: "sdk/weex_smart_life/cc_settings.gradle"
+
+if(new File("sdk/swaiotos/settings.gradle").exists())
+    apply from: "sdk/swaiotos/settings.gradle"
+
+if(new File("sdk/ss_settings.gradle").exists())
+    apply from: "sdk/ss_settings.gradle"
+
+if(new File("sdk/SmartScreen/ss_settings.gradle").exists())
+    apply from: "sdk/SmartScreen/ss_settings.gradle"
+
+if(new File("sdk/WhiteBoardLibWrapper/ss_settings.gradle").exists())
+    apply from: "sdk/WhiteBoardLibWrapper/ss_settings.gradle"
+
+rootProject.name='SmartLife'
+
+rootProject.children.each { subproject ->
+    new File(subproject.projectDir.path)
+    find_build_file(subproject)
+}
+
+void find_build_file(project) {
+    if(new File(project.projectDir.path, "build_mobile.gradle").exists()) {
+        project.buildFileName = "build_mobile.gradle"
+    }
+}

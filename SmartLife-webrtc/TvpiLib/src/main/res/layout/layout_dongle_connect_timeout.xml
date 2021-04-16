@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dongle_connect_error"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/connect_dongle_connect_error" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="连接超时，请重试"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_26" />
+
+
+    <TextView
+        android:id="@+id/tvWifiName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Wi-Fi：COOCAA-5G"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_16" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvErrorCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="错误码：0x001"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tvErrorMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="错误原因：无法扫描到Wi-Fi"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tvSuggest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="建议：确认Wi-Fi和Dongle在合理距离内（10米内无遮挡）"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btRetry"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_dongle_button"
+        android:text="返回重试"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_16" />
+
+</LinearLayout>

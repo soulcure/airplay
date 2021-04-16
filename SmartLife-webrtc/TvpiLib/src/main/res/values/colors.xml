@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_multivideo_call_bg">#17191C</color>
+    <color name="color_multivideo_call_asf_bg">#333333</color>
+    <color name="bg_picture_push">#E6FFFFFF</color>
+
+    <color name="checkout_price">#FF9600</color>
+    <color name="checkout_black">#000000</color>
+</resources>

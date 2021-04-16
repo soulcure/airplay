@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/remote_dialog_layout"
+        android:layout_width="match_parent"
+        android:layout_height="515dp"
+        android:background="@drawable/bg_f0f0f0_top_round_16"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/remote_view_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/global_horizontal_margin_30"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_30"
+            android:layout_marginRight="@dimen/global_horizontal_margin_30"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_30">
+
+            <ImageView
+                android:id="@+id/remote_view_power_off"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/icon_back_black"/>
+
+            <ImageView
+                android:id="@+id/remote_view_more"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_back_black"/>
+
+            <LinearLayout
+                android:id="@+id/remote_view_volume_up_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/remote_view_volume_down"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/icon_back_black" />
+                <TextView
+                    android:id="@+id/remote_view_volume_up"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/icon_back_black" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/remote_view_center_layout"
+            android:layout_below="@id/remote_view_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_20">
+
+            <RelativeLayout
+                android:id="@+id/remote_view_key_mode_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/remote_view_direction_iv"
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:background="@drawable/icon_back_black"/>
+                <ImageView
+                    android:id="@+id/remote_view_center"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:background="@drawable/icon_back_black"/>
+            </RelativeLayout>
+
+            <com.coocaa.swaiotos.virtualinput.module.view.xdefault.RemoteTouchView
+                android:id="@+id/remote_view_touch_mode_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/remote_view_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remote_view_center_layout"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginRight="@dimen/global_horizontal_margin_20"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_20">
+
+            <ImageView
+                android:id="@+id/remote_view_home"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/icon_back_black"/>
+
+            <ImageView
+                android:id="@+id/remote_view_back"
+                android:layout_width="142dp"
+                android:layout_height="56dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:background="@drawable/icon_back_black"/>
+
+            <ImageView
+                android:id="@+id/remote_view_settings"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_back_black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/remote_view_color_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remote_view_bottom_layout"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginRight="@dimen/global_horizontal_margin_20"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/remote_view_color_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/icon_back_black"/>
+
+            <ImageView
+                android:id="@+id/remote_view_color_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:background="@drawable/icon_back_black"/>
+
+            <ImageView
+                android:id="@+id/remote_view_color_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_back_black"/>
+
+        </RelativeLayout>
+
+        <com.coocaa.swaiotos.virtualinput.module.view.xdefault.RemoteMoreTipsView
+            android:id="@+id/remote_more_tips_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"/>
+
+        <com.coocaa.swaiotos.virtualinput.module.view.xdefault.PowerOffView
+            android:id="@+id/remote_view_power_off_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_dialog_height"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <com.coocaa.swaiotos.virtualinput.module.view.xdefault.RemoteMoreView
+        android:id="@+id/remote_view_more_view"
+        android:layout_width="match_parent"
+        android:layout_height="581dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

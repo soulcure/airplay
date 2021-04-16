@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/normal_actionbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/b_1">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/b_1"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/title_btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/actionbar_click_selector"
+            android:clickable="true">
+
+            <!--UI反馈，返回按钮偏大。。。-->
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+                android:background="@drawable/icon_back_black"
+                android:clickable="false"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:layout_centerInParent="true"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/c_1"
+            android:textSize="@dimen/s_5" />
+
+        <!--去掉这里的   android:layout_weight="1"，否则不居中显示-->
+        <TextView
+            android:id="@+id/title_btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:background="@drawable/actionbar_click_selector"
+            android:ellipsize="marquee"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/s_4"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

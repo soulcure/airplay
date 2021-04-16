@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="182dp"
+    android:background="#fff8f8f8">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCover"
+        android:layout_width="108dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginTop="15dp"
+        app:riv_corner_radius="6dp"/>
+
+    <ImageView
+        android:id="@+id/ivVipFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivCover"
+        android:layout_alignEnd="@id/ivCover"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/ivCover"
+        android:layout_alignBottom="@id/ivCover"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="6dp"
+        android:text="8.2分"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_12" />
+
+
+    <LinearLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/ivCover"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="@dimen/activity_margin_end"
+            android:singleLine="true"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_18" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_black_a50"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tvDirector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_black_a50"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tvActor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="@dimen/activity_margin_end"
+            android:singleLine="true"
+            android:textColor="@color/color_black_a50"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/tvTags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_black_a50"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/infoLayout"
+        android:layout_alignBottom="@id/ivCover"
+        android:src="@drawable/movie_collect_gray" />
+
+
+    <ImageView
+        android:id="@+id/ivPushToTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivCollection"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        android:layout_toEndOf="@id/ivCollection"
+        android:src="@drawable/movie_push_to_tv" />
+
+</RelativeLayout>

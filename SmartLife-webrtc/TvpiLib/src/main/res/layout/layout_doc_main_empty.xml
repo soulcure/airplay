@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/icon_arrow"
+        android:layout_width="70dp"
+        android:layout_height="110dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="46dp"
+        android:background="@drawable/doc_empty_curve_arrow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_arrow"
+        android:layout_centerHorizontal="true"
+        android:text="暂未共享过文档，点击这里快速添加"
+        android:textColor="@color/c_1"
+        android:textSize="@dimen/font_14"
+        android:textStyle="bold" />
+
+</RelativeLayout>

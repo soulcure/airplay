@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="204dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_f4f4f4_round_16">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入商家密码"
+            android:textSize="@dimen/font_18"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/color_black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="为防止共享屏被恶意设置，请输入密码"
+            android:textSize="@dimen/font_14"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_black_a80" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/subtitle"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_white_round_8"
+            android:hint="输入密码"
+            android:paddingHorizontal="16dp"
+            android:inputType="number"
+            android:textSize="@dimen/font_16"
+            android:textColorHint="@color/color_black_a20"
+            android:textCursorDrawable="@drawable/common_edittext_cursor_shape"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_black_a10"
+            android:layout_above="@id/operate_layout"/>
+
+        <LinearLayout
+            android:id="@+id/operate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="取消"
+                android:gravity="center"
+                android:textSize="@dimen/font_16"
+                android:textColor="@color/color_black_a80"
+                android:layout_gravity="center"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_black_a10" />
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="确定"
+                android:textSize="@dimen/font_16"
+                android:textColor="@drawable/selector_text_yellow"
+                android:enabled="false"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_width">94dp</dimen>
+    <dimen name="toolbar_padding_start">34dp</dimen>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_white_round_18"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:text="Wi-Fi连接失败"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="密码已复制，去设置里连接"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <com.coocaa.publib.views.STextView
+                android:id="@+id/bt_cancel"
+                android:layout_width="0dip"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_white_round_8_stoke_black"
+                android:gravity="center"
+                android:padding="12dip"
+                android:singleLine="true"
+                android:text="取消连接"
+                android:textColor="@color/color_black_a60"
+                android:textSize="16sp" />
+
+
+            <com.coocaa.publib.views.STextView
+                android:id="@+id/bt_agree"
+                android:layout_width="0dip"
+                android:layout_height="46dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_yellow_round_8"
+                android:gravity="center"
+                android:padding="12dip"
+                android:text="去连接"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

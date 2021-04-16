@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_mirror_activity" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="104dp"
+        android:text="实时批注"
+        android:textColor="@color/color_black_a80"
+        android:textSize="@dimen/font_28"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="用手机对电视画面进行实时批注"
+        android:textColor="@color/color_black_a40"
+        android:textSize="@dimen/font_14" />
+
+    <ImageView
+        android:layout_width="308dp"
+        android:layout_height="234dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="245dp"
+        android:src="@drawable/note_mark_default_tip" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="60dp">
+
+        <LinearLayout
+            android:id="@+id/layout_open_note_mark"
+            android:layout_width="324dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_blue_round_12"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/progressbar_open_note_mark"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:indeterminateDrawable="@drawable/progressbar_opening_whiteboard"
+                android:indeterminateDuration="1000"
+                android:progressTint="@color/color_black_a80"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_open_note_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="打开实时批注"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+</RelativeLayout>

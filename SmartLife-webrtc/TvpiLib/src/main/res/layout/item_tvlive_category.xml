@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="86dp"
+    android:layout_height="54dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/item_tvlive_channel_collect_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tv_live_category_collect_focus"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/item_tvlive_channel_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:layout_marginLeft="5dp"
+        android:maxLines="1"
+        android:text="央视"
+        android:textColor="@color/c_2"
+        android:textSize="@dimen/s_3" />
+
+</LinearLayout>

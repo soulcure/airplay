@@ -1,0 +1,6 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+include ':UserApi'
+project(':UserApi').projectDir = getProjectDir(".")

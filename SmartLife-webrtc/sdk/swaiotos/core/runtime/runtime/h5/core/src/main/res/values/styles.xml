@@ -1,0 +1,13 @@
+<resources>
+    <style name="Theme.H5FloatNP" parent="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="Theme.H5FloatNP.LandScape" parent="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/local_activity_layout_root"
+    android:background="@color/fff2f2f2">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:common_title_title="本地共享"/>
+
+    <RelativeLayout
+        android:id="@+id/local_picture_rl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/titleBar"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+        android:layout_marginTop="@dimen/global_horizontal_margin_10"
+        android:layout_marginRight="@dimen/global_horizontal_margin_15"
+        android:background="@drawable/bg_b_1_round_8">
+
+        <ImageView
+            android:id="@+id/local_picture_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+            android:layout_marginRight="@dimen/global_horizontal_margin_15"
+            android:background="@drawable/local_icon_picture" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/local_picture_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本地图片"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/local_picture_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black_40"
+                android:textSize="@dimen/font_14" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/global_horizontal_margin_15"
+            android:background="@drawable/local_icon_right_arrow" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/local_video_rl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/local_picture_rl"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+        android:layout_marginTop="@dimen/global_horizontal_margin_10"
+        android:layout_marginRight="@dimen/global_horizontal_margin_15"
+        android:background="@drawable/bg_b_1_round_8">
+
+        <ImageView
+            android:id="@+id/local_video_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+            android:layout_marginRight="@dimen/global_horizontal_margin_15"
+            android:background="@drawable/local_icon_video" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/local_video_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本地视频"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/local_video_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black_40"
+                android:textSize="@dimen/font_14" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/global_horizontal_margin_15"
+            android:background="@drawable/local_icon_right_arrow" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/local_music_rl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/local_video_rl"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+        android:layout_marginTop="@dimen/global_horizontal_margin_10"
+        android:layout_marginRight="@dimen/global_horizontal_margin_15"
+        android:background="@drawable/bg_b_1_round_8">
+
+        <ImageView
+            android:id="@+id/local_music_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+            android:layout_marginRight="@dimen/global_horizontal_margin_15"
+            android:background="@drawable/local_icon_music" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/local_music_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本地音乐"
+                android:textColor="@color/black_80"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/local_music_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black_40"
+                android:textSize="@dimen/font_14" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/global_horizontal_margin_15"
+            android:background="@drawable/local_icon_right_arrow" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

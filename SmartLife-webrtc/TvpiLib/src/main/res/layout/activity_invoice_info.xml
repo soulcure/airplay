@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fff2f2f2"
+    android:fitsSystemWindows="true">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:common_title_title="发票信息"
+        app:common_title_right_text="保存"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mall_card_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发票类型"
+            android:textSize="@dimen/font_14"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/color_black_a40"/>
+
+        <TextView
+            android:id="@+id/tvInvoiceType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通发票-个人"
+            android:textColor="@color/color_black"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_black_a5"
+            android:layout_below="@id/tvInvoiceType"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:textColor="@color/color_black_a40"
+            android:textSize="@dimen/font_12"
+            android:layout_marginStart="@dimen/activity_margin_start"
+            android:layout_marginEnd="@dimen/activity_margin_end"
+            android:text="Swaiot商品开具纸质普通发票，同商品一起寄出。其他商品开具电子普通发票，与纸质普通发票具备同等法律效力，订单完成后凭收货手机号或订单号在网站“http://fapiao.coocaa.com/ ”中查看"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@drawable/mall_card_bg"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抬头类型"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/color_black_a40"
+            android:textSize="@dimen/font_14"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentEnd="true">
+            <RadioButton
+                android:id="@+id/rbPersonally"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人"
+                android:button="@null"
+                android:checked="true"
+                android:background="@color/transparent"
+                android:drawableStart="@drawable/mall_pay_check_selector"
+                android:textColor="@drawable/mall_text_selector"
+                android:drawablePadding="5dp"/>
+
+            <RadioButton
+                android:id="@+id/rbCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:button="@null"
+                android:background="@color/transparent"
+                android:drawableStart="@drawable/mall_pay_check_selector"
+                android:textColor="@drawable/mall_text_selector"
+                android:drawablePadding="5dp"
+                android:text="单位"/>
+        </RadioGroup>
+            
+        <LinearLayout
+            android:id="@+id/companyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroup"
+            android:orientation="vertical"
+            android:visibility="gone">
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_black_a5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_black_a40"
+                    android:textSize="@dimen/font_14"
+                    android:text="发票抬头"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etInvoiceTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/color_black_a20"
+                    android:textSize="@dimen/font_14"
+                    android:textColor="@color/color_black"
+                    android:gravity="end|center_vertical"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:hint="单位名称"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/mall_edittext_cursor_shape"
+                    android:inputType="text"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_black_a5"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_black_a40"
+                    android:textSize="@dimen/font_14"
+                    android:text="税号"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etInvoiceNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/color_black_a20"
+                    android:textSize="@dimen/font_14"
+                    android:textColor="@color/color_black"
+                    android:gravity="end|center_vertical"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:hint="纳税人识别号"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@drawable/mall_edittext_cursor_shape"
+                    android:inputType="text"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        
+    </RelativeLayout>
+   
+</LinearLayout>

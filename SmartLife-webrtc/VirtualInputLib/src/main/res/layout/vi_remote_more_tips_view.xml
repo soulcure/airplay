@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/remote_more_tips_rl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/global_dialog_height"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:gravity="right">
+
+    <View
+        android:id="@+id/remote_more_tips"
+        android:layout_width="232dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/remote_more_tips_bg"
+        android:alpha="0">
+    </View>
+
+</RelativeLayout>

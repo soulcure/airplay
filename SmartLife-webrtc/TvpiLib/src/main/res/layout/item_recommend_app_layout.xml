@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+                android:layout_height="@dimen/app_list_item_height"
+                android:background="@color/b_2"
+                android:paddingLeft="@dimen/global_horizontal_margin_20">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/im_recommend_app_item_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="12dp"
+        android:src="@drawable/bg_b_3_round_13"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+        android:layout_toRightOf="@+id/im_recommend_app_item_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_recommend_app_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center_vertical"
+            android:minWidth="100dp"
+            android:textColor="@color/c_1"
+            android:textSize="@dimen/s_5">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_recommend_app_item_size"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:minWidth="100dp"
+            android:textColor="@color/c_3"
+            android:textSize="@dimen/s_3">
+
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bt_recommend_app_item_state"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:background="@drawable/app_state_button_bg"
+        android:gravity="center"
+        android:text="安装"
+        android:textSize="@dimen/s_3"
+        android:textColor="@color/color_main_red"/>
+
+    <LinearLayout
+        android:id="@+id/ll_recommend_app_item_progress"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/bg_b_5_round_50"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/progressbar_white_circle"
+            android:indeterminateDuration="1000"/>
+    </LinearLayout>
+
+</RelativeLayout>

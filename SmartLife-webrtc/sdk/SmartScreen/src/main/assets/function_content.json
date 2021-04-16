@@ -1,0 +1,85 @@
+{
+    "code": 0,
+    "data": {
+        "content": [
+            {
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_connect_wifi.png",
+                "id": "com.coocaa.smart.connectwifi",
+                "name": "一键连Wi-Fi",
+                "target": "index",
+                "type": "np",
+            },
+            {
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_qifen.png",
+                "id": "webapp.skyworthiot.com",
+                "name": "气氛",
+                "runtime": {
+                    "RUNTIME_NAV_KEY": "RUNTIME_NAV_TOP"
+                },
+                "target": "atmosphere/h5/index.html",
+                "type": "https"
+            },
+            {
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/1604921081ic_danmu.png",
+                "id": "webapp.skyworthiot.com",
+                "name": "弹幕",
+                "runtime": {
+                    "RUNTIME_NAV_KEY": "RUNTIME_NAV_TOP"
+                },
+                "target": "barrage/h5/index.html",
+                "type": "https"
+            },
+            {
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_local_picture.png",
+                "id": "com.coocaa.smart.localpicture",
+                "name": "照片共享",
+                "target": "index",
+                "type": "np"
+            },
+            {
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_local_movie.png",
+                "id": "com.coocaa.smart.localvideo",
+                "name": "视频共享",
+                "target": "index",
+                "type": "np"
+            },
+            {
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_local_doc.png",
+                "id": "com.coocaa.smart.localdoc_guide",
+                "name": "文档共享",
+                "target": "index",
+                "type": "np"
+            },
+            {
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_live.png",
+                "id": "com.coocaa.smart.live",
+                "name": "看直播",
+                "target": "index",
+                "type": "np"
+            },
+            {
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_comic.png",
+                "id": "com.coocaa.smart.comic",
+                "name": "看动画",
+                "params": {
+                    "classify_id": "_oqy_4",
+                    "source": "iqiyi"
+                },
+                "target": "index",
+                "type": "np"
+            },
+            {
+                "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_movie.png",
+                "id": "com.coocaa.smart.moviehome",
+                "name": "看影视",
+                "params": {
+                    "source": "iqiyi"
+                },
+                "target": "index",
+                "type": "np"
+            }
+        ],
+        "version": "1"
+    },
+    "msg": "成功"
+}

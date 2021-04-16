@@ -1,0 +1,23 @@
+[
+  {
+    "icon": "https://tv.doubimeizhi.com/images/dongle/app/ic_local_picture.png",
+    "id": "com.coocaa.smart.mirror",
+    "name": "屏幕镜像",
+    "target": "index",
+    "type": "np"
+  },
+  {
+    "icon": "file:///android_asset/img/lab_old_remote.png",
+    "id": "com.coocaa.smart.virtualinput",
+    "name": "按键遥控",
+    "target": "index",
+    "type": "np"
+  },
+  {
+    "icon": "file:///android_asset/img/function_wifi_test.png",
+    "id": "com.coocaa.smart.networktest",
+    "name": "网络检测",
+    "target": "index",
+    "type": "np"
+  }
+]

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/mainPagerLayout"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivMainPager"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/selector_home_tab_mainpager"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/tvMainPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="首页"
+            android:textSize="@dimen/font_10"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"
+            android:textColor="@drawable/main_tab_text_selector"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivScan"
+        android:layout_width="84dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/icon_home_bottom_scan"/>
+
+    <LinearLayout
+        android:id="@+id/discoverLayout"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivDiscover"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/selector_home_tab_discovery"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/tvDiscover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发现"
+            android:textSize="@dimen/font_10"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"
+            android:textColor="@drawable/main_tab_text_selector"/>
+    </LinearLayout>
+
+</LinearLayout>

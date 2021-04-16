@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+        android:layout_marginRight="@dimen/global_horizontal_margin_10"
+        android:layout_marginBottom="@dimen/global_horizontal_margin_10">
+
+        <RelativeLayout
+            android:id="@+id/content_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_round_12_white_alpha10"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/btn_stop"
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+                android:background="@drawable/bg_round_25_white_alpha10"
+                android:gravity="center"
+                android:text="结束分享"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+
+            <RelativeLayout
+                android:id="@+id/content_one_left_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/btn_stop">
+
+                <ImageView
+                    android:id="@+id/img_type_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                    android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/remote_pager_default_type_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_type_icon"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_15" />
+
+                    <TextView
+                        android:id="@+id/tv_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="@color/color_white_40"
+                        android:textSize="@dimen/font_12" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/content_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_round_12_white_alpha10"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="145dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_round_25_white_alpha10"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:id="@+id/btn_stop_paly"
+                android:layout_width="145dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/btn_cancel"
+                android:background="@drawable/bg_btn_red_round_20"
+                android:gravity="center"
+                android:text="结束播放"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

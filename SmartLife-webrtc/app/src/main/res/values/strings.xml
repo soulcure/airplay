@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">共享屏</string>
+
+    <string name="tab_smart_screen" >智屏</string>
+    <string name="tab_smart_family" >智家</string>
+    <string name="tab_voice" >小维</string>
+    <string name="tab_discover" >发现</string>
+    <string name="tab_mine" >我的</string>
+</resources>

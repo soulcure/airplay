@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_main_bg"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+  <!--  http://jira.skyoss.com/browse/ZHP-395-->
+ <!--   <View
+        android:id="@+id/padding_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/white"/>-->
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:common_title_right_text="关闭"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="1000"
+            android:progress="0"
+            android:progressDrawable="@drawable/bar_web_loading"
+            android:secondaryProgress="0"
+            android:visibility="visible"/>
+
+        <ProgressBar
+            android:id="@+id/circle_progress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"/>
+
+        <ViewStub
+            android:id="@+id/error_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/state_web_load_fail"/>
+    </RelativeLayout>
+</LinearLayout>

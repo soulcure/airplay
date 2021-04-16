@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_mirror_activity"/>
+
+    <TextView
+        android:id="@+id/tv_mirror_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="104dp"
+        android:text="手机镜像"
+        android:textColor="@color/black_80"
+        android:textSize="28sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_mirror_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="将手机画面实时分享到共享屏"
+        android:textColor="@color/black_40"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/mirror_off_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/bg_mirror_off"/>
+
+    <ImageView
+        android:id="@+id/mirror_on_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/bg_mirror_on"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/mirror_switch_layout"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/mirror_off_img"
+        android:layout_marginTop="63dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_blue_round_12">
+
+        <ProgressBar
+            android:id="@+id/mirror_loading_progressbar"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:indeterminateDrawable="@drawable/progressbar_mirror_loading"
+            android:indeterminateDuration="1000" />
+
+        <TextView
+            android:id="@+id/tv_mirror_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开手机镜像"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

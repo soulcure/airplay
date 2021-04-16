@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/common_title_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        android:text="@string/yunxin_add_contacts"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"/>
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        style="@style/common_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/yunxin_add_contacts_desc"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"/>
+
+
+    <com.coocaa.tvpi.view.DeletableEditText
+        android:id="@+id/etRegisterCode"
+        style="@style/videocall_add_edittext"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubTitle"
+        android:inputType="phone"
+        android:hint="@string/yunxin_input_phone_number"/>
+
+
+    <com.coocaa.tvpi.view.DeletableEditText
+        android:id="@+id/etNickname"
+        style="@style/videocall_add_edittext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegisterCode"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:maxLength="7"
+        android:hint="@string/yunxin_input_nickname"
+        android:layout_marginTop="20dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNickname"/>
+
+
+    <com.coocaa.tvpi.view.LoadingButton
+        android:id="@+id/sendButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvNickname"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        app:loading_button_background_unfocus="@drawable/bg_b_11_round_6"
+        app:loading_button_background="@drawable/bg_b_10_round_6"
+        app:loading_button_text="@string/yunxin_send_add_contacts" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

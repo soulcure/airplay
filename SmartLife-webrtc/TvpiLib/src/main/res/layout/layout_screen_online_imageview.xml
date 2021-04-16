@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_reverse_screen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="3dp"
+    android:paddingStart="3dp"
+    android:paddingEnd="3dp"
+    android:paddingBottom="8dp">
+
+    <com.coocaa.tvpi.module.homepager.view.ReverseScreenImageView
+        android:id="@+id/iv_revers_screen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,339:191"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerInside" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <style name="Theme.FloatRemote" parent="Theme.AppCompat">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/black_60</item>
+    </style>
+    <style name="Theme.FloatDotGuide" parent="AppTheme.NoActionBar.Fullscreen.translucent">
+        <item name="android:navigationBarColor">@color/black_80</item>
+    </style>
+    <style name="Theme.ConnectDialogActivity" parent="Theme.DialogActivity">
+        <item name="android:navigationBarColor">@color/transparent</item>
+    </style>
+</resources>

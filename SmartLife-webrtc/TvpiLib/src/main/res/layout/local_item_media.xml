@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/b_2">
+
+    <RelativeLayout
+        android:src="@color/b_3"
+        app:layout_aspectRatio="100%"
+        app:layout_widthPercent="100%">
+
+        <ImageView
+            android:id="@+id/item_video_poster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/b_3" />
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_local_video_shape"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/local_video_flag" />
+
+            <TextView
+                android:id="@+id/item_video_play_length"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:gravity="right|center_vertical"
+                android:paddingRight="@dimen/global_horizontal_margin_5"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/check_view"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/checkbox"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/local_media_check_selector" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

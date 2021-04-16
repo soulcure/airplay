@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="applet_anim_duration">300</integer><!-- 动画间隔-->
+</resources>

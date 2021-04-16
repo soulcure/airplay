@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_mirror_activity"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="104dp"
+        android:text="多人画板"
+        android:textColor="@color/color_black_a80"
+        android:textSize="@dimen/font_28"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="把电视变成画板，用手机轻松写画"
+        android:textColor="@color/color_black_a40"
+        android:textSize="@dimen/font_14" />
+
+    <ImageView
+        android:layout_width="308dp"
+        android:layout_height="234dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="245dp"
+        android:src="@drawable/whiteboard_default_tip" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="60dp">
+
+        <LinearLayout
+            android:id="@+id/layout_open_whiteboard"
+            android:layout_width="335dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_blue_round_12"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/progressbar_open_whiteboard"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:indeterminateDrawable="@drawable/progressbar_opening_whiteboard"
+                android:indeterminateDuration="1000"
+                android:progressTint="@color/color_black_a80"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_open_whiteboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="打开电视画板"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_join_whiteboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/image_join_whiteboard_avatar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/whitebroard_icon_avatar"
+                    app:riv_corner_radius="12dp" />
+
+                <TextView
+                    android:id="@+id/text_join_whiteboard_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Nagi正在分享画板"
+                    android:textColor="@color/color_black_a80"
+                    android:textSize="@dimen/font_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_btn_join_whiteboard"
+                android:layout_width="335dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_blue_round_12"
+                android:clickable="true"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/progressbar_join_whiteboard"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:indeterminateDrawable="@drawable/progressbar_opening_whiteboard"
+                    android:indeterminateDuration="1000"
+                    android:progressTint="@color/color_black_a80"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_join_whiteboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="打开多人画板"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_continue_or_new_canvas_whiteboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/layout_continue_whiteboard"
+                android:layout_width="335dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_blue_round_12"
+                android:clickable="true"
+                android:gravity="center">
+
+                <ProgressBar
+                    android:id="@+id/progressbar_continue_whiteboard"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:indeterminateDrawable="@drawable/progressbar_opening_whiteboard"
+                    android:indeterminateDuration="1000"
+                    android:progressTint="@color/color_black_a80"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_continue_whiteboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="继续编辑上次的画板"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_new_canvas_whiteboard"
+                android:layout_width="335dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_f4f4f4_round_12"
+                android:clickable="true"
+                android:gravity="center">
+
+                <ProgressBar
+                    android:id="@+id/progress_new_canvas_whiteboard"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:indeterminateDrawable="@drawable/progressbar_opening_whiteboard"
+                    android:indeterminateDuration="1000"
+                    android:progressTint="@color/color_black_a80"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_new_canvas_whiteboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="新建画板（将删除原画板）"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

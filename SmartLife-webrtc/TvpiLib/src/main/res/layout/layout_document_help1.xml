@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未找到你的文档？可能原因如下："
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="1. 如果是微信，QQ等APP中接收的文档，需要下载后才能查到"
+        android:textColor="@color/color_black_a60"
+        android:textSize="@dimen/font_14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="2.为了速度更快，我们只查找了一些常用目录，未查找整个手机"
+        android:textColor="@color/color_black_a60"
+        android:textSize="@dimen/font_14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="解决方案："
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_18"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_white_round_12"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="方法一"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="从文件管理器打开你的文档，点击【编辑】，选择文件后点击【复制】，进入documents路径下，点击【粘贴】，然后再次【扫描文档】即可"
+            android:textColor="@color/color_black_a50"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/bt_play_video_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_blue_round_16"
+            android:paddingLeft="14dp"
+            android:paddingTop="8dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="7dp"
+            android:text="查看视频教程"
+            android:textColor="#286FFF"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_white_round_12"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="方法二"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="打开你的文档，选择用其他应用打开，选择【共享屏】"
+            android:textColor="@color/color_black_a50"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/bt_play_video_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_blue_round_16"
+            android:paddingLeft="14dp"
+            android:paddingTop="8dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="7dp"
+            android:text="查看视频教程"
+            android:textColor="#286FFF"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+</LinearLayout>

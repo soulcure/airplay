@@ -1,0 +1,135 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion BUILDTOOLS_VERSION
+
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+
+        ndk {
+            abiFilters "armeabi-v7a"  //保留一种架构的CPU
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    //解决云信sdk问题
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs project(':sanyansdk').file('libs')
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['*.aar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.android.support:percent:27.1.1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.github.yhaolpz:FloatWindow:1.0.9'
+
+    //数据分析
+    implementation 'com.umeng.sdk:common:latest.integration'
+    implementation 'com.umeng.sdk:analytics:latest.integration'
+    //图片
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+    //圆角图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //解决Glide找不到Android声明库问题
+    //    annotationProcessor 'androidx.annotation:annotation:1.1.0'
+    implementation('com.airbnb.android:lottie:3.4.0')
+    api 'com.liaoinstan.springview:library:1.3.0'
+    implementation 'com.youth.banner:banner:2.1.0'
+    implementation('me.drakeet.multitype:multitype:3.3.1')
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.30"
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.1'      //核心必须依赖
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.lyft:scissors:1.1.1'
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+
+    //tbs
+    implementation 'com.tencent.tbs.tbssdk:sdk:43939'
+
+    implementation project(':SLPubLib')
+    //meizu push
+    implementation 'com.meizu.flyme.internet:push-internal:3.6.3@aar'
+    implementation 'androidx.palette:palette:1.0.0'
+
+    api project(':sanyansdk')
+//    implementation project(':ZXingLiteLib')
+    api project(':SmartScreen')
+    api project(':SmartOpenApi')
+    api project(':ShareOpenApi')
+
+    implementation project(':VirtualInputLib')
+    implementation project(':swaiotos'), {
+        exclude module: 'okhttp'
+    }
+    implementation files('libs/svs_device_sdk-1.5.aar')
+
+    implementation project(path: ':checkversionlib')
+//    implementation 'com.allenliu.versionchecklib:library:2.0.3'
+//    implementation 'com.github.AlexLiuSheng:CheckVersionLib:2.4_androidx'
+
+    implementation project(':UserCommon')
+
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.8'
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.8'
+    api "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+
+
+    implementation 'org.webrtc:google-webrtc:1.0.32006'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.qiyukf.unicorn:unicorn:+'
+
+    implementation project(':WhiteBoardLib')
+    implementation project(':WhiteBoardUILib')
+    implementation project(':SVGLib')
+
+    def room_version = "2.2.6"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+}

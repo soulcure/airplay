@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="60dp"
+    android:layout_height="83dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
+        app:riv_corner_radius="30dp"/>
+
+    <ImageView
+        android:id="@+id/iv_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/iv_cover"
+        android:layout_alignBottom="@id/iv_cover"/>
+
+    <TextView
+        android:id="@+id/iv_contacts_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorText_cc000000"
+        android:layout_below="@id/iv_cover"
+        android:layout_alignStart="@id/iv_cover"
+        android:layout_alignEnd="@id/iv_cover"/>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+//后台接口返回错误
+    LOGIN_ERROR(1000, "Token失效,请重新登录"),
+    SYSTEM_ERROR(1001, "系统错误"),
+    INVALID_INPUT_PARAMS(1002, "参数错误：%s"),
+    NO_SUCH_ENTITY(1003, "没有找到对象"),
+    NO_SUCH_ENTITY_ERROR(1004, "%s"),
+    NETWORK_ERROR(1005, "网络错误,%s"),
+    PARAMETER_REQUIRED_WHAT(10006, "缺少参数: %s"),
+    SYSTEM_CONFIG_ERROR(1006, "系统配置错误：%s"),
+    ILLEGAL_REQUEST(10012, "非法请求"),
+    QUERY_THIRD_INT_ERROR(5001, "请第三方接口失败：%s"),
+    API_INTERFACE_SHUTDOWN(9001, "接口已经停止服务"),
+    API_INTERFACE_SHUTDOWN_CUSTOMER_INFO(9002, "%s"),
+    ACCOUNT_MOBILE_FORMAT_WRONG(20298, "手机号码格式错误"),
+    ACCOUNT_CAPTCHA_TOO_MANY(20220, "验证码发送过于频繁,请于24小时后重试！"),
+    ACCOUNT_CAPTCHA_DENIED(20221, "请在%s秒后重新获取"),
+    IP_EXCEED_LIMIT(20223, "设备访问超限，请输入图片验证码"),
+    CODEKEY_AND_CAPCHA_ERROR(20225, "图片验证码错误"),
+    IP_CANNOT_ACCESS(20227, "IP访问受限"),
+    ACCOUNT_PASSWORD_LIMIT(202223, "密码错误次数超限，请24小时后重试"),
+    ACCOUNT_NICK_NAME_DUPLICATE(202091, "已经被%s占用"),
+    ACCOUNT_CAPTCHA_ERROR(20204, "验证码错误,还有%s次验证机会"),
+    ACCOUNT_CAPTCHA_VALIDATE_TO_MANY(20205, "验证码验证过于频繁，请1分钟后重试！"),
+    ACCOUNT_CAPTCHA_VALIDATE_TO_RETURN(20226, "验证码错误，请重新发送验证码！"),
+    ACCOUNT_VALIDATE_CODE_EXPIRED(20205, "验证码失效"),
+    ACCOUNT_USER_FORMAT_WRONG(20299, "账户名格式错误"),
+    SKYAPI_AES_DECRYPT_FAILURE(30001, "AES解密失败"),
+    USER_ADDRESS_SIGN_INVALID(20611, "验签失败"),
+    AUTH_ERROR(300402, "%s"),
+    ERROR_WEIXIN_USER_INFO(900001, "获取微信用户的信息失败"),
+    ACCOUNT_FAIL_GET_THIRD_INFO(20564, "获取第三方账号信息失败，请返回重新登录"),
+    ACCOUNT_USER_NOT_FOUND(20202, "用户未找到"),
+    EXTERNAL_ID_ALREADY_BIND(20566, "此绑定账号已经与其他账号绑定"),
+    AUTH_TYPE_UNSUPPORT(20104, "认证类型不支持"),
+    REFRESH_TOKEN_EXPIRED(20124, "refresh_token 已经失效"),
+    AUTH_TOKEN_ILLEGAL(20122, "非法 token"),
+    ACCOUNT_BIND_EXTERNAL_ID(20562, "此账号已经与其他账号绑定"),
+    ACCOUNT_MOBILE_DUPLICATE_2(20210, "该账号已注册"),
+    ACCOUNT_ALREADY_BINDING_DEVICE(20001, "此账号已经与该设备绑定，请勿重复绑定"),
+    ACCOUNT_BINDINGCODE_VALIDATE_TO_RETURN(20002, "绑定码错误，请重新输入"),
+    ACCOUNT_BINDINGCODE_EXPIRED(20003, "绑定码已失效"),
+    ACCOUNT_BINDINGCODE_BINDING(20004, "该二维码已被绑定"),;
+//请求返回的错误
+    UNKNOW(-1, "UNKNOW"),
+    SocketException(-2, "SocketException"),
+    SocketTimeoutException(-3, "SocketTimeoutException"),
+    RuntimeException(-4, "RuntimeException"),
+    ParseException(-5, "ParseException"),
+    ConnectException(-6, "ConnectException"),
+    ServerRetunNullException(-7, "ServerRetunNullException"),
+    NetworkNotConnected(-8, "NetworkNotConnected");
+//业务异常的错误
+	BUSINESS(-10,"bindcode or accesstoken is null,please check it!")
+	BUSINESS(-11,"set time " + time +" but overtime!")
+	BUSINESS(-12,"submit Interface request successful but on error occurs e:"+e.getMessage())
+	BUSINESS(-13,"submit Interface request result is null")
+	BUSINESS(-14,"re-registration in submit Interface request occurs e:"+e.getMessage())

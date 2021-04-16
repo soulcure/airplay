@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etInputCaptureIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入IP地址" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startScreen"
+        android:text="开始镜像"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="stopScreen"
+        android:text="结束镜像"/>
+
+    <EditText
+        android:id="@+id/etInputPlayerIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入IP地址" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startReverseScreen"
+        android:text="开始反向投屏"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="stopReverseScreen"
+        android:text="结束反向投屏"/>
+
+</LinearLayout>

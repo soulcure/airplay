@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="581dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_f0f0f0_top_round_16">
+
+        <RelativeLayout
+            android:id="@+id/remote_more_top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginTop="@dimen/global_horizontal_margin_20"
+            android:layout_marginRight="@dimen/global_horizontal_margin_20">
+
+            <TextView
+                android:id="@+id/remote_more_mode_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="遥控模式"
+                android:textColor="@color/c_2"
+                android:textSize="@dimen/s_5"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/remote_more_vibrate_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+                android:switchMinWidth="5dp"
+                android:layout_centerVertical="true"
+                android:textOff=""
+                android:textOn=""
+                android:thumb="@drawable/vi_video_thumb"
+                android:track="@drawable/switch_custom_track_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/remote_more_vibrate_switch"
+                android:text="震动反馈"
+                android:textColor="@color/c_2"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/s_4" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/remote_more_mode_content"
+            android:layout_width="match_parent"
+            android:layout_height="238dp"
+            android:layout_below="@id/remote_more_top_rl"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginRight="@dimen/global_horizontal_margin_20"
+            android:layout_marginTop="@dimen/global_horizontal_margin_10"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/remote_more_mode_key_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                android:layout_weight="1"
+                android:foreground="@drawable/remote_more_mode_selector">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/icon_back_black" />
+
+                <TextView
+                    android:id="@+id/remote_more_tv_key_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+                    android:text="按键模式"
+                    android:textColor="@color/c_2"
+                    android:textSize="@dimen/s_3" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/remote_more_mode_touch_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:foreground="@drawable/remote_more_mode_selector">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/icon_back_black" />
+
+                <TextView
+                    android:id="@+id/remote_more_tv_touch_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+                    android:text="手势模式"
+                    android:textColor="@color/c_2"
+                    android:textSize="@dimen/s_3" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/remote_more_source_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remote_more_mode_content"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginTop="@dimen/global_horizontal_margin_20"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+            android:text="信号源"
+            android:textColor="@color/c_2"
+            android:textSize="@dimen/s_5"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/remote_more_tv_source_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/remote_more_source_title">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/remote_more_other_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remote_more_tv_source_recyclerview"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginTop="@dimen/global_horizontal_margin_20"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+            android:text="其他功能"
+            android:textColor="@color/c_2"
+            android:textSize="@dimen/s_5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/remote_more_mute_btn"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/remote_more_other_title"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginRight="@dimen/global_horizontal_margin_10"
+            android:background="@drawable/remote_more_btn_selector"
+            android:gravity="center"
+            android:text="电视静音"
+            android:textColor="@color/c_2"
+            android:textSize="@dimen/s_3"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/remote_more_clear_btn"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/remote_more_other_title"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginRight="@dimen/global_horizontal_margin_10"
+            android:layout_toRightOf="@id/remote_more_mute_btn"
+            android:background="@drawable/remote_more_btn_selector"
+            android:gravity="center"
+            android:text="清理加速"
+            android:textColor="@color/c_2"
+            android:textSize="@dimen/s_3" />
+
+        <LinearLayout
+            android:id="@+id/remote_more_tv_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/c_1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="@color/c_2"
+                android:textSize="@dimen/s_5" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coocaa.tvpi.module.mine.VoiceControllerActivity">
+
+    <View
+        android:id="@+id/bg_voice_controller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@color/black_60"/>
+
+    <RelativeLayout
+        android:background="@drawable/bg_voice_controller"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_gravity="bottom"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_voice_content"
+            android:layout_width="355dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="36dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:text="我在，你说"
+            android:gravity="center"
+            android:textColor="#ff292934"
+            android:maxLines="2"
+            android:ellipsize="start"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_send_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送失败"
+            android:layout_marginTop="122dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:textColor="#ff7c7c8d"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/voice_exit_img"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            android:layout_margin="12dp"
+            android:src="@drawable/icon_voice_controller_exit"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lv_voice_listener_state"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/lv_voice_state"
+            android:layout_marginBottom="35dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_control_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击停止聆听"
+            android:layout_centerHorizontal="true"
+            android:textColor="#4F5EE0"
+            android:textSize="13sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="36dp"/>
+
+        <TextView
+            android:id="@+id/advice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:layout_above="@id/advice_content1"
+            android:text="你可以说"
+            android:visibility="invisible"
+            android:textColor="#ff292934"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/advice_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/advice_content2"
+            android:layout_marginBottom="3dp"
+            android:text="最新的电视剧"
+            android:visibility="invisible"
+            android:textColor="#99000000"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/advice_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_above="@id/advice_content3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
+            android:text="刘德华演的电影"
+            android:visibility="invisible"
+            android:textColor="#ff292934"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/advice_content3"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_above="@id/lv_voice_state"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp"
+            android:text="体育新闻"
+            android:visibility="invisible"
+            android:textColor="#99000000"
+            android:textSize="16sp"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lv_voice_state"
+            android:layout_width="@dimen/global_row_height_60"
+            android:layout_height="@dimen/global_row_height_60"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/tv_control_state"
+            android:background="@drawable/bg_voice_control"
+            android:layout_marginBottom="8dp"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

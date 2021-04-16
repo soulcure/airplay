@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white_main_bg">
+
+    <ImageView
+        android:id="@+id/back_iv"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="44dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/icon_back_black" />
+
+    <TextView
+        android:id="@+id/input_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="智屏码连接"
+        android:textColor="@color/c_1"
+        android:textSize="@dimen/font_24"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/input_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="输入“共享屏”「智屏码」"
+        android:textColor="@color/color_black_a40"
+        android:textSize="@dimen/font_14"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20">
+
+        <EditText
+            android:id="@+id/input_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/global_horizontal_margin_20"
+            android:background="@drawable/bg_white_round_12"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:singleLine="true"
+            android:letterSpacing="0"
+            android:hint="输入智屏码"
+            android:textColorHint="@color/color_black_a20"
+            android:textColor="@color/c_1"
+            android:textCursorDrawable="@drawable/shape_edit_text"
+            android:textSize="@dimen/font_16"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/input_delete_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_edittext_delete"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <com.coocaa.tvpi.view.LoadingButton
+        android:id="@+id/connect_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        app:layout_constraintTop_toBottomOf="@+id/tvAgreementTip"
+        app:loading_button_background="@drawable/bg_loading_button_enable"
+        app:loading_button_background_unfocus="@drawable/bg_loading_button_unable"
+        app:loading_button_text="立即连接"
+        app:loading_button_loading_text="连接中"
+        app:loading_button_textColor="@color/white"
+        app:loading_button_textSize="@dimen/s_4" />
+
+    <!--<RelativeLayout
+        android:id="@+id/rl_connect_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_button_height_50"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:background="@drawable/bg_yellow_round_12_selector"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/btn_connect_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_button_height_50"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="立即连接"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/s_4" />
+
+        <ProgressBar
+            android:id="@+id/active_id_connect_tv_progress"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/progressbar_white_circle"
+            android:indeterminateDuration="1000"
+            android:visibility="gone"/>
+
+    </RelativeLayout>-->
+
+</LinearLayout>

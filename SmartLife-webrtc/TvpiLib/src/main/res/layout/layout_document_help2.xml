@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未找到你的文档？可能原因如下："
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="由于系统限制，我们无法读取到部分手机文档"
+        android:textColor="@color/color_black_a60"
+        android:textSize="@dimen/font_14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_white_round_12"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="解决方案："
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="从其他应用或文件管理器打开你的文档，选择【另存为】，选择documents路径，然后再次【扫描文档】即可"
+            android:textColor="@color/color_black_a50"
+            android:textSize="@dimen/font_14" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bt_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bg_doc_player_btn"
+        android:text="扫描文档"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_17"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+</LinearLayout>

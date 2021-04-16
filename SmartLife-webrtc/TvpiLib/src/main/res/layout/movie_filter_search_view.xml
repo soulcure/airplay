@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@drawable/movie_filter_search_bg"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/movie_filter_scearch_icon" />
+
+    <TextView
+        android:id="@+id/searchTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#66000000"
+        android:textSize="14sp"
+        android:text="请输入片名"/>
+
+</LinearLayout>

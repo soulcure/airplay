@@ -1,0 +1,17 @@
+<resources>
+    <!-- 下载进度条样式 -->
+    <style name="progressBarHorizontal_media" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_horizontal</item>
+        <item name="android:minHeight">5dip</item>
+        <item name="android:maxHeight">5dip</item>
+    </style>
+
+    <style name="Theme.FloatRemote" parent="Theme.DialogActivity">
+    </style>
+    <style name="Theme.FloatDotGuide" parent="AppTheme.NoActionBar.Fullscreen.translucent">
+    </style>
+    <style name="Theme.ConnectDialogActivity" parent="Theme.DialogActivity">
+    </style>
+
+</resources>

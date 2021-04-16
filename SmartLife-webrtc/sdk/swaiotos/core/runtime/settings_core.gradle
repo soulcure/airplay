@@ -1,0 +1,18 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+include ':runtime-service'
+project(':runtime-service').projectDir = getProjectDir("runtime-service")
+
+include ':runtime-base'
+project(':runtime-base').projectDir = getProjectDir("runtime-base")
+
+include ':runtime-np'
+project(':runtime-np').projectDir = getProjectDir("runtime/np/core")
+
+include ':runtime-h5'
+project(':runtime-h5').projectDir = getProjectDir("runtime/h5/core")
+
+
+//apply from: getProjectDir('runtime/mp/settings.gradle').absolutePath

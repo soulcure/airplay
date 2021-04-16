@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/b_2">
+
+    <RelativeLayout
+        android:src="@color/b_3"
+        app:layout_aspectRatio="100%"
+        app:layout_widthPercent="100%">
+
+        <ImageView
+            android:id="@+id/item_video_poster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/b_3" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_local_video_shape"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/item_video_size"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/global_horizontal_margin_5"
+                android:text=""
+                android:textColor="@color/c_6"
+                android:textSize="@dimen/s_2" />
+
+            <TextView
+                android:id="@+id/item_video_play_length"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:gravity="right|center_vertical"
+                android:paddingRight="@dimen/global_horizontal_margin_5"
+                android:text="00:00"
+                android:textColor="@color/c_6"
+                android:textSize="@dimen/s_2" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="circle_progress_gray">#1A000000</color>
+    <color name="circle_progress_orange">#FFFF7D42</color>
+    <color name="black_3A3D4E">#ff3A3D4E</color>
+    <color name="black_475B80">#475B80</color>
+
+    <color name="bg_f4f4f4">#F4F4F4</color>
+
+    <color name="vi_float_bg_color">#FAFFFFFF</color>
+</resources>

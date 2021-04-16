@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="vi_picture_height">453dp</dimen>
+    <dimen name="vi_picture_browser_width">375dp</dimen>
+    <dimen name="vi_picture_browser_height">211dp</dimen>
+    <dimen name="vi_picture_bottom_padding">64dp</dimen>
+    <dimen name="vi_picture_title_height">62dp</dimen>
+
+    <dimen name="vi_common_radius">18dp</dimen>
+    <dimen name="vi_common_bottom_margin">30dp</dimen>
+    <dimen name="vi_common_padding">10dp</dimen>
+    <dimen name="vi_common_height">96dp</dimen>
+    <dimen name="vi_base_content_height">96dp</dimen>
+    <dimen name="vi_common_space">10dp</dimen>
+    <dimen name="vi_guide_btn_width">100dp</dimen>
+</resources>

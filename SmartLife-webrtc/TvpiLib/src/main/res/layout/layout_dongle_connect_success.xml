@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_dongle_connect_success">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/connect_dongle_connect_success"
+        android:layout_marginTop="200dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接成功"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_24"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="试试推送视频、照片或音乐吧"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_16"
+        android:layout_marginTop="6dp"/>
+
+    <Button
+        android:id="@+id/btFinish"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="完成"
+        android:layout_marginTop="40dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/bg_dongle_button"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_16"/>
+</LinearLayout>

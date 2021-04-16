@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/avchat_head"
+            android:background="@drawable/icon_avchat_head"
+            android:layout_centerInParent="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/avchat_head"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/global_horizontal_margin_10"
+            android:text="客厅的电视"
+            android:gravity="center"
+            android:textColor="#ff333333"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:id="@+id/friend_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/name"
+            android:layout_marginTop="@dimen/global_horizontal_margin_5"
+            android:text="55036720"
+            android:textColor="#cc333333"
+            android:textSize="12sp"
+            android:background="@drawable/bg_friend_account"
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/global_horizontal_margin_20"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yunxin_video_call_wait_tip"
+        android:textColor="#ff333333"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/hangup"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_avchat_hangup"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yunxin_video_call_wait_hangup"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_below="@id/hangup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/global_horizontal_margin_10"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/receive"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_avchat_receive"
+                style="?android:attr/borderlessButtonStyle"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yunxin_video_call_wait_receive"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_below="@id/receive"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/global_horizontal_margin_10"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

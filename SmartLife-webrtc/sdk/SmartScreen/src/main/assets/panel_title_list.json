@@ -1,0 +1,14 @@
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+            "content": [
+                {
+                    "name": "68以上版本",
+                    "icon": "https://wx1.sinaimg.cn/mw690/968408a0ly1gjoss8m6ubj20u01hcwqd.jpg",
+                    "id": "6"
+                }
+            ],
+            "version": "1"
+    }
+}

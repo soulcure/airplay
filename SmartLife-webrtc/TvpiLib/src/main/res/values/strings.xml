@@ -1,0 +1,42 @@
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <string name="app_name">共享屏</string>
+    <string name="request_camera_permission_tips">请先设置授权酷开智屏拍照权限</string>
+    <string name="push_screen_success_tips">共享成功</string>
+    <string name="delete_right">移除</string>
+    <string name="loadtips_no_data">内容加载失败</string>
+    <string name="loadtips_no_network">网络异常</string>
+    <string name="delete_doc">移除文档</string>
+    <string name="delete_str">移除</string>
+    <string name="cancel">取消</string>
+    <string name="confirm_delete_doc">确定移除文档？</string>
+    <string name="add_str">添加</string>
+    <string name="confirm_add_doc">确定添加文档？</string>
+
+    <string name="screenshotting">正在截屏</string>
+    <string name="screenshot_success">再截一张</string>
+    <string name="screenshot_fail">重新截屏</string>
+
+    <string name="open_ali_pay">“共享屏”想要打开“支付宝”</string>
+    <string name="confirm_cancel">取消</string>
+    <string name="confirm_ok">打开</string>
+
+    <string name="no_network_title">共享屏未联网</string>
+    <string name="no_network_subtitle">需要先用手机为共享屏联网后才能使用</string>
+    <string name="no_network_confirm" >为共享屏联网</string>
+
+    <string name="no_network_title_no_ble">电视未联网</string>
+    <string name="no_network_subtitle_no_ble">请使用遥控器进入设置，为电视连接网络</string>
+    <string name="no_network_confirm_no_ble" >我知道了</string>
+
+    <string-array name="document_source_name_list">
+        <item>扫描文档</item>
+        <item>手机文件夹</item>
+        <item>微信</item>
+        <item>企业微信</item>
+        <item>钉钉</item>
+        <item>QQ</item>
+    </string-array>
+</resources>

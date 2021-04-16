@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.H5FloatNP" parent="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+<!--        <item name="android:navigationBarColor">#00000000</item>-->
+    </style>
+</resources>

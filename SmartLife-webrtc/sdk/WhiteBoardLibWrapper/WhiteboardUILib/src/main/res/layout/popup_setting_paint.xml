@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/whiteboard_toolbar_paint_layout"
+    android:layout_width="305dp"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="20dp"
+    android:layout_marginStart="25dp"
+    android:background="@drawable/bg_tool_fafafa_round_12"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="40dp"
+    android:visibility="visible"
+    tools:visibility="visible">
+
+    <RadioGroup
+        android:id="@id/whiteboard_toolbar_rg_paint_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_red"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_paint_color_red"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_orange"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_color_orange"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_green"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_color_green"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_blue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_color_blue"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_purple"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_color_purple"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_black"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_color_black"
+            android:button="@null" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@id/whiteboard_toolbar_rg_paint_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_size_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_paint_size_1"
+            android:button="@null"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_size_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_size_2"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_size_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_size_3"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_size_4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_size_4"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_size_5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_size_5"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/whiteboard_toolbar_rb_paint_size_6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/selector_paint_size_6"
+            android:button="@null" />
+    </RadioGroup>
+
+</LinearLayout>
+

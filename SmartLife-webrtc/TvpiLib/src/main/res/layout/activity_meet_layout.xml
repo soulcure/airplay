@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multi_call_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_1">
+
+    <LinearLayout
+        android:id="@+id/multi_call_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/time_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="126dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/state"
+            android:text="通话中"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+        <Chronometer
+            android:id="@+id/avchat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:descendantFocusability="afterDescendants"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="50dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/video_close"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/icon_avchat_camera_open"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/video_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="关闭摄像头"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/font_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/audio_close"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/icon_avchat_unmute"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/audio_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="静音"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/font_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/hangup"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/icon_avchat_hangup"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/hangup_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="结束"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/font_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_camera_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_camera_switch"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/icon_avchat_switch"
+                    android:focusable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="切换摄像头"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/font_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_invita_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="50dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/invita_other"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/icon_avchat_multi"
+                    android:focusable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="多人通话"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/font_14" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fff2f2f2"
+    android:orientation="vertical">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:common_title_right_text="相册"
+        app:common_title_title="本地照片" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_picture_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_below="@id/titleBar"/>
+
+    <!--放不大 发现放大图片被截掉了，总是感觉在一个框里出不去 解决属性
+        android:clipChildren="false"
+        android:clipToPadding="false"-->
+
+    <com.coocaa.tvpi.module.local.view.LocalResStatesView
+        android:id="@+id/local_res_state_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"/>
+</RelativeLayout>

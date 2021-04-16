@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="web页面地址："
+        android:textColor="@color/color_black_a80"
+        android:textSize="@dimen/font_16" />
+    <Spinner
+        android:id="@+id/url_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/app_name"
+        android:spinnerMode="dropdown">
+    </Spinner>
+    <EditText
+        android:id="@+id/url_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_black_a80"
+        android:textSize="@dimen/font_16"
+        android:hint="https://beta-webapp.skysrt.com/swaiot/alldemo">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="样式选择"
+        android:textColor="@color/color_black_a80"
+        android:textSize="@dimen/font_16" />
+
+    <RadioGroup
+        android:id="@+id/h5_style_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp">
+        <RadioButton
+            android:id="@+id/h5_style_np"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16"
+            android:checked="true"
+            android:text="小程序风格" />
+        <RadioButton
+            android:id="@+id/h5_style_float_np"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16"
+            android:text="游戏风格" />
+        <RadioButton
+            android:id="@+id/h5_style_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16"
+            android:text="网页风格" />
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/h5_orientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:visibility="gone">
+        <RadioButton
+            android:id="@+id/h5_orientation_portrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16"
+            android:checked="true"
+            android:text="竖屏" />
+        <RadioButton
+            android:id="@+id/h5_orientation_landscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16"
+            android:text="横屏" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="@color/color_black_a80"
+        android:textSize="@dimen/font_16" >
+    </Button>
+</LinearLayout>

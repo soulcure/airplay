@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp">
+
+    <ImageView
+        android:id="@+id/ivNetworkType"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="20dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/icon_home_network_type_wifi_light"/>
+
+    <TextView
+        android:id="@+id/tvNetworkName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CooCaa-Office"
+        android:textSize="@dimen/font_13"
+        android:textColor="@color/color_black_a40"
+        android:layout_toEndOf="@id/ivNetworkType"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="3dp"/>
+
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="center"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/icon_home_more_light"
+        android:elevation="0dp"/>
+
+    <TextView
+        android:id="@+id/tvEnv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_13"
+        android:textStyle="bold"
+        android:text="当前为测试环境"
+        android:textColor="@color/color_black_a40"
+        android:layout_alignTop="@id/tvNetworkName"
+        android:layout_toEndOf="@id/tvNetworkName"
+        android:layout_marginStart="20dp"
+        android:visibility="gone"/>
+</RelativeLayout>

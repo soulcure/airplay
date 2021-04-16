@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@drawable/bg_live_program_selector">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/item_tvlive_channel_icon"
+        android:layout_width="60dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+        android:layout_marginRight="@dimen/global_horizontal_margin_10"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_live_defalut"
+        app:riv_corner_radius="4dp" />
+
+    <View
+        android:id="@+id/item_tvlive_channel_mark_view"
+        android:layout_width="58dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/item_tvlive_channel_mark_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tv_live_program_collect_nofocus"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_10"/>
+
+    <ImageView
+        android:id="@+id/item_tvlive_channel_mark_icon_anim1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tv_live_program_collect_focus"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+        android:alpha="0"/>
+
+    <ImageView
+        android:id="@+id/item_tvlive_channel_mark_icon_anim2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tv_live_program_collect_focus"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+        android:alpha="0"/>
+
+    <LinearLayout
+        android:id="@+id/item_tvlive_channel_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/item_tvlive_channel_icon"
+        android:layout_toLeftOf="@+id/item_tvlive_channel_mark_view"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/item_tvlive_channel_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="标题"
+            android:textColor="@color/c_2"
+            android:textSize="@dimen/s_4" />
+
+        <TextView
+            android:id="@+id/item_tvlive_channel_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="标题"
+            android:textColor="@color/c_3"
+            android:textSize="@dimen/s_3"
+            android:layout_marginTop="3dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

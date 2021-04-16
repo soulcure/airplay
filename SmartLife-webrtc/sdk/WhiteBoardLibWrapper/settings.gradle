@@ -1,0 +1,12 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+include ':SVGLib'
+project(':SVGLib').projectDir = getProjectDir('SVGLib')
+
+include ':WhiteBoardLib'
+project(':WhiteBoardLib').projectDir = getProjectDir('WhiteBoardLib')
+
+include ':WhiteBoardUILib'
+project(':WhiteBoardUILib').projectDir = getProjectDir('WhiteboardUILib')

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="runtime_title_height">88dp</dimen>
+    <dimen name="runtime_title_content_height">44dp</dimen>
+    <dimen name="runtime_title_padding">10dp</dimen>
+    <dimen name="runtime_left_container_padding">40dp</dimen>
+    <dimen name="runtime_bottom_padding">60dp</dimen>
+</resources>

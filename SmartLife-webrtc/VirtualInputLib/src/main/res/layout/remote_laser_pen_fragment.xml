@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp">
+
+       <ImageView
+           android:id="@+id/laser_off_img"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="100dp"
+           android:src="@drawable/icon_laser_pen_off"
+           android:layout_centerHorizontal="true"/>
+
+       <ImageView
+           android:id="@+id/laser_on_text_img"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/laser_pen_center_text"
+           android:layout_marginTop="30dp"
+           android:layout_below="@id/laser_off_img"
+           android:layout_centerInParent="true"
+           android:visibility="invisible"/>
+
+       <ImageView
+           android:id="@+id/laser_off_text_img"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/icon_laser_off_text"
+           android:layout_marginTop="30dp"
+           android:layout_below="@id/laser_off_img"
+           android:layout_centerInParent="true"/>
+
+       <Button
+           android:id="@+id/btn_laser_switch"
+           android:layout_width="315dp"
+           android:layout_height="50dp"
+           android:layout_centerHorizontal="true"
+           android:layout_marginBottom="50dp"
+           android:clickable="true"
+           android:background="@drawable/bg_round_25_white_alpha0"
+           android:text="启用激光笔"
+           android:textColor="#FF444444"
+           android:textSize="@dimen/font_16"
+           android:layout_alignParentBottom="true"
+           style="?android:attr/borderlessButtonStyle"
+           android:visibility="visible"/>
+
+
+
+</RelativeLayout>

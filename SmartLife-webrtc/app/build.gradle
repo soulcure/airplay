@@ -1,0 +1,306 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.huawei.agconnect'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd_HHmmss")
+}
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILDTOOLS_VERSION
+
+    def ver_name = getVersionName()
+    def ver_code = getVersionCode()
+
+    defaultConfig {
+        applicationId "com.coocaa.smartscreen"
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode ver_code
+        versionName ver_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        ndk {
+            abiFilters 'armeabi-v7a'//'arm64-v8a'
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+        sourceSets {
+            androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+        }
+
+        buildConfigField "long", "BUILD_TIMESTAMP", System.currentTimeMillis() + "L"
+        buildConfigField "String", "BUILD_DATE", getBuildDate()
+        buildConfigField 'String', 'BUILD_CHANNEL', "\"XiaoWeiGuanWang\""
+        buildConfigField 'boolean', 'PUBLISH_MODE', getPublishMode()
+
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "XiaoWeiGuanWang",
+
+                                TVPI_DOMAIN_VALUE          : "https://tvpi.coocaa.com",
+                                COOCAA_ACCOUNT_DOMAIN_VALUE : "https://passport.coocaa.com/",
+                                COOCAA_SECRET_VALUE         : "o1ERnx2KfSHQmpzy",
+                                COOCAA_CLIENT_ID_VALUE      : "7050748df941410d8ed46172fb72eefe",
+
+                                IOT_SERVER_VALUE            : "https://passport.coocaa.com/",
+                                COOCAA_APIKEY_VALUE         : "KSiVM12wRNu1WNN5",
+                                IOT_SERVER_LOG_URL          : "https://api.skyworthiot.com/",
+                                IOT_APPKEY_LOG              : "81dbba5e74da4fcd8e42fe70f68295a6",
+                                IOT_SERVER_APP_STORE_URL    : "http://tc.skysrt.com/",
+                                DEBUG_MODE_VALUE            : "false",
+                                IOT_CHANEL_VALUE           : "openid"]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        debug {
+//            storeFile file('debug.keystore')
+        }
+
+        //小维智联的
+//        release {
+//            storeFile file('debug.keystore')
+//            storePassword 'android'
+//
+//            keyAlias "androiddebugkey"
+//            keyPassword "android"
+//        }
+
+        release {
+            storeFile file('tvpi_key_store.jks')
+            storePassword 'tvpi123456'
+
+            keyAlias 'tvpi'
+            keyPassword 'tvpi123456'
+        }
+    }
+    buildTypes {
+        release {
+            //true 开启代码混淆
+//            minifyEnabled true
+            // 移除无用的resource文件
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            applicationVariants.all { variant ->
+                def buildType = variant.buildType
+                if (buildType.name.equals("debug")) {
+                    return
+                }
+                variant.outputs.all {
+                    String prefix = "SmartScreen_V"
+                    if(variant.productFlavors[0].name.startsWith("ATest") || variant.productFlavors[0].name.startsWith("ADev1")) {
+                        prefix = variant.productFlavors[0].name + "_SmartScreen_V"
+                    }
+                    outputFileName = "${prefix}${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime()}_release_signed_for_${variant.productFlavors[0].name}.apk"
+                }
+            }
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+//        ADev1 {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "Abeta1",
+//
+//                                    TVPI_DOMAIN_VALUE          : "https://beta-tvpi.coocaa.com",
+//                                    COOCAA_ACCOUNT_DOMAIN_VALUE : "https://dot-dev.skyworthiot.com",
+//                                    COOCAA_SECRET_VALUE         : "X123oGzsAPuRfjo8",
+//                                    COOCAA_CLIENT_ID_VALUE      : "56e0a352e69644d787adf859b7ec73af",
+//
+//                                    IOT_SERVER_VALUE            : "https://dot-dev.skyworthiot.com/",
+//                                    COOCAA_APIKEY_VALUE         : "coocaa2020",
+//                                    IOT_SERVER_LOG_URL          : "https://dot-dev.skyworthiot.com/",
+//                                    IOT_APPKEY_LOG              : "81dbba5e74da4fcd8e42fe70f68295a6",
+//                                    IOT_SERVER_APP_STORE_URL    : "http://beta-tc.skysrt.com/",
+//                                    DEBUG_MODE_VALUE            : "true",
+//                                    IOT_CHANEL_VALUE            : "openid"]
+//            buildConfigField 'String', 'BUILD_CHANNEL', "\"Abeta1\""
+//        }
+        ATest1 {
+            dimension "default"
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "Atest1",
+
+                                    TVPI_DOMAIN_VALUE          : "https://beta-tvpi.coocaa.com",
+                                    COOCAA_ACCOUNT_DOMAIN_VALUE : "https://beta.passport.coocaa.com",
+                                    COOCAA_SECRET_VALUE         : "X123oGzsAPuRfjo8",
+                                    COOCAA_CLIENT_ID_VALUE      : "56e0a352e69644d787adf859b7ec73af",
+
+                                    IOT_SERVER_VALUE            : "https://beta.passport.coocaa.com/",
+                                    COOCAA_APIKEY_VALUE         : "coocaa2020",
+                                    IOT_SERVER_LOG_URL          : "https://api-sit.skyworthiot.com/",
+                                    IOT_APPKEY_LOG              : "81dbba5e74da4fcd8e42fe70f68295a6",
+                                    IOT_SERVER_APP_STORE_URL    : "http://beta-tc.skysrt.com/",
+                                    DEBUG_MODE_VALUE            : "true",
+                                    IOT_CHANEL_VALUE            : "openid"]
+            buildConfigField 'String', 'BUILD_CHANNEL', "\"Atest1\""
+        }
+        XiaoWeiGuanWang {
+            dimension "default"
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "XiaoWeiGuanWang"]
+        }
+//        TV {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "TV"]
+//        }
+//        OPPO {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "OPPO"]
+//        }
+//        VIVO {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "VIVO"]
+//        }
+//        XiaoMi {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "XiaoMi"]
+//        }
+//        YingYongBao {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "YingYongBao"]
+//        }
+//        HuaWei {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "HuaWei"]
+//        }
+//        Alibaba {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "Alibaba"]
+//        }
+//        Meizu {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "Meizu"]
+//        }
+//        Samsung {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE        : "Samsung"]
+//        }
+    }
+    repositories {
+        flatDir {
+            dirs project(':sanyansdk').file('libs')
+        }
+    }
+
+    //More than one file was found with OS independent path 'lib/x86/libc++_shared.so'
+    packagingOptions {
+        pickFirst '**/libc++_shared.so'
+    }
+}
+
+int getGitVersionCode() {
+    def cmd = 'git rev-list HEAD --first-parent --count'
+    return cmd.execute().text.trim().toInteger()
+}
+
+String getGitVersionName() {
+    def cmd = 'git describe --tags'
+    def version = cmd.execute().text.trim()
+
+    def pattern = "-(\\d+)-g"
+    def matcher = version =~ pattern
+
+    if (matcher) {
+        version = version.substring(0, matcher.start()) + "." + matcher[0][1]
+    } else {
+        version = version + ".0"
+    }
+
+    return version
+}
+
+String getBuildDate() {
+    Date date = new Date();
+    String dateStr = "\"" + date.format("yyyy-MM-dd HH:mm:ss") + "\"";
+    return dateStr;
+}
+
+String getVersionName() {
+//    String pVersion = VERSION_NAME
+//    System.out.println("pVersion=" + pVersion)
+//    if(pVersion != null && !pVersion.equals("")) {
+//        System.out.println("use pVersion : " + pVersion)
+//        return pVersion
+//    }
+    System.out.println("use app config version")
+    String vName = getVersionProps('VERSION_NAME')
+    return vName
+}
+
+String getWeek() {
+    return getVersionProps('WEEKS_OF_YEAR')
+//    return String.valueOf(Calendar.getInstance().get(Calendar.WEEK_OF_YEAR))
+}
+
+String getPublishMode() {
+    return getVersionProps('PUBLISH_MODE')
+}
+
+int getVersionCode() {
+    return Integer.parseInt(getVersionProps("VERSION_CODE"))
+}
+
+String getVersionProps(String key) {
+    def versionFilePath = "version.ini"
+
+    def File _file = new File(project.projectDir.getAbsolutePath() + "/" + versionFilePath);
+    if (_file.canRead()) {
+        def versionPropsFile = file(versionFilePath)
+        def Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionPropsFile))
+        return versionProps[key]
+    } else {
+        return "1"
+    }
+}
+
+//configurations.all {
+//
+//    resolutionStrategy {
+//        force 'com.squareup.retrofit2:retrofit:latest.integration'
+//        force 'com.squareup.retrofit2:converter-gson:latest.integration'
+//        force 'com.squareup.retrofit2:adapter-rxjava2:latest.integration'
+//    }
+//}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    implementation 'com.github.yhaolpz:FloatWindow:1.0.9'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    def huaweiVersion = '5.0.2.300'
+    implementation "com.huawei.hms:push:${huaweiVersion}"
+
+    implementation project(':TvpiLib')
+    implementation project(':SLPubLib')
+    implementation 'com.qiyukf.unicorn:unicorn:+'
+}

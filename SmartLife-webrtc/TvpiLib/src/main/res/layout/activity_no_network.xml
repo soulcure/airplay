@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="426dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_top_10_round"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btClose"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/icon_close_gray"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/no_network_title"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_24"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/subtile_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/no_network_subtitle"
+            android:textColor="@color/color_black_a80"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:id="@+id/no_network_tip_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/subtile_tv"
+            android:background="@drawable/bg_no_network_tip" />
+
+        <LinearLayout
+            android:id="@+id/connet_network_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_connect_device_scan_btn_gradient">
+
+            <ImageView
+                android:id="@+id/no_network_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_device_no_network"/>
+
+            <TextView
+                android:id="@+id/confirm_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:textSize="@dimen/font_16"
+                android:textColor="@color/c_6"
+                android:textStyle="bold"
+                android:text="@string/no_network_confirm"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

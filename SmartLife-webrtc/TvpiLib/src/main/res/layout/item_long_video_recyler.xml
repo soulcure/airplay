@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="105dp"
+    android:layout_height="212dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/poster_iv"
+        app:layout_widthPercent="100%"
+        app:layout_aspectRatio="71.43%"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="8dp"/>
+
+    <ImageView
+        android:id="@+id/vip_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/poster_iv"
+        android:layout_alignRight="@id/poster_iv"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_vip"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:maxWidth="105dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/c_2"
+        android:textSize="@dimen/s_3"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="长视频标题"/>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

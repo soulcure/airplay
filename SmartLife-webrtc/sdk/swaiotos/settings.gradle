@@ -1,0 +1,9 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+apply from: getProjectDir('api/settings.gradle').absolutePath
+apply from: getProjectDir('core/settings.gradle').absolutePath
+
+apply from: getProjectDir('swaiotos/settings.gradle').absolutePath
+

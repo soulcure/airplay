@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/vi_scene_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/vi_common_padding"
+        android:background="@drawable/vi_scene_title_bg">
+        <ImageView
+            android:id="@+id/vi_scene_title_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/vi_scene_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/vi_scene_title_icon"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:text="共享应用"/>
+        <ImageView
+            android:id="@+id/vi_scene_title_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/vi_scene_title_name"
+            android:layout_centerVertical="true"
+            android:background="@drawable/vi_scene_title_right_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vi_scene_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/vi_scene_title_container"
+        android:minHeight="96dp"
+        android:background="@drawable/vi_scene_content_bg">
+    </RelativeLayout>
+</RelativeLayout>

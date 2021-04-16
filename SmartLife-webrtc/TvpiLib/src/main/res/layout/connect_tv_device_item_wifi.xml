@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/connect_tv_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/bg_b_1_round_8"
+    android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+    android:layout_marginRight="@dimen/global_horizontal_margin_20">
+
+    <ImageView
+        android:id="@+id/connect_tv_device_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/icon_connect_tv_normal" />
+
+    <TextView
+        android:id="@+id/connect_tv_device_tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toRightOf="@id/connect_tv_device_icon"
+        android:maxLines="1"
+        android:text="电视名称"
+        android:textColor="@color/c_1"
+        android:textSize="@dimen/s_4"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/connect_tv_device_tvmodel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connect_tv_device_tvname"
+        android:layout_marginRight="@dimen/global_horizontal_margin_10"
+        android:layout_toRightOf="@id/connect_tv_device_icon"
+        android:maxLines="1"
+        android:text="型号 S8A"
+        android:textColor="@color/c_1"
+        android:textSize="@dimen/s_2" />
+
+    <TextView
+        android:id="@+id/connect_tv_device_activeid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/connect_tv_device_tvmodel"
+        android:layout_toRightOf="@id/connect_tv_device_tvmodel"
+        android:maxLines="1"
+        android:text="激活ID：12345678"
+        android:textColor="@color/c_1"
+        android:textSize="@dimen/s_2" />
+
+    <ImageView
+        android:id="@+id/connect_tv_device_tick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:background="@drawable/icon_connect_tv_tick"/>
+
+</RelativeLayout>

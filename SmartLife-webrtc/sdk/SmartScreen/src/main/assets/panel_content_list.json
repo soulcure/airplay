@@ -1,0 +1,79 @@
+{
+    "code": 0,
+    "data": {
+        "content": [
+            {
+                "poster": "https://tv.doubimeizhi.com/images/dongle/panel/c_birthday.png",
+                "title": "气氛",
+                "subTitle": "教你提升生日聚会的氛围",
+                "scale": 0.94,
+                "action": {
+                    "type": "https",
+                    "id": "webapp.skyworthiot.com",
+                    "target": "application/birthday/index.html"
+                }
+            },
+            {
+                "poster": "https://tv.doubimeizhi.com/images/dongle/panel/c_mp_rec.png",
+                "title": "餐厅观影解决方案",
+                "subTitle": "如何将餐厅变成影院？",
+                "subTitle": "",
+                "scale": 0.94,
+                "action": {
+                    "type": "https",
+                    "id": "webapp.skyworthiot.com",
+                    "target": "application/projector/index.html"
+                }
+            },
+            {
+                "poster": "https://tv.doubimeizhi.com/images/dongle/panel/c_screen.png",
+                "title": "实用工具",
+                "subTitle": "把会议投影仪揣进口袋",
+                "scale": 0.94,
+                "action": {
+                    "type": "https",
+                    "id": "webapp.skyworthiot.com",
+                    "target": "application/screen/index.html"
+                }
+            },
+            {
+                "poster": "https://tv.doubimeizhi.com/images/dongle/panel/c_movie_rec.png",
+                "title": "影视推荐",
+                "subTitle": "蜘蛛侠系列你最钟情哪部？",
+                "scale": 0.94,
+                "action": {
+                    "type": "https",
+                    "id": "webapp.skyworthiot.com",
+                    "target": "application/movies/index.html",
+                    "params": {
+                        "source": "iqiyi"
+                    }
+                }
+            },
+            {
+                "poster": "https://tv.doubimeizhi.com/images/dongle/panel/c_comic.png",
+                "title": "动画推荐",
+                "subTitle": "小朋友最近都在看这些",
+                "scale": 0.94,
+                "action": {
+                    "type": "https",
+                    "id": "webapp.skyworthiot.com",
+                    "target": "application/animation/index.html"
+                }
+            },
+            {
+                "poster": "https://tv.doubimeizhi.com/images/dongle/panel/c_record_video.png",
+                "title": "美食纪录片",
+                "subTitle": "隔着屏幕都能闻到的美味",
+                "scale": 0.94,
+                "action": {
+                    "type": "https",
+                    "id": "webapp.skyworthiot.com",
+                    "target": "application/documentary/index.html"
+                }
+            }
+        ],
+        "version": "1"
+    },
+    "msg": "成功"
+}

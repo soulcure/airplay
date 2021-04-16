@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCover"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:riv_corner_radius="12dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivCover"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:ellipsize="end"
+        android:maxWidth="200dp"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_18" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_black_a40"
+        android:textSize="@dimen/font_12"
+        android:layout_below="@id/tvName"
+        android:layout_toEndOf="@id/ivCover"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="10dp"/>
+
+
+    <com.coocaa.tvpi.module.app.widget.AppStateButton
+        android:id="@+id/appStateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

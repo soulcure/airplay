@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_50"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/screen_shot_actionbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/black_30">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/screen_shot_left_top_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+                android:src="@drawable/icon_actionbar_delete" />
+
+            <TextView
+                android:id="@+id/screen_shot_right_top_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="marquee"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:text="重新截屏"
+                android:textColor="@color/white"
+                android:textSize="@dimen/s_4" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/screen_shot_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/screen_shot_bottom_layout"
+        android:layout_below="@id/screen_shot_actionbar_layout">
+
+        <ImageView
+            android:id="@+id/screen_shot_iv"
+            android:layout_width="345dp"
+            android:layout_height="194dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/screen_shot_iv_portrait"
+            android:layout_width="194dp"
+            android:layout_height="345dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/screen_shot_loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/screen_shot_loading_iv"
+                style="@android:style/Widget.ProgressBar.Large.Inverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:indeterminateDrawable="@drawable/screenshot_loading_progress"
+                android:indeterminateDuration="1000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/screen_shot_loading_iv"
+                android:layout_centerHorizontal="true"
+                android:text="正在截屏中..."
+                android:textColor="@color/c_6"
+                android:textSize="@dimen/s_4" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/screen_shot_failed_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="截屏失败了，再试试吧～"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/screen_shot_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_30">
+
+        <TextView
+            android:id="@+id/screen_shot_share_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/global_horizontal_margin_15"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_20"
+            android:gravity="center"
+            android:text="分享到"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s_3" />
+
+        <LinearLayout
+            android:id="@+id/screen_shot_share_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/screen_shot_share_tv"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/share_ll_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_share_wechat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信好友"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s_2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/share_ll_wechat_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_share_wechat_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="朋友圈"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s_2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/share_ll_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_share_qq" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QQ好友"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s_2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/share_ll_qzone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_share_qzone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QQ空间"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/s_2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/screen_shot_save_to_sdcard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="保存至相册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s_4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/screen_shot_save_to_sdcard"
+            android:background="@color/white_10" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

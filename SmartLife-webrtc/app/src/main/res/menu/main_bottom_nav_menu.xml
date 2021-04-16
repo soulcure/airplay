@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_smartscreen"
+        android:icon="@drawable/selector_tab_smart_screen"
+        android:title="首页"
+        android:orderInCategory="0"/>
+
+   <!-- <item
+        android:id="@+id/tab_smartfamily"
+        android:icon="@drawable/selector_tab_smart_family"
+        android:title="智家"
+        android:orderInCategory="1"/>-->
+
+<!--    <item-->
+<!--        android:id="@+id/tab_xiaowei"-->
+<!--        android:icon="@drawable/selector_tab_voice"-->
+<!--        android:title="小维"-->
+<!--        android:orderInCategory="2" />-->
+
+ <!--   <item
+        android:id="@+id/tab_mall"
+        android:icon="@drawable/selector_tab_mall"
+        android:title="商城"
+        android:orderInCategory="2"/>-->
+
+    <item
+        android:id="@+id/tab_mine"
+        android:icon="@drawable/selector_tab_discovery"
+        android:title="发现"
+        android:orderInCategory="1"/>
+
+</menu>

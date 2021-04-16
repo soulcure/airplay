@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:longClickable="false">
+
+    <TextView
+        android:id="@+id/tvlive_program_collect_editbtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="编辑"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_btn_tvlive_round_8"
+        android:textColor="@color/c_2"
+        android:textSize="@dimen/s_3"/>
+</RelativeLayout>

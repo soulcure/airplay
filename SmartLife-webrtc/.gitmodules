@@ -1,0 +1,12 @@
+[submodule "sdk/SmartScreen"]
+	path = sdk/SmartScreen
+	url = http://gitlab.skysri.com/swaiotos/SmartScreen.git
+[submodule "sdk/swaiotos"]
+	path = sdk/swaiotos
+	url = http://gitlab.skysri.com/swaiotos/smart-screen/swaiotos.git
+[submodule "sdk/SensorEventLib"]
+	path = sdk/SensorEventLib
+	url = http://gitlab.skysri.com/swaiotos/SensorEventLib.git
+[submodule "sdk/WhiteBoardLibWrapper"]
+	path = sdk/WhiteBoardLibWrapper
+	url = http://gitlab.skysri.com/AndroidLab/WhiteBoardLibWrapper.git

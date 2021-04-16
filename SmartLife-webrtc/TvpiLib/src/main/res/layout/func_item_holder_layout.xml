@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/bg_white_round_12">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/func_item_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        app:riv_corner_radius="0dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/func_item_icon">
+
+        <TextView
+            android:id="@+id/func_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:text=""
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/func_item_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/func_item_title"
+            android:text=""
+            android:textColor="@color/color_black_a40"
+            android:textSize="@dimen/font_10" />
+    </RelativeLayout>
+
+</RelativeLayout>

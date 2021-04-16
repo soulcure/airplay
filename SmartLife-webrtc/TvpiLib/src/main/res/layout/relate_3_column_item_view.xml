@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants">
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <com.coocaa.tvpi.module.movie.widget.Relate3ColumnChildView
+            android:id="@+id/relate_3_column_item_column_0"
+            app:layout_widthPercent="28%"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="5.33%"/>
+
+        <com.coocaa.tvpi.module.movie.widget.Relate3ColumnChildView
+            android:id="@+id/relate_3_column_item_column_1"
+            app:layout_widthPercent="28%"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+
+        <com.coocaa.tvpi.module.movie.widget.Relate3ColumnChildView
+            android:id="@+id/relate_3_column_item_column_2"
+            app:layout_widthPercent="28%"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:layout_marginRightPercent="5.33%"/>
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

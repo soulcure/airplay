@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="1dp">
+
+    <RelativeLayout
+        android:id="@+id/small_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_multivideo_call_bg">
+
+        <com.netease.nimlib.sdk.avchat.video.AVChatTextureViewRenderer
+            android:id="@+id/render"
+            android:layout_width="630dp"
+            android:layout_height="298dp" />
+
+        <View
+            android:id="@+id/view_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_multivideo_call_bg"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_status"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/render"
+            android:layout_alignBottom="@id/render"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="13dp"
+            android:gravity="right">
+
+            <ImageView
+                android:id="@+id/iv_talking"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_state_speaking"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_audiomute"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_state_audiomute"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_videomute"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_state_videomute"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_networkweak"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_state_netweak"
+                android:visibility="gone" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/call_info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_18"
+                android:maxEms="7"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/call_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_12"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_state_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/video_tips" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_state_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/audio_tips" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

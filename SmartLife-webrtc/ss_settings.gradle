@@ -1,0 +1,14 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+//apply from: getProjectDir("sdk/iot-channel/smart_settings.gradle").getAbsolutePath()
+//apply from: getProjectDir("sdk/iot-channel/sdk/OkHttp/ss_settings.gradle").getAbsolutePath()
+apply from: getProjectDir("sdk/SmartScreen/ss_settings.gradle").getAbsolutePath()
+//apply from: getProjectDir("sdk/UserServiceCore/cc_settings.gradle").getAbsolutePath()
+
+//include ':ccUserServiceSDK'
+//project (":ccUserServiceSDK").projectDir = getProjectDir("sdk/UserServiceSDK")
+//
+//include ":sdk:okhttp"
+//project (':sdk:okhttp').projectDir = new File("SmartScreen/iot-channel/sdk/OkHttp/java-library")

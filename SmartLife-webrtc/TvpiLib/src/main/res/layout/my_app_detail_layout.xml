@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/b_2">
+
+    <RelativeLayout
+        android:id="@+id/my_app_detail_rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+        android:layout_marginTop="@dimen/global_horizontal_margin_10">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/my_app_detail_icon"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="20dp"
+            android:src="@drawable/place_holder_bg"
+            android:layout_marginRight="@dimen/global_horizontal_margin_20"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/my_app_detail_icon">
+
+            <TextView
+                android:id="@+id/my_app_detail_app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:gravity="center_vertical"
+                android:textColor="@color/c_1"
+                android:textSize="@dimen/s_7"
+                android:layout_marginTop="@dimen/global_horizontal_margin_10"
+                android:text="应用名称">
+            </TextView>
+
+
+            <RatingBar
+                android:id="@+id/my_app_detail_grade"
+                style="@style/rating_bar_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="30dp"
+                android:minHeight="30dp"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="0.5"
+                android:isIndicator="true"
+                android:layout_below="@+id/my_app_detail_app_name"
+                android:layout_marginTop="16dp">
+            </RatingBar>
+
+            <TextView
+                android:id="@+id/my_app_detail_open_btn"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/app_state_button_bg"
+                android:gravity="center"
+                android:text="打开"
+                android:textSize="@dimen/s_3"
+                android:textColor="@color/color_main_red"/>
+
+            <LinearLayout
+                android:id="@+id/my_app_detail_ll_progress"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="17dp"
+                android:background="@drawable/bg_b_5_round_50">
+
+                <ProgressBar
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@drawable/progressbar_white_circle"
+                    android:indeterminateDuration="1000"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_app_detail_screenshot_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/my_app_detail_rl_title"
+        android:layout_marginBottom="@dimen/global_horizontal_margin_10"/>
+
+    <RelativeLayout
+        android:id="@+id/my_app_detail_rl_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/global_horizontal_margin_20"
+        android:paddingRight="@dimen/global_horizontal_margin_20"
+        android:layout_below="@+id/my_app_detail_screenshot_recyclerview"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="18dp"
+            android:background="@color/color_main_red"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/s_5"
+            android:textColor="@color/c_1"
+            android:text="简介"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/app_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/my_app_detail_rl_summary">
+
+        <TextView
+            android:id="@+id/my_app_detail_version_size"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/s_3"
+            android:textColor="@color/c_3"
+            android:text=""
+            android:ellipsize="end"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/my_app_detail_summary_desc"
+            android:layout_below="@+id/my_app_detail_version_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/s_3"
+            android:textColor="@color/c_3"
+            android:lineSpacingExtra="6dp"
+            android:text="应用简介"/>
+    </RelativeLayout>
+
+</RelativeLayout>

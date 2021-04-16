@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tvlive_category_recyclerview"
+         android:layout_width="86dp"
+        android:layout_height="match_parent"/>
+
+    <com.coocaa.tvpi.view.CustomViewPager
+        android:id="@+id/tvlive_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/tvlive_category_recyclerview"/>
+
+    <FrameLayout
+        android:id="@+id/tvlive_fragment_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/tvlive_category_recyclerview"/>
+
+    <com.coocaa.tvpi.view.LoadTipsView
+        android:id="@+id/tvlive_loadtipview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/anim_mark_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tv_live_program_collect_focus"
+        android:alpha="0"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/b_2"
+    android:paddingLeft="@dimen/screen_cast_margin_left"
+    android:paddingRight="@dimen/screen_cast_margin_right">
+
+    <TextView
+        android:id="@+id/details_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="《芦花十里送风来》"
+        android:textSize="25sp"
+        android:textColor="#333333"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/details_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="作者：孔维克"
+        android:textSize="@dimen/font_15"
+        android:textColor="#333333"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_title_margin_top"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/details_likes_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_screen_saver_customized"
+            android:drawablePadding="@dimen/screen_saver_item_text_padding"
+            android:text="3072 定制"
+            android:textSize="@dimen/font_13"
+            android:textColor="#666666"/>
+
+        <View
+            android:layout_width="@dimen/details_title_margin_top"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/details_previews_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_screen_saver_perview"
+            android:drawablePadding="@dimen/screen_saver_item_text_padding"
+            android:text="10.5w 浏览"
+            android:textSize="@dimen/font_13"
+            android:textColor="#666666"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/details_img"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="@dimen/screen_saver_item_pic_height"
+        android:layout_marginTop="@dimen/global_horizontal_margin_10" />
+
+    <LinearLayout
+        android:id="@+id/details_push_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_saver_details_height"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:background="@drawable/bg_white_round_50">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_dlna_push_to_tv_grey"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="推送预览"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/details_setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_saver_details_height"
+        android:layout_marginTop="@dimen/global_horizontal_margin_10"
+        android:gravity="center"
+        android:background="@drawable/bg_white_round_50">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_screen_saver_customized"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="设为屏保"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+</LinearLayout>

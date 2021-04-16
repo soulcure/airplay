@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:common_title_title="联系人"
+        app:common_title_right_text="移除好友"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCover"
+        android:layout_width="101dp"
+        android:layout_height="101dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/yunxin_icon_user_cover_gray"
+        app:riv_corner_radius="50dp"/>
+
+    <TextView
+        android:id="@+id/tvRegisterCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/s_5"
+        android:textColor="@color/c_2"
+        android:text="1111"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCover"/>
+
+    <com.coocaa.tvpi.view.DeletableEditText
+        android:id="@+id/etNickname"
+        style="@style/common_edittext"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/activity_margin_start"
+        android:layout_marginLeft="@dimen/activity_margin_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegisterCode"
+        android:layout_marginTop="20dp"
+        android:maxLength="11"
+        android:hint="@string/yunxin_input_nickname"
+        android:inputType="text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        app:layout_constraintTop_toBottomOf="@+id/etNickname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/callLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_round_26_83c44f"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvNickname"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yunxin_video_call"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s_4"
+            android:layout_centerInParent="true"
+            android:drawablePadding="6dp"
+            android:drawableLeft="@drawable/yunxin_icon_video_call" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout >
+

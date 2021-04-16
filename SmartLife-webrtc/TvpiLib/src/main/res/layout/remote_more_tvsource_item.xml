@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/remote_more_tvsource_item"
+        android:layout_width="105dp"
+        android:layout_height="50dp"
+        android:background="@drawable/remote_more_mode_selector"
+        android:gravity="center"
+        android:textColor="@color/c_4"
+        android:textSize="@dimen/s_4"/>
+
+    <ImageView
+        android:id="@+id/remote_more_flag_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_remote_tv_source_hasdevice"
+        android:scaleType="centerCrop"
+        android:layout_alignTop="@+id/remote_more_tvsource_item"
+        android:layout_alignRight="@+id/remote_more_tvsource_item"/>
+
+</RelativeLayout>

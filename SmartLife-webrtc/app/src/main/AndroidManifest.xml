@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.coocaa.smartscreen">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        tools:replace="android:allowBackup,android:icon,android:roundIcon"
+        android:name="com.coocaa.tvpi.MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/logo"
+        android:roundIcon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true"/>
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+
+        <!--todo for ble test"-->
+        <!--        com.coocaa.tvpi.module.connection.BleClientActivity-->
+        <activity
+            android:name="com.coocaa.tvpi.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+            <intent-filter>
+                <!--用来云信被踢出重新弹出登录界面，在登录界面返回-->
+                <action android:name="android.intent.action.kickout.back" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="main"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.homepager.IntentActivity"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen.translucent" >
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+<!--                <data android:scheme="file"/>-->
+<!--                <data android:scheme="content"/>-->
+                <data android:mimeType="application/vnd.ms-powerpoint" />
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--                <data android:scheme="file"/>-->
+                <!--                <data android:scheme="content"/>-->
+                <data android:mimeType="application/mspowerpoint" />
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/vnd.ms-excel"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/pdf"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    tools:ignore="AppLinkUrlError"/>
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/msword"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="smartscreen"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+                <data android:scheme="ccsmartscreen"/>
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.SEND" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <data android:mimeType="text/plain" />-->
+<!--            </intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <!--umeng start-->
+        <activity
+            android:name="com.coocaa.tvpi.test.AppTestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.coocaa.tvpi.module.login.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="swaiotos.service.user.account_setting" />
+                <action android:name="android.settings.ADD_ACCOUNT_SETTINGS" />
+                <action android:name="com.coocaa.tvpi.LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:process=":h5">
+        </activity>
+
+
+        <!--合并iot到主进程，检查是否有问题
+            android:process=":core"-->
+        <service
+            android:name="com.coocaa.publib.connect.service.MySSService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.service.SS" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.coocaa.smartscreen.connect.service.MainSSClientService"
+            android:enabled="true"
+            android:exported="true">
+            <meta-data
+                android:name="ss-clientID"
+                android:value="ss-clientID-SmartScreen" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="ss-clientKey-12345" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="0" />
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="TVPI_DOMAIN"
+            android:value="${TVPI_DOMAIN_VALUE}" />
+        <meta-data
+            android:name="COOCAA_ACCOUNT_DOMAIN"
+            android:value="${COOCAA_ACCOUNT_DOMAIN_VALUE}" />
+        <meta-data
+            android:name="COOCAA_SECRET"
+            android:value="${COOCAA_SECRET_VALUE}" />
+        <meta-data
+            android:name="COOCAA_CLIENT_ID"
+            android:value="${COOCAA_CLIENT_ID_VALUE}" />
+
+        <meta-data
+            android:name="IOT_SERVER"
+            android:value="${IOT_SERVER_VALUE}" />
+        <meta-data
+            android:name="IOT_CHANEL"
+            android:value="${IOT_CHANEL_VALUE}" />
+
+        <!-- 通道的配置 start-->
+
+        <meta-data
+            android:name="IOT_APPKEY"
+            android:value="${COOCAA_APIKEY_VALUE}" />
+
+        <!-- 新增上报日志的key值-->
+        <meta-data
+            android:name="IOT_SERVER_LOG_URL"
+            android:value="${IOT_SERVER_LOG_URL}" />
+
+        <!-- 新增拉平版本的key值-->
+        <meta-data
+            android:name="IOT_SERVER_APP_STORE_URL"
+            android:value="${IOT_SERVER_APP_STORE_URL}" />
+
+        <meta-data
+            android:name="IOT_APPKEY_LOG"
+            android:value="${IOT_APPKEY_LOG}" />
+
+        <meta-data
+            android:name="com.skyworthiot.sselib.HOSTADDRESS"
+            android:value="${IOT_SERVER_LOG_URL}"/>
+        <!-- 通道的配置 end-->
+    </application>
+
+</manifest>

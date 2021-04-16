@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:gravity="center_vertical"
+    android:background="@color/b_2">
+
+    <TextView
+        android:id="@+id/item_push_history_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/s_4"
+        android:textColor="@color/c_1"
+        android:text="7天内"/>
+
+</RelativeLayout>

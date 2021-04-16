@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/tvRLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/coocaagray">
+        <WebView
+            android:id="@+id/tv_webview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/linear_miniprog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/coocaagray"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/img_miniprog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/minprog_loading"/>
+            <TextView
+                android:id="@+id/txt_miniprog_title"
+                android:layout_marginTop="36dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:background="@color/coocaagray"
+                android:textSize="40sp"
+                android:text="@string/miniprog_title" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:gravity="center"
+            android:background="@color/coocaagray"
+            android:layout_marginBottom="22dp"
+            android:orientation="horizontal">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/tv_lottie_loading"
+                android:background="@color/coocaagray"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                app:lottie_loop="true"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loadingText"
+                android:text="正在加载"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:textColor="#ffffffff"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fff2f2f2"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:common_title_title="确认订单" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_start"
+            android:layout_marginEnd="@dimen/activity_margin_end"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/mall_card_bg">
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text=""
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_16" />
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tvUsername"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/tvUsername"
+                    android:text=""
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_16" />
+
+                <TextView
+                    android:id="@+id/tvDefaultAddress"
+                    android:layout_width="34dp"
+                    android:layout_height="20dp"
+                    android:text="默认"
+                    android:textSize="@dimen/font_10"
+                    android:textColor="@color/color_white"
+                    android:gravity="center"
+                    android:layout_alignTop="@id/tvUsername"
+                    android:layout_toEndOf="@id/tvPhone"
+                    android:layout_marginStart="7dp"
+                    android:background="@drawable/mall_text_button_bg"
+                    android:visibility="gone"/>
+                
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/activity_margin_end"
+                    android:src="@drawable/mall_address_right_arrow" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvUsername"
+                    android:layout_alignStart="@id/tvUsername"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="50dp"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/mall_card_bg"
+                android:paddingStart="@dimen/activity_margin_start"
+                android:paddingTop="15dp"
+                android:paddingEnd="@dimen/activity_margin_end"
+                android:paddingBottom="15dp">
+
+                <RadioButton
+                    android:id="@+id/rbAliPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/mall_pay_ali"
+                    android:drawableEnd="@drawable/mall_pay_check_selector"
+                    android:drawablePadding="10dp"
+                    android:text="支付宝" />
+
+                <RadioButton
+                    android:id="@+id/rbWeiXinPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="15dp"
+                    android:button="@null"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/mall_pay_weixin"
+                    android:drawableEnd="@drawable/mall_pay_check_selector"
+                    android:drawablePadding="10dp"
+                    android:text="微信"
+                    android:visibility="gone"/>
+
+                <RadioButton
+                    android:id="@+id/rbCloudPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="15dp"
+                    android:button="@null"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/mall_pay_cloud"
+                    android:drawableEnd="@drawable/mall_pay_check_selector"
+                    android:drawablePadding="10dp"
+                    android:text="云闪付"
+                    android:visibility="gone"/>
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/mall_card_bg">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivProductCover"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/activity_margin_start"
+                    app:riv_corner_radius="2dp"
+                    android:background="@color/color_black_a10" />
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivProductCover"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ivProductCover"
+                    android:maxLines="2"
+                    android:text="加载中..."
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/tvProductSku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/tvProductName"
+                    android:layout_alignBottom="@id/ivProductCover"
+                    android:layout_marginBottom="10dp"
+                    android:text="65寸"
+                    android:textColor="@color/color_black_a50"
+                    android:textSize="@dimen/font_14" />
+
+
+                <TextView
+                    android:id="@+id/tvProductCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvProductSku"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/activity_margin_end"
+                    android:text="x2"
+                    android:textColor="@color/color_black_a50"
+                    android:textSize="@dimen/font_14" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/invoiceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/mall_card_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin_start"
+                    android:text="发票"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/tvInvoiceType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="电子普通发票-个人"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_margin_end"
+                    android:src="@drawable/mall_address_right_arrow" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/mall_card_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tvPrice"
+                    android:layout_marginStart="15dp"
+                    android:text="商品金额"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="@dimen/activity_margin_end"
+                    android:text="￥0"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tvDiscounts"
+                    android:layout_marginStart="@dimen/activity_margin_start"
+                    android:text="活动优惠"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/tvDiscounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvPrice"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="@dimen/activity_margin_end"
+                    android:text="￥0"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tvFreight"
+                    android:layout_marginStart="@dimen/activity_margin_start"
+                    android:text="运费"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/tvFreight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDiscounts"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="@dimen/activity_margin_end"
+                    android:text="￥0"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/font_14" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="@dimen/activity_margin_start"
+        android:paddingEnd="@dimen/activity_margin_end"
+        android:gravity="center_vertical"
+        android:background="@color/color_white"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_14"
+            android:textColor="@color/color_black"
+            android:text="合计："/>
+        
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_red"
+            android:text="￥0"/>
+        
+        <TextView
+            android:id="@+id/tvStartPay"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="去支付"
+            android:gravity="center"
+            android:background="@drawable/mall_text_button_bg"
+            android:textColor="@color/color_white"/>
+    </LinearLayout>
+</RelativeLayout>

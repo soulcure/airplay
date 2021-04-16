@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/global_horizontal_margin_5"
+    android:layout_marginRight="@dimen/global_horizontal_margin_5"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_remote_touch_guide"/>
+
+</RelativeLayout>

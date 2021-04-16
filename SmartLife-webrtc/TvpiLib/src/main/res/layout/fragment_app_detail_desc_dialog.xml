@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="436dp"
+        android:background="@drawable/bg_bottom_dialog_b1"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/app_detail_fragment_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_20"
+            android:text="简介"
+            android:textColor="@color/c_1"
+            android:textSize="@dimen/s_7"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/app_detail_fragment_version_size"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/app_detail_fragment_label_tv"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_10"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="版本：1.8.2"
+            android:textColor="@color/c_3"
+            android:textSize="@dimen/s_3" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_detail_fragment_version_size"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/app_detail_fragment_summary_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                    android:layout_marginRight="@dimen/global_horizontal_margin_20"
+                    android:lineSpacingExtra="6dp"
+                    android:text=""
+                    android:textColor="@color/c_3"
+                    android:textSize="@dimen/s_5" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:common_title_title="关于设备" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_horizontal_margin_20"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+        android:background="@drawable/bg_mine_rl"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_row_height_60"
+            android:layout_marginHorizontal="@dimen/global_horizontal_margin_20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="名称"
+                android:textColor="@color/color_black_a80"
+                android:textSize="@dimen/font_16" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text=" 酷开公司-影视厅"
+                android:textColor="@color/color_black_a60"
+                android:textSize="@dimen/font_16" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A000000" />
+
+        <RelativeLayout
+            android:id="@+id/idLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_row_height_60" >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                android:text="激活ID"
+                android:textColor="@color/color_black_a80"
+                android:textSize="@dimen/font_16" />
+
+
+            <TextView
+                android:id="@+id/tvRegisterId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+                android:text=""
+                android:textColor="@color/color_black_a60"
+                android:textSize="@dimen/font_16" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_row_height_60" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                android:text="Mac地址"
+                android:textColor="@color/color_black_a80"
+                android:textSize="@dimen/font_16" />
+
+
+            <TextView
+                android:id="@+id/tvMac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+                android:text=""
+                android:textColor="@color/color_black_a60"
+                android:textSize="@dimen/font_16" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_row_height_60" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                android:text="系统版本"
+                android:textColor="@color/color_black_a80"
+                android:textSize="@dimen/font_16" />
+
+
+            <TextView
+                android:id="@+id/tvSysVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+                android:text=""
+                android:textColor="@color/color_black_a60"
+                android:textSize="@dimen/font_16" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_row_height_60" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                android:text="主页版本"
+                android:textColor="@color/color_black_a80"
+                android:textSize="@dimen/font_16" />
+
+
+            <TextView
+                android:id="@+id/tvLauncherVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+                android:text=""
+                android:textColor="@color/color_black_a60"
+                android:textSize="@dimen/font_16" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_row_height_60" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                android:text="通道版本"
+                android:textColor="@color/color_black_a80"
+                android:textSize="@dimen/font_16" />
+
+
+            <TextView
+                android:id="@+id/tvChannelVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+                android:text=""
+                android:textColor="@color/color_black_a60"
+                android:textSize="@dimen/font_16" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_row_height_60" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                android:text="H5版本"
+                android:textColor="@color/color_black_a80"
+                android:textSize="@dimen/font_16" />
+
+
+            <TextView
+                android:id="@+id/tvH5Version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+                android:text=""
+                android:textColor="@color/color_black_a60"
+                android:textSize="@dimen/font_16" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A000000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_row_height_60" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+                android:text="文档版本"
+                android:textColor="@color/color_black_a80"
+                android:textSize="@dimen/font_16" />
+
+
+            <TextView
+                android:id="@+id/tvDocAppVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/global_horizontal_margin_20"
+                android:text=""
+                android:textColor="@color/color_black_a60"
+                android:textSize="@dimen/font_16" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

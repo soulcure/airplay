@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="swaiotos.channel.iot.tv">
+
+    <application
+        android:name=".DemoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".server.CoreService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.service.SS" />
+            </intent-filter>
+        </service>
+
+        <!-- MainSSClientService 必须继承于SDK SSChannelClientService,用于接收消息-->
+        <service
+            android:name=".server.MainSSClientService"
+            android:enabled="true"
+            android:exported="true">
+
+            <!-- 声明接收消息 Service ID-->
+            <!-- Service ID 必填，全局唯一-->
+            <meta-data
+                android:name="ss-clientID"
+                android:value="ss-clientID-XXXXXXX" />
+
+            <!-- 声明接收消息 Service Key-->
+            <!-- Service key 必填，全局唯一-->
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="ss-clientKey-XXXXXXX" />
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+        </service>
+
+
+    </application>
+
+</manifest>

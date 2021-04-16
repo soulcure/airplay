@@ -1,0 +1,6 @@
+[submodule "core/runtime"]
+	path = core/runtime
+	url = http://gitlab.skysri.com/swaiotos/smart-screen/runtime/runtime-android.git
+[submodule "core/iot-channel"]
+	path = core/iot-channel
+	url = http://gitlab.skysri.com/swaiotos/iot-channel.git

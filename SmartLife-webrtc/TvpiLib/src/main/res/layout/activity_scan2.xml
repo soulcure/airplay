@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <RelativeLayout
+            android:id="@+id/scan_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/rim"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="106dp">
+
+                <ImageView
+                    android:id="@+id/iv_scan"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/bg_scan"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/iv_flash"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@id/iv_scan"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="42dp"
+                    android:src="@drawable/selector_flash"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_flash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/iv_scan"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="轻触开启"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_12"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <com.coocaa.tvpi.view.webview.InputCodeView
+            android:id="@+id/input_code_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_scan_top_cover"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_scan_bottom_cover"/>
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="44dp" >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/icon_back_round_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/font_17"
+                android:textColor="@color/color_white"
+                android:text="连接共享屏" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="227dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/scan_btn"
+                android:layout_width="101dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/scan_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_18"
+                    android:text="扫码"/>
+
+                <View
+                    android:id="@+id/scan_indicator"
+                    android:layout_width="30dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_white_round_12"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/code_btn"
+                android:layout_width="101dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/code_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/color_white_60"
+                    android:textSize="@dimen/font_18"
+                    android:text="数字码"/>
+
+                <View
+                    android:id="@+id/code_indicator"
+                    android:layout_width="30dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_white_round_12"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:text=""
+            android:textColor="@color/c_6"
+            android:textSize="@dimen/s_5"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tv_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:text="相册"
+            android:textColor="@color/c_6"
+            android:textSize="@dimen/s_4"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/anim_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_layout"
+            android:layout_above="@id/tab_layout">
+            <ImageView
+                android:id="@+id/scan_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_row_height_60"
+                android:src="@drawable/icon_scan2_scan"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/device_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="200dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:background="@drawable/bg_bottom_device_list">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_d8d8d8_round_4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="连接记录"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/device_list_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

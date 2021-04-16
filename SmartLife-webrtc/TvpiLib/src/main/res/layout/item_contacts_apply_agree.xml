@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@drawable/bg_item_contacts">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/yunxin_icon_user_cover_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="25dp"/>
+
+    <ImageView
+        android:id="@+id/ivOnlineFlag"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/yunxin_icon_flag_contacts_normal"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCover"
+        app:layout_constraintRight_toRightOf="@+id/ivCover" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        android:maxEms="7"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/c_2"
+        android:textSize="@dimen/s_4"
+        app:layout_constraintLeft_toRightOf="@+id/ivCover"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRegisterCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="222"
+        android:textColor="@color/c_4"
+        android:textSize="@dimen/s_2"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        android:text="昨天"
+        android:textSize="@dimen/font_10"
+        android:textColor="@color/color_black_a20"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/color_black_a5"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/videocall_contacts_apply_agree_gray"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="已通过申请"
+        android:textColor="@color/color_black_unable"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

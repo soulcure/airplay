@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/mall_card_bg"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="唐小名"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_16" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvUsername"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/tvUsername"
+        android:text="185****8888"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_16" />
+
+    <TextView
+        android:id="@+id/tvDefaultAddress"
+        android:layout_width="34dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@id/tvUsername"
+        android:layout_marginStart="7dp"
+        android:layout_toEndOf="@id/tvPhone"
+        android:background="@drawable/mall_text_button_bg"
+        android:gravity="center"
+        android:text="默认"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_10" />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/mall_address_right_arrow" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvUsername"
+        android:layout_alignStart="@id/tvUsername"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="50dp"
+        android:maxLines="2"
+        android:text="广东省深圳市宝安区石岩街道创维创新谷公寓2号楼10楼前台 "
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_14" />
+</RelativeLayout>
+

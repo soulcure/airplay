@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--新标准化start-->
+    <dimen name="s_1">10sp</dimen>
+    <dimen name="s_2">12sp</dimen>
+    <dimen name="s_3">14sp</dimen>
+    <dimen name="s_4">16sp</dimen>
+    <dimen name="s_5">18sp</dimen>
+    <dimen name="s_6">20sp</dimen>
+    <dimen name="s_7">22sp</dimen>
+    <dimen name="s_8">24sp</dimen>
+    <dimen name="s_9">26sp</dimen>
+    <!--新标准化end-->
+
+    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="actionbar_height">44dp</dimen>
+    <dimen name="actionbar_title_size">20sp</dimen>
+    <dimen name="status_bar_and_actionbar_height">66dp</dimen>
+
+    <!--副标题的高度-->
+    <dimen name="bar_headline_height_l">127dp</dimen>
+    <dimen name="bar_headline_height_m">103dp</dimen>
+    <dimen name="bar_headline_height_s">90dp</dimen>
+
+    <dimen name="font_64">64sp</dimen>
+    <dimen name="font_34">34sp</dimen>
+    <dimen name="font_32">32sp</dimen>
+    <dimen name="font_30">30sp</dimen>
+    <dimen name="font_26">26sp</dimen>
+    <dimen name="font_24">24sp</dimen>
+    <dimen name="font_22">22sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_19">19sp</dimen>
+    <dimen name="font_17">17sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_13">13sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_10">10sp</dimen>
+    <dimen name="font_28">28sp</dimen>
+    <dimen name="font_29">29sp</dimen>
+    <dimen name="font_27">27sp</dimen>
+    <dimen name="activity_margin_start">15dp</dimen>
+    <dimen name="activity_margin_end">15dp</dimen>
+
+    <!--SDialog-->
+    <!-- 小字体 -->
+    <dimen name="t_font_size_l">14sp</dimen>
+    <!-- 中字体 -->
+    <!-- 大字体 -->
+
+    <!--UI控件标准尺寸-->
+    <dimen name="global_horizontal_margin_30">30dp</dimen>
+    <dimen name="global_horizontal_margin_20">20dp</dimen>
+    <dimen name="global_horizontal_margin_15">15dp</dimen>
+    <dimen name="global_horizontal_margin_10">10dp</dimen>
+    <dimen name="global_horizontal_margin_5">5dp</dimen>
+    <dimen name="global_dialog_height">469dp</dimen>
+    <dimen name="global_row_height_45">45dp</dimen>
+    <dimen name="global_row_height_60">60dp</dimen>
+    <dimen name="global_row_height_80">80dp</dimen>
+    <dimen name="global_row_height_55">55dp</dimen>
+    <dimen name="global_button_height_50">50dp</dimen>
+    <dimen name="global_separator_line_width_height">1dp</dimen>
+    <dimen name="mine_text_arrow_gap_2">2dp</dimen>
+
+    <dimen name="home_search_bar_height">60dp</dimen>
+    <dimen name="connect_device_item_height">80dp</dimen>
+    <dimen name="app_list_item_height">100dp</dimen>
+
+    <dimen name="long_video_detail_app_bar_height">446dp</dimen>
+    <dimen name="screen_cast_sport_margin_left">30dp</dimen>
+    <dimen name="screen_cast_sport_text_margin_left">55dp</dimen>
+    <dimen name="screen_cast_sport_img_width">120dp</dimen>
+    <dimen name="screen_cast_sport_img_height">80dp</dimen>
+    <!--<dimen name="screen_cast_local_title_margin_top">24dp</dimen>-->
+
+    <dimen name="screen_cast_margin_top">10dp</dimen>
+    <dimen name="screen_cast_margin_right">20dp</dimen>
+    <dimen name="screen_cast_margin_left">20dp</dimen>
+    <dimen name="bt_screen_cast_height_l">84dp</dimen>
+    <dimen name="screen_cast_icon_size">36dp</dimen>
+    <dimen name="local_title_margin_top">29dp</dimen>
+    <dimen name="local_title_height">47dp</dimen>
+    <dimen name="screen_cast_title_icon_width">3dp</dimen>
+    <dimen name="screen_cast_title_icon_height">19dp</dimen>
+    <dimen name="screen_cast_title_margin_left">7dp</dimen>
+    <dimen name="screen_cast_title_margin_top">31dp</dimen>
+    <dimen name="screen_cast_local_mode_height">94dp</dimen>
+    <dimen name="screen_cast_local_padding_top">11dp</dimen>
+    <dimen name="screen_cast_local_icon_size">31dp</dimen>
+    <dimen name="screen_cast_saver_height">243dp</dimen>
+    <dimen name="screen_saver_item_pic_height">197dp</dimen>
+    <dimen name="screen_saver_item_text_margin">12dp</dimen>
+    <dimen name="screen_saver_item_text_padding">5dp</dimen>
+    <dimen name="screen_cast_actionbar">44dp</dimen>
+    <dimen name="screen_action_height">44dp</dimen>
+    <dimen name="network_failed_pic_size">250dp</dimen>
+    <dimen name="details_title_margin_top">20dp</dimen>
+    <dimen name="bt_saver_details_height">58dp</dimen>
+    <dimen name="s_dialog_background_radius">16dp</dimen>
+    <dimen name="s_dialog_margin">40dp</dimen>
+    <dimen name="screen_shot_button_height">58dp</dimen>
+    <dimen name="screen_shot_view_height">492dp</dimen>
+    <dimen name="screen_shot_img_height">220dp</dimen>
+    <dimen name="screen_shot_saver_margin_top">21dp</dimen>
+    <dimen name="item_video_size">63dp</dimen>
+    <dimen name="item_video_height">84dp</dimen>
+    <dimen name="item_video_push_size">46dp</dimen>
+    <dimen name="local_video_height">67dp</dimen>
+    <dimen name="shot_loading_img_width">157dp</dimen>
+    <dimen name="shot_loading_img_height">79dp</dimen>
+</resources>

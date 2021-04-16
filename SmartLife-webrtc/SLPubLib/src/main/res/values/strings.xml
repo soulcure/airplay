@@ -1,0 +1,253 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">PubLib</string>
+
+
+
+    <!--loadingDialog-->
+    <string name="loading_tip">正在加载...</string>
+    <string name="loading_tip_no_more_data">没有更多了！</string>
+    <string name="loading_tip_server_busy">服务器繁忙，请稍后重试！</string>
+    <string name="loading_tip_net_error">网络异常</string>
+
+    <string name="id_connect_scan_title">扫码连接电视</string>
+    <string name="id_connect_scan_desc">打开电视端「电视派」APP，并扫描\nAPP主页的二维码完成连接</string>
+    <string name="id_connect_input_title">激活ID连接电视</string>
+    <string name="id_connect_input_desc">打开电视端「设置-关于本机-本机信\n息」即可看到电视的激活ID</string>
+
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="uninstall">卸载</string>
+    <string name="confirm_disconnect">确认断开</string>
+    <string name="confirm_unbind">确认移除</string>
+    <string name="start_at_once">立即开始</string>
+    <string name="call">拨打</string>
+    <string name="delete">删除</string>
+    <string name="one_key_connect_wifi">一键连wifi</string>
+    <string name="bt_connect_wifi">去连接</string>
+
+
+    <!--MultiCall-->
+    <string name="video_call_accepting">接通中...</string>
+    <string name="video_call_hangup">已挂断</string>
+    <string name="video_call_busy">用户正忙 请稍后再拨</string>
+    <string name="video_call_timeout">无应答 请稍后再拨</string>
+    <string name="video_camera_error">摄像头异常</string>
+    <string name="video_call_lock">摄像头已锁</string>
+
+    <!--HomeMonitor-->
+    <string name="home_monitor_quit">退出</string>
+    <string name="home_monitor_lock">摄像头被锁\n无法进行家庭看护\n请手动开启电视端摄像头</string>
+
+    <!--HomeActivity-->
+    <string name="exit_prompt_hint">再按一次将退出电视派</string>
+
+    <!--SDialog-->
+    <string name="t_cancel">取消</string>
+    <string name="t_confirm">确定</string>
+    <string name="not_allowed">不允许</string>
+    <string name="allowed">允许</string>
+
+    <!--loadTipView-->
+    <string name="title_loadtips_login">指尖到家精彩视频\n请立即登录预订!</string>
+    <string name="title_loadtips_login_btn">登录</string>
+    <string name="title_loadtips_no_data">服务器没给我数据嘞！</string>
+    <string name="title_loadtips_net_error">网络有问题</string>
+
+    <!--登录页面-->
+
+    <!--voice remote-->
+    <string name="voice_remote_start">按住说话</string>
+    <string name="voice_remote_send">松开结束</string>
+    <string name="voice_remote_title">说点什么</string>
+    <string name="voice_remote_subtitle">轻松快捷的与电视交互</string>
+    <string name="voice_remote_finger_slide_up">手指上滑，取消发送</string>
+    <string name="voice_remote_finger_move_up">松开手指，取消发送</string>
+
+
+    <!--收藏，播放历史-->
+    <string name="collect_history_no_selected_data">没有选中的数据嘞</string>
+    <string name="collect_history_delete_data_fail">删除数据失败了</string>
+    <string name="collect_history_no_data_to_edit">没有数据可编辑嘞</string>
+    <string name="history_no_data">您还没有播放任何视频</string>
+
+    <string name="reuqest_parse_data_fail">解析数据失败了</string>
+    <!--关于-->
+    <string name="about_app_introduce">电视派APP致力于为用户带来新颖有趣cancel的大屏互动体验，如果您在使用过程中有任何建议，欢迎联系我们。</string>
+    <!--我的会员权益-->
+    <!--购买会员-->
+    <!--我的首页-->
+    <string name="loading_member_info_fail">加载会员信息失败</string>
+
+    <string name="push_to_tv">推送至电视</string>
+    <string name="push_to_tv_success">推送成功</string>
+    <!--搜索页面-->
+    <string name="search_no_input_tips">请输入关键字查询</string>
+    <!--会员购买-->
+    <string name="member_not_buy">当前未开通</string>
+    <string name="product_not_selected">未选中产品</string>
+    <string name="wx_not_installed">亲，还没有安装微信哦！</string>
+    <string name="wx_version_too_low">请升级到最新版本微信!</string>
+    <string name="wx_pay_result_info_failed">获取微信支付信息失败</string>
+    <!--腾讯源 绑定qq账号-->
+    <string name="coocaa_bind_qq_failed">绑定第三方账号失败</string>
+    <string name="switch_tvsource_tip">已适配为当前电视的内容</string>
+
+    <!--关于中的qq号-->
+    <string name="about_contact_qq">768873963</string>
+
+    <!--会员设备选择页面-->
+
+    <!--版本更新-->
+    <string name="update_app_no_need">当前已是最新版本</string>
+    <string name="download_apk_fail">下载App最新版本失败</string>
+    <string name="detect_new_version">发现新版本</string>
+    <string name="update_app_info_error">更新app信息错误</string>
+    <string name="logout_ok">确定</string>
+    <string name="logout_cancel">取消</string>
+    <string name="hotpoint_no">暂不</string>
+    <string name="hotpoint_setting">去设置</string>
+
+    <string name="screen_shot">截屏</string>
+    <string name="screen_shot_ing">正在截屏</string>
+    <string name="screen_shot_reload">重截</string>
+
+
+    <style name="start">立即开始</style>
+
+    <string name="switch_title">镜像</string>
+    <string name="hint_info">手机屏幕投射到电视</string>
+    <string name="str_immediately_start">立即开始</string>
+    <string name="screen_cast">屏幕镜像</string>
+    <string name="string_pic">图片</string>
+    <string name="start_screen_saver">开机屏保</string>
+    <string name="string_more">更多</string>
+    <string name="screen_push_pireview">投屏预览</string>
+    <string name="customies_screen_saver">定制屏保</string>
+    <string name="permission_storage">请求存储权限</string>
+    <string name="tip_command_send">指令已发送</string>
+
+
+    <!--视频聊天-->
+    <string name="yunxin_video_call">视频通话</string>
+    <string name="yunxin_input_phone_number">电视通话号码</string>
+    <string name="yunxin_input_verification_code">请输入手机验证码</string>
+    <string name="yunxin_get_verification_code">获取验证码</string>
+    <string name="yunxin_get_verification_code_again">重新获取</string>
+    <string name="yunxin_login">登录</string>
+    <string name="yunxin_call_number">本机通话号码：%1$s</string>
+    <string name="yunxin_call_number_other">对方电视通话号码：%1$s</string>
+    <string name="yunxin_welcome_1">欢迎使用电视派视频通话服务</string>
+    <string name="yunxin_welcome_2">添加联系人开启视频通话</string>
+    <string name="yunxin_input_tv_number">请输入电视通话号码</string>
+    <string name="yunxin_input_nickname">添加备注名</string>
+    <string name="yunxin_input_contacts_add_contacts">输入电视号码添加联系人</string>
+    <string name="yunxin_manually_add_by_id">通过号码添加</string>
+    <string name="yunxin_add">添加</string>
+    <string name="yunxin_save">保存</string>
+    <string name="yunxin_finish">完成</string>
+    <string name="yunxin_contacts">联系人</string>
+    <string name="yunxin_remove_contacts">移除好友</string>
+    <string name="yunxin_add_contacts">添加好友</string>
+    <string name="yunxin_no_tv_number">电视通话号码不存在</string>
+    <string name="yunxin_request_add_contacts">%1$s\n请求加你为视频好友</string>
+    <string name="yunxin_request_agree">授权添加</string>
+    <string name="yunxin_request_refuse">拒绝请求</string>
+    <string name="yunxin_current_login_user">当前登录号码:%1$s\n是否切换账号？</string>
+    <string name="yunxin_add_friends">添加好友</string>
+    <string name="yunxin_add_friends_method">通过扫码或输入号码的方式添加好友</string>
+    <string name="yunxin_scan_title">扫码添加好友</string>
+    <string name="yunxin_scan_desc">打开电视端「视频通话」App，选择\n「添加好友」并扫码完成添加</string>
+    <string name="yunxin_add_contacts_desc">输入电视通话号码与电视互相添加为好友</string>
+    <string name="yunxin_add_contacts_wait">等待对方验证</string>
+    <string name="yunxin_add_contacts_tip">好友添加申请</string>
+    <string name="yunxin_other_contacts_id">对方号码 %1$s</string>
+    <string name="yunxin_contacts_id">通话号码 %1$s</string>
+    <string name="yunxin_add_contacts_start">添加好友开启视频通话</string>
+    <string name="yunxin_add_contacts_now">立即添加</string>
+    <string name="yunxin_send_add_contacts">发送申请</string>
+    <string name="yunxin_logout">退出账号</string>
+    <string name="yunxin_video_call_subtitle">使用本机号码登录，开启视频通话</string>
+    <string name="yunxin_login_and_register">登录/注册</string>
+    <string name="yunxin_login_tip">未注册手机号验证后自动登录</string>
+    <string name="yunxin_dialog_exit">确定退出码？</string>
+    <string name="yunxin_dialog_exit_cancel">取消</string>
+    <string name="yunxin_dialog_exit_confirm">确定</string>
+    <string name="yunxin_dialog_no_contacts">你已不是对方好友，无法视频通话</string>
+    <string name="yunxin_dialog_no_contacts_cancel">取消</string>
+    <string name="yunxin_dialog_no_contacts_readd">重新添加</string>
+    <string name="yunxin_permission_camera">申请使用摄像头</string>
+    <string name="yunxin_permission_camera_add_audio">请求摄像头和麦克风权限</string>
+    <string name="yunxin_permission_refuse">权限申请被拒绝，需要授权才能使用</string>
+    <string name="yunxin_toast_add_success">添加成功</string>
+    <string name="yunxin_toast_send_request">已发送申请</string>
+    <string name="yunxin_toast_delete_success">删除成功</string>
+    <string name="yunxin_toast_contacts_already">已经是好友</string>
+    <string name="yunxin_toast_agree_privacy">请先同意：用户许可协议和隐私政策</string>
+    <string name="yunxin_scan_tip">注：仅部分电视型号支持视频通话功能</string>
+
+    <string name="yunxin_video_call_wait_tip">邀请你视频通话</string>
+    <string name="yunxin_video_call_wait_hangup">挂断</string>
+    <string name="yunxin_video_call_wait_receive">接听</string>
+    <string name="yunxin_video_call_calling_state">视频呼叫中...</string>
+    <string name="yunixn_video_call_state">通话中</string>
+
+    <string name="yunixn_video_calling_notification">正在与%1$s通话中，点击继续</string>
+    <string name="yunixn_video_call_notification">%1$s请求通话，点击继续</string>
+    <string name="yunixn_verify_friend_notification">%1$s同意添加好友</string>
+    <string name="yunixn_add_friend_notification">%1$s申请添加好友</string>
+    <string name="yunixn_refuse_friend_notification">%1$s拒绝添加好友</string>
+    <string name="yunixn_agree_friend_notification">%1$s添加你为联系人</string>
+    <string name="request_captcha_after">%1$s 秒后重试</string>
+    <string name="yunixn_friend_add">好友通知</string>
+    <string name="yunixn_video_call">网络通话</string>
+    <string name="reverse_control_button_text">同屏控制</string>
+    <string name="reverse_tip">告别按键，把电视变成触控智慧屏</string>
+    <string name="tip_connected_tv">请先连接电视</string>
+
+    <string name="close">关闭 </string>
+    <string name="webview_load_fail">偶哦~加载失败了!您家网络还行吗?</string>
+
+    <string name="server_error_tip">服务器返回错误，请稍后再试</string>
+    <string name="s_msg_intent_failed">抱歉，手机内没有找到可用的应用程序。</string>
+    <string name="to_login">去登录</string>
+    <string name="str_learn_know2">我知道了</string>
+    <string name="user_token_failure">登录已失效，请重新登录!</string>
+    <string name="psw_error">密码格式不正确</string>
+    <string name="verify_psw_notsame">两次设置的密码不一致，请重新设置</string>
+    <string name="verify_psw_error">确认密码格式不正确</string>
+    <string name="pull_no_more_msg">没有更多内容</string>
+    <string name="yunxin_toast_contacts_already_friend">已经是好友</string>
+    <string name="yunxin_toast_contacts_already_add">已经添加，等待对方通过</string>
+    <!--验证码登录-->
+    <string name="sms_title_login">登录</string>
+    <string name="auto_register">未注册的手机号验证通过后将自动注册</string>
+
+    <string name="mine_scan">扫一扫</string>
+    <string name="mine_share">分享酷开智屏</string>
+    <string name="mine_advise">建议与反馈</string>
+    <string name="mine_about">关于</string>
+    <string name="mine_tool">辅助工具</string>
+    <string name="mine_help">帮助说明</string>
+    <string name="mine_line_platform">连接其他平台</string>
+    <string name="mine_set">设置</string>
+    <string name="mine_login_out">退出</string>
+    <string name="mine_login_out_cancel">再想一想</string>
+    <string name="smart_lab">智屏实验室</string>
+    <string name="not_same_wifi_tips">请和设备在同一Wi-Fi下操作</string>
+
+    <string name="dialog_update_title">酷开智屏版本过低</string>
+    <string name="dialog_update_content">功能需在App升级后方可正常使用</string>
+    <string name="dialog_update_cancel">取消</string>
+    <string name="dialog_update_confirm">立即升级</string>
+
+    <string name="dialog_live_tips_content_top">“电视直播”服务由第三方直播平台提供，可能存在信号不稳定的情况，“共享屏”无法控制。</string>
+    <string name="dialog_live_tips_content_bottom">但如果使用过程中出现问题，您可以通过「 我的-建议与反馈 」向我们反馈，我们将全力为您解决。</string>
+    <string name="dialog_live_tips_cancel">不再提示</string>
+    <string name="dialog_live_tips_confirm">知道了</string>
+    <string name="dialog_live_tips_title">温馨提示</string>
+
+    <string name="vi_music_play">点击暂停背景音乐</string>
+    <string name="vi_music_pause">点击播放背景音乐</string>
+
+    <string name="share_code_reconnect"><u>点击连接</u></string>
+</resources>

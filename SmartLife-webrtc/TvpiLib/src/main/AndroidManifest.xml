@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coocaa.tvpilib">
+
+    <application android:usesCleartextTraffic="true">
+        <!-- 云信sdk -->
+        <activity
+            android:name="com.coocaa.tvpi.module.remote.RemoteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.DialogActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.virtualinput"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity> <!-- 解决webview渲染异常 -->
+
+        <activity
+            android:name="com.coocaa.tvpi.module.remote.DongleRemoteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.donglevirtualinput"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.screenshot.ScreenShotActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.coocaa.tvpi.module.screenshot.ScreenshotDialogActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.DialogActivity">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.screenshot" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.screenshot"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.coocaa.tvpi.module.connection.OpenHotspotActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.coocaa.tvpi.module.connection.ConnectNetForDongleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.coocaa.tvpi.module.screensaver.ScreenSaverListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.coocaa.tvpi.module.screensaver.ScreenSaverDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.coocaa.tvpi.module.local.VideoPreviewActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mall.MallDetailActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.app.AppDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.live.LiveActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.live"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.whiteboard.WhiteboardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.whiteboard"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.coocaa.tvpi.module.whiteboard.ui.WhiteBoardDrawActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.whiteboard.notemark.NoteMarkLoadingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.notemark"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.coocaa.tvpi.module.whiteboard.notemark.NoteMarkDrawActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.live.LiveH5Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.live.h5"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.movie.LongVideoDetailActivity2"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="app.smart_screen.com"
+                    android:path="/long_video_detail"
+                    android:scheme="coocaa" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.moviedetail"
+                    android:path="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.movie.CategoryFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="app.smart_screen.com"
+                    android:path="/long_video_list"
+                    android:scheme="coocaa" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.movie.HomeRecommendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="app.smart_screen.com"
+                    android:path="/recommend_detail"
+                    android:scheme="coocaa" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.LocalActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.document.page.DocumentVideoPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen.translucent"/>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.document.page.DocumentHelpActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.document.page.DocumentHelpListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.document.page.DocumentAddHelpActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.album2.Picture2Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.localpicture"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.local.PictureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.local.media.LocalMediaActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity-alias
+            android:name="LocalPictureActivity"
+            android:targetActivity="com.coocaa.tvpi.module.local.media.LocalMediaActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.mypicture"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name="LocalVideoActivity"
+            android:targetActivity="com.coocaa.tvpi.module.local.media.LocalMediaActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.myvideo"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.local.media.LocalAddActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppLauncher">
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.local.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.localvideo"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.LocalVideoPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 本地投屏相关 -->
+        <activity
+            android:name="com.coocaa.tvpi.module.local.MusicActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.localmusic"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.AlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.local.AlbumActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.local.album.AlbumPreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AlbumPreview" />
+        <activity
+            android:name="com.coocaa.tvpi.module.local.album.AlbumPreviewActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.coocaa.tvpi.module.local.PictureAndVideoPreActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.coocaa.tvpi.module.local.document.page.DocumentListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.localdoc_list"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.document.page.DocumentMainActivity_old"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.localdoc_guide_old"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.document.page.DocumentMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.localdoc_guide"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.document.page.DocumentPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.localdoc_player"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.local.document.page.DocumentDeleteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.localdoc_delete"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.lab.networktest.NetworkTestActivityW3"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.networktest3"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1109849345" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.login.SmsLoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 本地投屏相关 -->
+        <activity
+            android:name="com.coocaa.tvpi.view.webview.SimpleWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.util.permission.PermissionActivity"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen.translucent" />
+        <activity
+            android:name="com.coocaa.tvpi.module.newmovie.MovieHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.moviehome"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity> <!-- 云信进程间通信 Receiver -->
+        <activity
+            android:name="com.coocaa.tvpi.module.newmovie.MovieFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 云信进程间通信service -->
+        <activity
+            android:name="com.coocaa.tvpi.module.newmovie.MovieSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 云信进程间通信provider -->
+        <!-- android:authorities="{包名}.ipc.provider", 请将com.netease.nim.demo替换为自己的包名 -->
+        <activity
+            android:name="com.coocaa.tvpi.module.app.AppHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="coocaa.com"
+                    android:pathPattern="/AppHome"
+                    android:scheme="smart" />
+            </intent-filter>
+        </activity> <!-- 配置小米推送的service和receiver start -->
+        <activity
+            android:name="com.coocaa.tvpi.module.app.AppStoreListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.newmovie.CollectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 -->
+        <activity
+            android:name="com.coocaa.tvpi.module.newmovie.PushHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.coocaa.tvpi.module.reversescreen.ReverseScreenActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen" /> <!-- 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 -->
+        <activity
+            android:name="com.coocaa.tvpi.module.local.VideoPlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.app.AppSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.coocaa.tvpi.module.mall.MyOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 配置的VIVO推送 service, activity, receiver end -->
+        <!-- 魅族推送配置的service和receiver start -->
+        <activity
+            android:name="com.coocaa.tvpi.module.mall.CustomerServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 魅族推送配置的service和receiver end -->
+        <!-- oppo推送配置的service和receiver start -->
+        <activity
+            android:name="com.coocaa.tvpi.module.mall.ConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- oppo推送配置的service和receiver end -->
+        <activity
+            android:name="com.coocaa.tvpi.module.mall.AddressListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mall.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- old appkey        5bd13984b465f5812800014c -->
+        <activity
+            android:name="com.coocaa.tvpi.module.mall.UpdateAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mall.InvoiceInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" /> <!-- umeng end -->
+        <activity
+            android:name="com.coocaa.movie.MovieWebViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.coocaa.movie.MovieProductActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.newmovie.CollectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.DongleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.ScanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.ScanActivity2"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.DefinedActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ScanActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.InputCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.WifiListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.WifiConnectTipActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.DialogStyle" />
+        <activity
+            android:name="com.coocaa.tvpi.module.feedback.FeedbackActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.MineActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.userinfo.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.userinfo.EditUserNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.EditDeviceNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.about.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.about.CallUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.VoiceControllerActivity"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen.translucent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.voicecontrol"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.newmovie.MovieCategoryActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.coocaa.tvpi.module.openapi.JumpWxMPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.WifiConnectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DialogStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="com.coocaa.smart.connectwifi" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.connectwifi"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.coocaa.smart.connectwifi" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.ConnectDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.DialogActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.devicelist"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.NoNetwortDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.DialogActivity"/>
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.lab.SmartLabActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.lab.SmartLabActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.lab"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.share.ShareActivity"
+            android:theme="@style/Theme.DialogStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.share"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.share.ShareCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.sharecode"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".SportsActivity"
+            android:screenOrientation="portrait"
+            android:targetActivity="com.coocaa.tvpi.module.newmovie.MovieCategoryActivity2"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.sports"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".ComicActivity"
+            android:screenOrientation="portrait"
+            android:targetActivity="com.coocaa.tvpi.module.newmovie.MovieCategoryActivity2"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.comic"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity-alias> <!-- mall start -->
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.lab.ShowDeviceInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.lab.device_info"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.upgrade.CallUpgradeActivity"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name="com.coocaa.tvpi.module.live.LiveTipDialogActivity"
+            android:theme="@style/ActivityDialogStyle" />
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.WifiConnectW52Activity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.DialogStyle">
+            <intent-filter>
+                <action android:name="smart.intent.action.WifiConnectTip" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.DeviceManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.device.manager" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.SmartScreenAboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.userinfo.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name="com.coocaa.tvpi.module.local.album2.AlbumDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name="com.coocaa.tvpi.module.local.album2.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name="com.coocaa.tvpi.module.local.album2.PreviewActivityW7"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.connection.scan.ScanApiActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/ScanActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.scan_api"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.lab.TestJumpH5Activity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.test_jump_h5"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.coocaa.tvpi.module.pay.PayCenterActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.pay"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.coocaa.tvpi.module.web.SmartBrowserActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name="com.coocaa.tvpi.module.web.SmartBrowserClipboardDialogActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/SmartBrowserClipboardDialog">
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.lab.SmartConfigActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.lab.config"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.lab.StartWxMpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.lab.test_mp"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+                <data
+                    android:host="com.coocaa.smart.lab.jump_mp"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.lab.micro.MicroLabActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:process=":h5">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.lab.micro"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.login.LoginAgreementActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.DialogStyle"/>
+        <activity
+            android:name="com.coocaa.tvpi.module.web.SmartBrowserActivity2"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.browser"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.web.SmartBrowserSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 日志管理activity start -->
+        <activity
+            android:name="com.coocaa.tvpi.module.logcat.ScanFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.coocaa.smart.lab.logcat"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coocaa.tvpi.module.logcat.ShowLogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.whiteboard.ReconnectActivity"
+            android:theme="@style/ActivityDialogStyle" />
+
+        <activity
+            android:name="com.coocaa.tvpi.module.mine.lab.MirrorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.mirror"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.coocaa.tvpi.module.timealbum.TimeAlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.coocaa.smart.timealbum"
+                    android:pathPattern="/index"
+                    android:scheme="np" />
+            </intent-filter>
+        </activity>
+
+        <!-- 日志管理activity end -->
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="60079479f1eb4f3f9b67846b" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name="com.coocaa.tvpi.module.login.provider.UserProvider"
+            android:authorities="com.tianci.user.UserProvider"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:readPermission="com.tianci.user.permission.READ_CONTENT"
+            android:writePermission="com.tianci.user.permission.WRITE_CONTENT" /> <!-- mall end -->
+        <!-- 影视业务 -->
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":mixpush">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.swaiotos.skymirror.sdk.reverse.ReverseCaptureService" />
+        <service android:name="com.swaiotos.skymirror.sdk.capture.MirClientService" />
+        <service android:name="com.coocaa.tvpi.module.homepager.service.FloatViewService" />
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":mixpush" />
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":mixpush" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+
+        <service
+            android:name="com.vivo.push.sdk.service.CommandClientService"
+            android:exported="true" />
+
+        <service
+            android:name="com.coocaa.tvpi.module.service.api.SmartApiService"
+            android:exported="true"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.SmartApiService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.coocaa.tvpi.module.share.ShareService"
+            android:exported="true"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="swaiotos.service.share" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.coocaa.tvpi.module.remote.floatui.VirtualInputFloatService"
+            android:exported="true"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="swaiotos.service.virtualinput.float" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.coocaa.service.WebRTCSoundClientService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":h5">
+            <meta-data
+                android:name="ss-clientID"
+                android:value="ss-clientID-WebRTC-Sound" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="ss-clientKey-20210312" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="0" />
+
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.coocaa.tvpi.module.whiteboard.WhiteBoardSSClientService"
+            android:enabled="true"
+            android:exported="true">
+            <meta-data
+                android:name="ss-clientID"
+                android:value="ss-whiteboard-client" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="ss-whiteboard-client" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="1" />
+
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.coocaa.tvpi.module.whiteboard.notemark.NoteMarkSSClientService"
+            android:enabled="true"
+            android:exported="true">
+            <meta-data
+                android:name="ss-clientID"
+                android:value="ss-notemark-client" />
+            <meta-data
+                android:name="ss-clientKey"
+                android:value="ss-notemark-client" />
+            <meta-data
+                android:name="ss-clientVersion"
+                android:value="1" />
+
+            <intent-filter>
+                <action android:name="swaiotos.intent.action.channel.iot.SSCLIENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+    <permission
+        android:name="${applicationId}.permission.RECEIVE_MSG"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="${applicationId}.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="${applicationId}.push.permission.MESSAGE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="com.tianci.user.permission.READ_CONTENT"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.tianci.user.permission.WRITE_CONTENT"
+        android:protectionLevel="signatureOrSystem" />
+
+    <uses-feature android:name="android.hardware.camera" /> <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" /> <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 如果需要实时音视频通话模块，下面的权限也是必须的。否则，可以不加 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 云信SDK 权限申明, 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 小米推送以下两处 com.coocaa.tvpi 改开发者App的包名 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 魅族推送 兼容flyme5.0以下版本，魅族内部集成pushSDK必填，不然无法收到消息，将com.coocaa.tvpi 改开发者App的包名 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 兼容flyme3.0配置权限 -->
+    <uses-permission android:name="${applicationId}.permission.RECEIVE_MSG" />
+
+    <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
+
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" /> <!-- oppo推送配置权限 -->
+    <uses-permission android:name="${applicationId}.push.permission.MESSAGE" />
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" /> <!-- 拨打客服 -->
+    <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" /> <!-- 账户 Provider 读写权限定义 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+</manifest>

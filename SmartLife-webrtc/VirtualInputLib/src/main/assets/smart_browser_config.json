@@ -1,0 +1,14 @@
+{
+  "dataList" : [
+    {
+      "host" : "www.bilibili.com",
+      "extJs" : "https://beta-webapp.skysrt.com/yss/script/bilibili.js",
+      "showVideo" : true
+    },
+    {
+      "host" : "m.bilibili.com",
+      "extJs" : "https://beta-webapp.skysrt.com/yss/script/bilibili.js",
+      "showVideo" : true
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<item name="code201001" type="string">该手机号码已注册,请直接登录</item>
+	<item name="code201002" type="string">昵称不能为空</item>
+	<item name="code201003" type="string">密码不能为空</item>
+	<item name="code201004" type="string">验证码不能为空</item>
+	<item name="code201005" type="string">注册的邀请码不正确</item>
+	
+	<item name="code202001" type="string">已被其他账号绑定</item>
+	<item name="code202002" type="string">账号类型非第三方账号类型</item>
+	<item name="code202003" type="string">账号类型不对</item>
+	<item name="code202004" type="string">手机号码已经被绑定</item>
+	<item name="code202005" type="string">绑定的手机号码没有密码</item>
+	
+	<item name="code203001" type="string">解绑的账号不存在</item>
+	<item name="code203002" type="string">自有账号禁止解绑</item>
+	<item name="code203003" type="string">唯一关联账号禁止解绑</item>
+	
+	<item name="code204001" type="string">手机号码格式不正确</item>
+	<item name="code204002" type="string">不支持的短信验证码的业务标识</item>
+	<item name="code204003" type="string">短信验证码发送太频繁</item>
+	<item name="code204004" type="string">短信验证码达到发送的限制次数</item>
+	<item name="code204005" type="string">短信验证码不正确</item>
+	
+	<item name="code205001" type="string">登录无密码</item>
+	<item name="code205002" type="string">账号冻结，禁止登录</item>
+	<item name="code205003" type="string">账号不存在</item>
+	<item name="code205004" type="string">登录密码不正确</item>
+	
+	<item name="code206001" type="string">账号不存在</item>
+	<item name="code206002" type="string">账号被冻结</item>
+	<item name="code206003" type="string">请求参数不能为空</item>
+	<item name="code206004" type="string">手机号码不能为空</item>
+	<item name="code206005" type="string">验证码不能为空</item>
+	<item name="code206006" type="string">新密码不能为空</item>
+	<item name="code206007" type="string">请求参数为空</item>
+	<item name="code206008" type="string">旧密码不能为空</item>
+	<item name="code206009" type="string">旧密码不正确</item>
+	<item name="code206010" type="string">新密码不能为空</item>
+	
+	<item name="code207001" type="string">用户昵称不能为空</item>
+	<item name="code207002" type="string">用户昵称太长</item>
+	<item name="code207003" type="string">用户性别错误</item>
+	<item name="code207004" type="string">用户个性签名不能为空</item>
+	<item name="code207005" type="string">用户个性签名太长</item>
+	<item name="code207006" type="string">用户生日信息不正确</item>
+	<item name="code207007" type="string">用户头像地址不能空</item>
+	<item name="code207008" type="string">用户头像地址太长</item>
+	<item name="code207009" type="string">用户不允许设置头像，仅支持第三方头像URL</item>
+	
+	<item name="code208001" type="string">头像上传地址不能为空</item>
+	<item name="code208002" type="string">头像上传内容不能为空</item>
+	<item name="code208003" type="string">上传失败</item>
+	<item name="code208004" type="string">上传保存时候出错</item>
+	
+	<item name="code403001" type="string">无效的access token</item>
+	<item name="code403002" type="string">未授权的应用</item>
+	<item name="code403003" type="string">请求者IP被封静</item>
+	<item name="code403004" type="string">URL时间戳差距过大，拒绝服务</item>
+	<item name="code403005" type="string">URL签名非法</item>
+
+    <item name="code503001" type="string">服务器内部出错</item>
+	
+</resources>

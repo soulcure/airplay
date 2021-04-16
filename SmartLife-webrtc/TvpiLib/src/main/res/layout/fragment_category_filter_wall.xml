@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/b_2">
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/fragment_category_filter_wall_springview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="42dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_category_filter_wall_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </com.liaoinstan.springview.widget.SpringView>
+
+    <com.coocaa.tvpi.view.LoadTipsView
+        android:id="@+id/fragment_category_filter_wall_loadtipsview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="42dp"
+        android:visibility="gone">
+    </com.coocaa.tvpi.view.LoadTipsView>
+
+    <RelativeLayout
+        android:id="@+id/fragment_category_filter_wall_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/fragment_category_filter_wall_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:background="@color/b_2_96">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_category_filter_wall_rl_types"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@id/fragment_category_filter_wall_ll"
+            android:background="@color/b_2_96">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/fragment_category_filter_wall_img_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@id/fragment_category_filter_wall_tv_types"
+                    android:layout_marginRight="14dp"
+                    android:src="@drawable/icon_filter_arrow_up" />
+
+                <TextView
+                    android:id="@+id/fragment_category_filter_wall_tv_types"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="筛选词条"
+                    android:textColor="@color/c_1"
+                    android:textSize="@dimen/s_3" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/global_separator_line_width_height"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorBack_e6e6e6"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

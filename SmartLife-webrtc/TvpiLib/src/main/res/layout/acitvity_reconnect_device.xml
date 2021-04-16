@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="128dp"
+        android:background="@drawable/bg_dialog_update">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/global_horizontal_margin_20"
+            android:gravity="center"
+            android:text="共享屏连接断开，无法继续"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <!-- 双按钮 -->
+        <RelativeLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/global_horizontal_margin_20"
+            android:layout_marginBottom="@dimen/global_horizontal_margin_20"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="125dp"
+                android:layout_height="46dp"
+                android:layout_marginRight="@dimen/global_horizontal_margin_10"
+                android:background="@drawable/bg_white_round_8"
+                android:gravity="center"
+                android:text="退出"
+                android:textColor="@color/black_80"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="125dp"
+                android:layout_height="46dp"
+                android:background="@drawable/bg_long_orange_gradient"
+                android:gravity="center"
+                android:text="重新连接"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/btn_cancel"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/device_connecting_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="31dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/device_connecting_icon"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

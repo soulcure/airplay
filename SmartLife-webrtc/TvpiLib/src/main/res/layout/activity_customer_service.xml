@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:common_title_title="客服"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+            android:background="#ff5b55"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="微信号"
+            android:textColor="@color/c_1"
+            android:textSize="@dimen/font_24"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/qr_tips_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#ff000000"
+        android:textSize="14sp"
+        android:text="长按保存二维码，通过微信扫一扫识别加微信好友“小酷跟班”获取帮助。"
+        />
+
+    <ImageView
+        android:id="@+id/qr_iv"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/mall_customer_service_qr"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="长按保存二维码"
+        android:textColor="@color/c_1"
+        android:textSize="@dimen/font_12"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="@dimen/global_horizontal_margin_15"
+            android:background="#ffff5b55"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="电话咨询"
+            android:textColor="@color/c_1"
+            android:textSize="@dimen/font_24"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/call_tips_tv"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:text="拨打电话 400-168-8880 ，或直接点击下方按钮与客服取得联系获取帮助。"
+        android:textColor="#ff000000"
+        android:textSize="@dimen/font_14"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/call_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:background="@drawable/bg_long_red_gradient"
+        android:text="拨打客服电话"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/font_16"
+        android:visibility="gone"/>
+
+</LinearLayout>

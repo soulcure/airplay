@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivWifiStrength"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/activity_margin_start"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/tvWifiName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/font_16"
+        android:layout_toEndOf="@id/ivWifiStrength"
+        android:layout_centerVertical="true"
+        android:text="CooCaa-Office"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="@dimen/activity_margin_end"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_arrow_right"/>
+    
+</RelativeLayout>

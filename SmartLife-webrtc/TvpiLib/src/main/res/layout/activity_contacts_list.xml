@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_main_bg"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/videocall_back"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="视频通话"
+            android:textColor="#cc000000"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_centerHorizontal="true"
+            android:text="通话号码：17666113883"
+            android:textColor="#ff000000"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/ivMultiChat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/videocall_multi_chat"
+            android:layout_toStartOf="@id/applyLayout"/>
+
+        <RelativeLayout
+            android:id="@+id/applyLayout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/ivApply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/videocall_message"/>
+
+            <TextView
+                android:id="@+id/tvApplyCount"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:text="1"
+                android:gravity="center"
+                android:textSize="@dimen/font_10"
+                android:textColor="@color/color_white"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_videocall_apply_count"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/springView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_20"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/global_horizontal_margin_20"
+        android:layout_marginBottom="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.liaoinstan.springview.widget.SpringView>
+
+    <com.coocaa.tvpi.base.mvvm.view.DefaultLoadStateView
+        android:id="@+id/loadStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:visibility="gone"/>
+
+</RelativeLayout>

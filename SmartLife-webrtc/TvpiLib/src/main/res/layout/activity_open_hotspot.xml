@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4">
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="使用热点连网"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/font_26"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="进入手机设置打开 “个人热点”"
+        android:textColor="@color/color_black_a60"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/ivTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_tip_open_hotspot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/tvSubtitle"/>
+
+    <TextView
+        android:id="@+id/tvOpenHotspot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="去「设置」打开热点"
+        android:textSize="@dimen/font_16"
+        android:textColor="#F86239"
+        android:layout_below="@id/ivTip"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/btNext"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true">
+
+        <CheckBox
+            android:id="@+id/cbOpenHotspot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:button="@drawable/selector_checkbox_orange"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已确认打开热点"
+            android:textSize="@dimen/font_16"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/color_black_a60" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btNext"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:background="@drawable/selector_bg_orange_round_12"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_16" />
+
+</RelativeLayout>

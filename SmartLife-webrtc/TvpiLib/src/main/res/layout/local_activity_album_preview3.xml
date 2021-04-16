@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_gary_mine"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/album_preview_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_album"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="88dp"
+        android:paddingLeft="@dimen/global_horizontal_margin_5"
+        android:paddingRight="@dimen/global_horizontal_margin_5"
+        android:clipToPadding="false"
+        android:background="@color/white"/>
+
+    <com.coocaa.tvpi.view.CommonTitleBar
+        android:id="@+id/album_preview_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:common_title_left_image="@drawable/icon_back_white"
+        android:background="@drawable/bg_actionbar_shape"/>
+
+        <LinearLayout
+            android:id="@+id/rl_push_to_tv"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/selector_bg_yellow_round_40"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/album_preview_push_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_picture_push_white" />
+
+                <TextView
+                    android:id="@+id/album_preview_pushtotv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="投送至共享屏"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/album_preview_push_icon"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/font_17" />
+
+            </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

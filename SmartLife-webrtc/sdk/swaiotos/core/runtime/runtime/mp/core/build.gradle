@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+
+def features_root = new File(getProjectDir().parentFile, 'libs/features/libs').absolutePath
+def core_root = new File(getProjectDir().parentFile, 'libs/features/core').absolutePath
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILDTOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    //此处配置必须添加 否则无法正确运行
+    aaptOptions {
+        additionalParameters '--auto-add-overlay'
+        //noCompress 'foo', 'bar'
+        ignoreAssetsPattern "!.svn:!.git:.*:!CVS:!thumbs.db:!picasa.ini:!*.scc:*~"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+//导入aar需要的配置
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['android-gif-drawable-release@1.2.17.aar'], dir: core_root)
+    api fileTree(include: ['msa_mdid_1.0.13.aar'], dir: core_root)
+    api fileTree(include: ['uniapp-release.aar'], dir: core_root)
+    api fileTree(include: ['uniMPSDK-release.aar'], dir: core_root)
+
+    implementation fileTree(include: ['weex_videoplayer-release.aar'], dir: features_root)
+    implementation fileTree(include: ['weex_gcanvas-release.aar'], dir: features_root)
+    implementation fileTree(include: ['weex_webview-x5-release.aar'], dir: features_root)
+    implementation fileTree(include: ['Bluetooth-release.aar'], dir: features_root)
+    implementation fileTree(include: ['media-release.aar'], dir: features_root)
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    //必须添加的依赖
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+//    implementation 'androidx.appcompat:support-v4:1.2.0'
+//    api 'com.android.support:recyclerview-v7:28.0.0' //必须集成
+//    api 'com.android.support:support-v4:28.0.0' //必须集成
+//    api 'com.android.support:appcompat-v7:28.0.0' //必须集成
+    api 'com.alibaba:fastjson:1.1.71.android' //必须集成
+    api 'com.github.bumptech.glide:glide:4.9.0'//必须集成
+    api 'com.facebook.fresco:fresco:1.13.0'
+    api "com.facebook.fresco:animated-gif:1.13.0"
+
+
+    implementation project(':runtime-base')
+    implementation project(':runtime-api')
+}

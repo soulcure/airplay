@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="44dp">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/videocall_back" />
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="添加文档"
+                android:textColor="@color/c_1"
+                android:textSize="@dimen/s_5"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <Spinner
+                android:id="@+id/spinner_all_source"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:background="@color/transparent"
+                android:dropDownWidth="140dp"
+                android:popupBackground="@drawable/bg_doc_spinner_bg" />
+
+            <Spinner
+                android:id="@+id/spinner_all_type"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/spinner_all_source"
+                android:background="@color/transparent"
+                android:dropDownWidth="140dp"
+                android:popupBackground="@drawable/bg_doc_spinner_bg" />
+
+            <TextView
+                android:id="@+id/btn_doc_help"
+                android:layout_width="89dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_doc_help_btn"
+                android:drawableLeft="@drawable/doc_icon_help"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:text="文档帮助"
+                android:textColor="@color/b_1"
+                android:textSize="@dimen/font_12"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="#F4F5F9" />
+
+        <RelativeLayout
+            android:id="@+id/scan_tips_layout"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="#F4F7FF">
+
+            <ImageView
+                android:id="@+id/tips_icon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/doc_icon_scan_tips" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/tips_icon"
+                android:text="文档传到手机后，需点击打开后才能扫描出来。"
+                android:textColor="#6F7377"
+                android:textSize="@dimen/font_10" />
+
+            <ImageView
+                android:id="@+id/scan_tips_close_btn"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/doc_icon_scan_tips_close" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/loading_rl"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/color_black_a5"
+            android:paddingLeft="20dp"
+            android:paddingEnd="17dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/search_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="正在搜索文档："
+                android:textColor="@color/c_1"
+                android:textSize="@dimen/s_3" />
+
+            <ImageView
+                android:id="@+id/loading_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@+id/search_tv"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_doc_loading" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_document_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarSize="3dp"
+            android:scrollbarThumbVertical="@color/color_black_a20"
+            android:scrollbars="vertical"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/empty_layout"
+            layout="@layout/layout_doc_common_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titleBar"
+            android:layout_marginTop="35dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_add_doc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/bg_188cff_round_12"
+        android:gravity="center"
+        android:text="添加至内容库"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_17"
+        android:textStyle="bold" />
+
+</RelativeLayout>

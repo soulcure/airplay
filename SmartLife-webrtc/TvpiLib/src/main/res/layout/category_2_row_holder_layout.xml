@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/poster_iv"
+            app:layout_widthPercent="86.67%"
+            app:layout_aspectRatio="100%"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            app:layout_widthPercent="100%"
+            android:layout_height="20dp"
+            android:layout_below="@id/poster_iv"
+            android:gravity="center"
+            android:textColor="@color/c_3"
+            android:textSize="@dimen/s_3"
+            android:text="title"/>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout">
+        <ImageView
+            android:id="@+id/poster_iv1"
+            app:layout_widthPercent="86.67%"
+            app:layout_aspectRatio="100%"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/title_tv1"
+            android:layout_width="match_parent"
+            app:layout_widthPercent="100%"
+            android:layout_height="20dp"
+            android:layout_below="@id/poster_iv1"
+            android:gravity="center"
+            android:textColor="@color/c_3"
+            android:textSize="@dimen/s_3"
+            android:text="title"/>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

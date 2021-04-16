@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_f4f4f4">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/smartlab_bg" />
+
+    <ImageView
+        android:id="@+id/back_img"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="@dimen/global_horizontal_margin_10"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/icon_back_black" />
+
+    <TextView
+        android:id="@+id/page_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="— 更多内容  敬请期待 —"
+        android:textColor="@color/color_black_a20"
+        android:textSize="14sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="228dp"
+        android:layout_marginBottom="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/item_mirror_screen"
+                layout="@layout/item_smartlab" />
+
+            <include
+                android:id="@+id/item_computer"
+                layout="@layout/item_smartlab"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/item_movie"
+                layout="@layout/item_smartlab"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/smart_lab_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/global_horizontal_margin_20"
+                android:paddingBottom="@dimen/global_horizontal_margin_10" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

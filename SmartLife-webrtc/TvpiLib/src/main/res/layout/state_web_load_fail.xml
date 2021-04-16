@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_loadtips_no_network" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/webview_load_fail"
+        android:textColor="@color/colorText_3c3c3c"
+        android:textSize="@dimen/font_15" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="26dp">
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="重试"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/font_15"/>
+        <Button
+            android:id="@+id/back"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/font_15"/>
+    </LinearLayout>
+
+</LinearLayout>

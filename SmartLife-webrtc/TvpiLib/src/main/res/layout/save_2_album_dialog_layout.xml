@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/save_2_album_dismiss_root_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/save_2_album_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="34dp"
+        android:background="@drawable/bg_bottom_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/save_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textColor="@color/c_1_80"
+            android:textSize="@dimen/font_16"
+            android:text="保存至相册"/>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/color_white_main_bg"/>
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textColor="@color/c_1_80"
+            android:textSize="@dimen/font_16"
+            android:text="取消"/>
+
+    </LinearLayout>
+</RelativeLayout>

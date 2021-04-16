@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">互联通道PANEL</string>
+    <string name="bind_device_name">绑定设备%1$s</string>
+    <string name="bind_sid_name">sid: %1$s</string>
+</resources>

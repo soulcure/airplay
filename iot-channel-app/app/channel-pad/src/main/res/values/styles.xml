@@ -1,0 +1,16 @@
+<resources>
+    <style name="AppThemeBlack" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <!-- 全屏对话框 -->
+    <style name="dialog_fullscreen_base">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimAmount">1</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+</resources>

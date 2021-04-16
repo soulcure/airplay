@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px_500"
+    android:layout_height="@dimen/px_200"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/bg_color">
+
+    <TextView
+        android:id="@+id/id_bind_device_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:text="@string/bind_device_name"
+        android:textColor="@android:color/holo_blue_bright"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/id_bind_device_btn"
+            android:layout_width="@dimen/px_150"
+            android:layout_height="@dimen/px_80"
+            android:text="绑定"
+            android:background="@drawable/sel_color_bind_btn"/>
+
+        <Button
+            android:id="@+id/id_cance_bind_device_btn"
+            android:layout_width="@dimen/px_150"
+            android:layout_height="@dimen/px_80"
+            android:layout_marginLeft="@dimen/px_50"
+            android:text="取消"
+            android:background="@drawable/sel_color_bind_btn"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

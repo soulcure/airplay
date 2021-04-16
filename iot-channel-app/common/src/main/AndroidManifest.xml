@@ -1,0 +1,42 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="swaiotos.channel.iot.common">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="swaiot.permission.RECEIVE_ACTIVATION_ID" />
+
+    <application>
+        <receiver
+            android:name="swaiotos.channel.iot.common.MonitorStartUpBroadcastReceiver"
+            android:process=":core">
+
+            <intent-filter android:priority="1000">
+                <!-- 开机完成✅ 启动完成✅  开机是危险的行为，需要权限 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".ProvisionService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <!-- 开机完成✅ 启动完成✅  开机是危险的行为，需要权限 -->
+                <action android:name="swaiotos.intent.action.provide.external.service" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".SendLetterServiceImpl"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="swaiotos.channel.iot.common.SendLetterServiceImpl.action"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/iot_channel_background_one"/>
+
+    <item android:left="@dimen/px_1804" android:top="@dimen/px_508" android:bottom="@dimen/px_556" android:right="@dimen/px_100">
+        <shape android:shape="oval" >
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+
+    <item android:left="@dimen/px_1804" android:top="@dimen/px_556" android:bottom="@dimen/px_508" android:right="@dimen/px_100">
+        <shape android:shape="oval" >
+            <solid android:color="@color/white_40"/>
+        </shape>
+    </item>
+
+</layer-list>

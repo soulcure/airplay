@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/px_1776"
+    android:layout_height="@dimen/px_566"
+    tools:context=".MainActivity"
+    android:padding="@dimen/px_8">
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_1760"
+        android:layout_height="@dimen/px_550"
+        android:background="@drawable/plugin_backgrand">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_220"
+            android:layout_marginStart="@dimen/px_80"
+            android:textSize="@dimen/px_sp_56"
+            android:text="跨屏互动"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_297"
+            android:layout_marginStart="@dimen/px_80"
+            android:textSize="@dimen/px_sp_32"
+            android:text="尽享多屏精彩互动"
+            android:textColor="@color/white_60" />
+
+        <RelativeLayout
+            android:id="@+id/plugin_channel_device_layout"
+            android:layout_width="@dimen/px_360"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_480"
+            android:layout_centerVertical="true">
+            
+            <TextView
+                android:id="@+id/plugin_channel_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/px_sp_32"
+                android:text="跨屏设备"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/plugin_channel_device_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/px_10"
+                android:layout_toEndOf="@+id/plugin_channel_tip"
+                android:layout_alignBottom="@+id/plugin_channel_tip"
+                android:textSize="@dimen/px_sp_24"
+                android:text="@string/plugin_channel_device_size"
+                android:textColor="@color/white_60"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/plugin_channel_recycleview"
+                android:layout_width="@dimen/px_360"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plugin_channel_tip"
+                android:layout_marginTop="@dimen/px_20"/>
+            
+            <ImageView
+                android:id="@+id/plugin_channel_more_tips"
+                android:layout_width="@dimen/px_360"
+                android:layout_height="@dimen/px_68"
+                android:layout_below="@+id/plugin_channel_recycleview"
+                android:layout_marginTop="@dimen/px_negative_5"
+                android:visibility="gone"
+                android:background="@drawable/plugin_device_more_tips"/>
+
+        </RelativeLayout>
+        
+        <ImageView
+            android:id="@+id/plugin_channel_underline"
+            android:layout_width="@dimen/px_2"
+            android:layout_height="@dimen/px_264"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/px_938"
+            android:background="@drawable/plugin_underline"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/px_300"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_1020">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_90"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/px_sp_32"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_135"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/px_sp_22"
+                android:text="扫码下方二维码，绑定电视"
+                android:textColor="@color/white_60" />
+
+            <LinearLayout
+                android:layout_width="@dimen/px_280"
+                android:layout_height="@dimen/px_280"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_176"
+                android:gravity="center"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/plugin_channel_bind_Qrcode"
+                    android:layout_width="@dimen/px_260"
+                    android:layout_height="@dimen/px_260"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/px_300"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_1360">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_90"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/px_sp_32"
+                android:text="Swaiot PANEL"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_135"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/px_sp_22"
+                android:text="点击设备图标，输入绑定码"
+                android:textColor="@color/white_60" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/px_282"
+                android:layout_height="@dimen/px_282"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_176"
+                android:gravity="center"
+                android:background="@drawable/plugin_bindcode_background">
+
+                <swaiotos.channel.iot.tv.view.ChangeTextSpaceView
+                    android:id="@+id/plugin_channel_bind_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/px_sp_56"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:text="A B C F"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</FrameLayout>

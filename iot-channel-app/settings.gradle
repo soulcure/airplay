@@ -1,0 +1,13 @@
+rootProject.name = 'iot-channel-app'
+
+apply from: 'sdk/iot-channel/ss_settings.gradle'
+apply from: 'sdk/SmartHomePluginInterface/cc_settings.gradle'
+apply from: 'sdk/statemanager_tv/cc_settings.gradle'
+
+include ':common'
+include ':app:channel-tv'
+include ':app:channel-pad'
+//include ':demo:demo-tv'
+//include ':demo:demo-pad'
+//include ':demo:testdemo-tv'
+//include ':demo:testdemo-pad'

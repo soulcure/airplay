@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/px_870"
+    android:layout_height="@dimen/px_370"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_860"
+        android:layout_height="@dimen/px_360"
+        android:layout_gravity="center"
+        android:background="@drawable/plugin_panel_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_130"
+            android:layout_marginStart="@dimen/px_40"
+            android:textSize="@dimen/px_sp_40"
+            android:text="@string/iot_channel_xiaowei_app"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_185"
+            android:layout_marginStart="@dimen/px_40"
+            android:textSize="@dimen/px_sp_24"
+            android:text="尽享多屏精彩互动"
+            android:textColor="@color/white_60" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/px_180"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_380"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_55"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/px_sp_28"
+                android:text="@string/iot_channel_xiaowei_app"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_88"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/px_sp_20"
+                android:text="扫码绑定电视"
+                android:textColor="@color/white_60" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/px_180"
+                android:layout_height="@dimen/px_180"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_125"
+                android:padding="@dimen/px_6"
+                android:gravity="center"
+                android:background="@drawable/shape_plugin_background">
+
+                <ImageView
+                    android:id="@+id/plugin_channel_bind_Qrcode"
+                    android:layout_width="@dimen/px_168"
+                    android:layout_height="@dimen/px_168"
+                    android:visibility="invisible" />
+
+                <ProgressBar
+                    android:id="@+id/plugin_channel_progressBar1"
+                    android:layout_width="@dimen/px_28"
+                    android:layout_height="@dimen/px_28"
+                    android:visibility="invisible"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@drawable/rotate_anim"/>
+
+                <TextView
+                    android:id="@+id/plugin_channel_failure1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/px_sp_20"
+                    android:text="加载失败"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/px_226"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px_582">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_55"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/px_sp_28"
+                android:text="Swaiot PANEL"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_88"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/px_sp_20"
+                android:text="设备绑定码"
+                android:textColor="@color/white_60" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/px_180"
+                android:layout_height="@dimen/px_180"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/px_125"
+                android:gravity="center"
+                android:background="@drawable/shape_plugin_background">
+
+                <swaiotos.channel.iot.tv.view.ChangeTextSpaceView
+                    android:id="@+id/plugin_channel_bind_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/px_sp_33"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:text="A B C F"
+                    android:textColor="@color/white"/>
+
+                <ProgressBar
+                    android:id="@+id/plugin_channel_progressBar2"
+                    android:layout_width="@dimen/px_28"
+                    android:layout_height="@dimen/px_28"
+                    android:visibility="invisible"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@drawable/rotate_anim"/>
+
+                <TextView
+                    android:id="@+id/plugin_channel_failure2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/px_sp_20"
+                    android:text="加载失败"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPopupBack">#ffffffff</color>
+    <color name="colorBuColor">#ff00ff</color>
+    <color name="whiteTranslate20">#33FFFFFF</color>
+    <color name="colorPrimary1">#ff00bfc6</color>
+
+
+    <color name="black">#ff000000</color>
+    <color name="black_5">#10000000</color>
+    <color name="black_10">#19000000</color>
+    <color name="black_15">#23000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_30">#4d000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_70">#b3000000</color>
+    <color name="black_80">#CC000000</color>
+
+
+    <color name="white">#ffffffff</color>
+    <color name="white_5">#10ffffff</color>
+    <color name="white_10">#19ffffff</color>
+    <color name="white_15">#23ffffff</color>
+    <color name="white_20">#33ffffff</color>
+    <color name="white_30">#4dffffff</color>
+    <color name="white_40">#66ffffff</color>
+    <color name="white_50">#80ffffff</color>
+    <color name="white_60">#99ffffff</color>
+    <color name="white_70">#b3ffffff</color>
+    <color name="white_80">#CCffffff</color>
+    <color name="CCCCCC">#CCCCCC</color>
+    <color name="FF4265">#FF4265</color>
+    <color name="FF6F41">#FF6F41</color>
+    <color name="color_05172F">#05172F</color>
+    <color name="color_0A5388">#0A5388</color>
+    <color name="color_444444">#444444</color>
+</resources>

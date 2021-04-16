@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_714"
+        android:layout_height="@dimen/px_400"
+        android:background="@drawable/dialog_bind_code_shape">
+
+        <TextView
+            android:layout_width="@dimen/px_614"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_99"
+            android:gravity="center"
+            android:text="@string/iot_channel_dialog_bind_tips"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_sp_36"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/id_dialog_btn_sure"
+            android:layout_width="@dimen/px_292"
+            android:layout_height="@dimen/px_90"
+            android:layout_marginTop="@dimen/px_260"
+            android:layout_marginLeft="@dimen/px_50"
+            android:background="@drawable/sel_color_bind_btn"
+            android:textSize="@dimen/px_sp_32"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="@string/iot_channel_dialog_bind_btn_sure" />
+
+        <Button
+            android:id="@+id/id_dialog_btn_cancel"
+            android:layout_width="@dimen/px_292"
+            android:layout_height="@dimen/px_90"
+            android:layout_marginTop="@dimen/px_260"
+            android:layout_marginLeft="@dimen/px_372"
+            android:gravity="center"
+            android:background="@drawable/sel_color_bind_btn"
+            android:textSize="@dimen/px_sp_32"
+            android:textColor="@color/white_10"
+            android:text="@string/iot_channel_dialog_bind_btn_cancel" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/fragment_devices_gradient">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_150"
+        android:textSize="@dimen/px_sp_56"
+        android:layout_centerHorizontal="true"
+        android:text="跨屏设备管理"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_1090"
+        android:layout_height="@dimen/px_560"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px_286">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/devices_recyclerView"
+            android:layout_width="@dimen/px_1090"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:descendantFocusability="afterDescendants"
+            android:background="@drawable/devices_recycler_background_shape"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

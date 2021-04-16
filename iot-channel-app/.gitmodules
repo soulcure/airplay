@@ -1,0 +1,12 @@
+[submodule "property"]
+	path = property
+	url = http://gitlab.skysri.com/swaiotos/swaiots_property.git
+[submodule "sdk/iot-channel"]
+	path = sdk/iot-channel
+	url = http://gitlab.skysri.com/swaiotos/iot-channel.git
+[submodule "sdk/SmartHomePluginInterface"]
+	path = sdk/SmartHomePluginInterface
+	url = http://gitlab.skysri.com/TV_APP/SmartHomePluginInterface.git
+[submodule "sdk/statemanager_tv"]
+	path = sdk/statemanager_tv
+	url = http://gitlab.skysri.com/swaiotos/coocaa-smartscreen/statemanager_tv.git

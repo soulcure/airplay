@@ -1,0 +1,14 @@
+COMPILE_SDK_VERSION = android-29
+MIN_SDK_VERSION = 17
+TARGET_SDK_VERSION = 29
+BUILDTOOLS_VERSION = 29.0.3
+
+androidx-appcompat-appcompat = 1.1.0
+
+fastjson_version = 1.1.70.android
+okhttp3_version = 3.6.0
+okhttp3_logging_interceptor_version = 3.6.0
+retrofit2_version = 2.1.0
+retrofit2_converter_fastjson_android_version = 2.1.0
+zxing_core_version = 3.4.0
+nanohttpd-webserver = 2.3.1

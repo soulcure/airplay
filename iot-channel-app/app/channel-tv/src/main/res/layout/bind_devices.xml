@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px_1090"
+    android:layout_height="@dimen/px_140"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/selector_devices">
+    
+    <ImageView
+        android:id="@+id/devices_icon"
+        android:layout_width="@dimen/px_80"
+        android:layout_height="@dimen/px_80"
+        android:layout_marginTop="@dimen/px_30"
+        android:layout_marginLeft="@dimen/px_60"
+        android:src="@drawable/icon_pad"
+        />
+
+    <TextView
+        android:id="@+id/devices_show_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/px_sp_32"
+        android:layout_marginTop="@dimen/px_37"
+        android:layout_marginLeft="@dimen/px_160"
+        android:text="@string/iot_channel_devices_show_name"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/devices_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/px_sp_24"
+        android:layout_marginTop="@dimen/px_79"
+        android:layout_marginLeft="@dimen/px_160"
+        android:text="@string/iot_channel_type_phone"
+        android:textColor="@color/white_80" />
+
+    <TextView
+        android:id="@+id/devices_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/px_sp_24"
+        android:layout_toRightOf="@+id/devices_type"
+        android:layout_marginTop="@dimen/px_79"
+        android:layout_marginLeft="@dimen/px_20"
+        android:text="@string/iot_channel_AIP10A"
+        android:textColor="@color/white_80" />
+
+    <TextView
+        android:id="@+id/devices_unBind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/px_sp_36"
+        android:layout_marginLeft="@dimen/px_887"
+        android:layout_marginTop="@dimen/px_52"
+        android:text="@string/iot_channel_unbind"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

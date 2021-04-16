@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px_60"
+    android:layout_height="@dimen/px_60"
+    style="@style/loading_dialog_style">
+    <ProgressBar
+        android:layout_width="@dimen/px_60"
+        android:layout_height="@dimen/px_60"
+        android:indeterminateDrawable="@drawable/rotate_anim"/>
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/check_bt_editText"
+        android:layout_width="@dimen/px_362"
+        android:layout_height="@dimen/px_150"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="请输入验证码"
+        android:inputType="none"
+        android:lines="1"
+        android:paddingLeft="@dimen/px_30"
+        android:paddingRight="@dimen/px_30"
+        android:selectAllOnFocus="true"
+        android:textColor="#000000"
+        android:textColorHint="#2f2f30"
+        android:textSize="@dimen/px_sp_30"/>
+
+    <Button
+        android:id="@+id/check_btn"
+        android:layout_width="@dimen/px_200"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginTop="@dimen/px_10"
+        android:text="确定"/>
+
+    <Button
+        android:id="@+id/un_bind_btn"
+        android:layout_width="@dimen/px_200"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginTop="@dimen/px_10"
+        android:text="解绑"/>
+
+    <Button
+        android:id="@+id/devices_btn"
+        android:layout_width="@dimen/px_200"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginTop="@dimen/px_10"
+        android:text="设备列表"/>
+
+    <Button
+        android:id="@+id/join_btn"
+        android:layout_width="@dimen/px_200"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginTop="@dimen/px_10"
+        android:text="进入房间"/>
+
+    <Button
+        android:id="@+id/leave_btn"
+        android:layout_width="@dimen/px_200"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginTop="@dimen/px_10"
+        android:text="退出房间"/>
+
+    <Button
+        android:id="@+id/lister_btn"
+        android:layout_width="@dimen/px_200"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginTop="@dimen/px_10"
+        android:text="监听"/>
+
+    <TextView
+        android:id="@+id/check_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#000000"
+        android:layout_marginTop="@dimen/px_10"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/devices_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#000000"
+        android:layout_marginTop="@dimen/px_10"
+        android:textSize="20sp"/>
+
+</LinearLayout>

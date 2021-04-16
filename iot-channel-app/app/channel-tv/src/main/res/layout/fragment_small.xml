@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/small_background">
+
+    <swaiotos.channel.iot.tv.view.AutoScrollRecyclerView
+        android:id="@+id/autoScrollRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_522"
+        android:layout_height="match_parent"
+        android:background="@drawable/small_left">
+
+        <LinearLayout
+            android:layout_width="@dimen/px_360"
+            android:layout_height="@dimen/px_360"
+            android:layout_marginStart="@dimen/px_80"
+            android:layout_marginTop="@dimen/px_485"
+            android:padding="@dimen/px_12"
+            android:gravity="center"
+            android:background="@drawable/small_val_white">
+            <ImageView
+                android:id="@+id/small_bind_Qrcode"
+                android:layout_width="@dimen/px_336"
+                android:layout_height="@dimen/px_336" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_440"
+        android:layout_marginStart="@dimen/px_1824"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/small_oval_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_val_white"/>
+
+        <ImageView
+            android:id="@+id/small_oval_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_30"
+            android:background="@drawable/shape_val_white_40"/>
+
+        <ImageView
+            android:id="@+id/small_oval_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_30"
+            android:background="@drawable/shape_val_white_40"/>
+
+        <ImageView
+            android:id="@+id/small_oval_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_30"
+            android:background="@drawable/shape_val_white_40"/>
+
+        <ImageView
+            android:id="@+id/small_oval_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_30"
+            android:background="@drawable/shape_val_white_40"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

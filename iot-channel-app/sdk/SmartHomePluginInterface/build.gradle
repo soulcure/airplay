@@ -1,0 +1,38 @@
+apply plugin: 'java'
+
+dependencies {
+    compileOnly files(getAndroidJar())
+    compileOnly "com.android.support:support-annotations:23.2.0"
+}
+
+String getAndroidJar() {
+    def path = getSDKPath()
+    def androidPath = "${path}${File.separator}android.jar"
+    return androidPath
+}
+
+String getSDKPath() {
+    def android_home = System.getenv()['ANDROID_HOME']
+    println("android_home: ${android_home}")
+    if (android_home == null || android_home.equals("")) {
+        android_home = getSDKPathFromLocalProperty()
+    }
+    if (android_home == null || android_home.equals(""))
+        return 'not found android.jar'
+    def compileSdkVersion = "android-28"
+    def path = "${android_home}${File.separator}platforms${File.separator}${compileSdkVersion}"
+    return path
+}
+
+
+String getSDKPathFromLocalProperty() {
+    def localProperties = new File(rootDir, "local.properties")
+    if (localProperties.exists()) {
+        Properties properties = new Properties()
+        localProperties.withInputStream {
+            instr -> properties.load(instr)
+        }
+        return properties.getProperty('sdk.dir')
+    }
+    return ""
+}

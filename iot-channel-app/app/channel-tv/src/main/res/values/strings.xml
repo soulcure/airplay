@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">跨屏互动</string>
+    <string name="bind_device_name">绑定设备%1$s</string>
+    <string name="bind_sid_name">绑定码: %1$s</string>
+
+    <string name="iot_channel_tips_3">输入绑定码，连接设备</string>
+    <string name="iot_channel_devices">跨屏设备管理 (%1$s)</string>
+    <string name="iot_channel_theme_xiaowei">遥控、截屏、视频通话</string>
+    <string name="iot_channel_theme_swaiotos">同步电视UI，大小屏无缝互联</string>
+    <string name="iot_channel_bind_success">移动设备绑定成功</string>
+    <string name="iot_channel_unbind">解除绑定</string>
+    <string name="iot_channel_AIP10A">AIP10A</string>
+    <string name="iot_channel_xiaowei_app">酷开智屏</string>
+    <string name="iot_channel_type_phone">手机：%1$s</string>
+    <string name="iot_channel_type_panel">Swaiot PANEL</string>
+    <string name="iot_channel_devices_show_name">显示账号名称</string>
+    <string name="iot_channel_dialog_bind_tips">确定要解除设备与电视的绑定吗？</string>
+    <string name="iot_channel_dialog_bind_btn_sure">确定</string>
+    <string name="iot_channel_dialog_bind_btn_cancel">取消</string>
+
+    <string name="plugin_channel_device_size">共 %1$s 个</string>
+    <string name="load_error">加载失败</string>
+    <string name="loading_re_flush_code">试一试刷新</string>
+    <string name="swaiot_panel">Swaiot PANEL</string>
+    <string name="iot_channel_name">跨屏互动</string>
+    <string name="bind_code_load_error">二维码加载失败</string>
+
+</resources>

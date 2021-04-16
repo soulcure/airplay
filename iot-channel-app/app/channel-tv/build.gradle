@@ -1,0 +1,212 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+def ver_major = 1
+def ver_minor = 0
+def vera_cc_all_right = 20  //酷开版权永不变
+def ver_build = getDate()
+def versionBuildCode = vera_cc_all_right + ver_build
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILDTOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion TARGET_SDK_VERSION
+        applicationId "swaiotos.channel.iot"
+        versionCode Integer.valueOf(versionBuildCode)
+        versionName ver_major.toString() + "." + ver_minor.toString() + "." + getDate2()
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [DEBUG_MODE_VALUE: "false",
+                                IOT_CHANEL_VALUE: "TV"]
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        def path = '../../keystores/platform.keystore'
+        releaseConfig {
+            keyAlias "skyworth"
+            keyPassword "android"
+            storeFile file(path)
+            storePassword "android"
+        }
+
+        debugConfig {
+            keyAlias "skyworth"
+            keyPassword "android"
+            storeFile file(path)
+            storePassword "android"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debugConfig
+        }
+    }
+    productFlavors {
+        Dev {
+            flavor ->
+                flavorDimensions "Dev"
+                flavor.manifestPlaceholders = [IOT_SERVER_VALUE        : "https://screenapi-dev.skyworthiot.com/",
+                                               COOCAA_APIKEY_VALUE     : "coocaa2020",
+                                               IOT_SERVER_LOG_URL      : "https://dot-dev.skyworthiot.com/",
+                                               IOT_APPKEY_LOG          : "81dbba5e74da4fcd8e42fe70f68295a6",
+                                               IOT_SERVER_APP_STORE_URL: "http://dev-tc.skysrt.com/",
+                                               DEBUG_MODE_VALUE        : "true"]
+                versionName defaultConfig.versionName + ".Dev"
+        }
+
+        Beta {
+            flavor ->
+                flavorDimensions "Beta"
+                flavor.manifestPlaceholders = [IOT_SERVER_VALUE        : "https://beta.passport.coocaa.com/",
+                                               COOCAA_APIKEY_VALUE     : "coocaa2020",
+                                               IOT_SERVER_LOG_URL      : "https://api-sit.skyworthiot.com/",
+                                               IOT_APPKEY_LOG          : "81dbba5e74da4fcd8e42fe70f68295a6",
+                                               IOT_SERVER_APP_STORE_URL: "http://dev-tc.skysrt.com/",
+                                               DEBUG_MODE_VALUE        : "true"]
+                versionName defaultConfig.versionName + ".Beta"
+        }
+
+        Production {
+            flavor ->
+                flavorDimensions "Production"
+                flavor.manifestPlaceholders = [IOT_SERVER_VALUE        : "https://passport.coocaa.com/",
+                                               COOCAA_APIKEY_VALUE     : "KSiVM12wRNu1WNN5",
+                                               IOT_SERVER_LOG_URL      : "https://api.skyworthiot.com/",
+                                               IOT_APPKEY_LOG          : "81dbba5e74da4fcd8e42fe70f68295a6",
+                                               IOT_SERVER_APP_STORE_URL: "http://tc.skysrt.com/",
+                                               DEBUG_MODE_VALUE        : "false"]
+                versionName defaultConfig.versionName
+        }
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                outputFileName = 'IOT-Channel-TV_' + versionName + '.apk'
+            }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    packagingOptions {
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
+}
+
+static def getDate() {
+    def date = new Date()
+    def timeZone = TimeZone.getTimeZone("Asia/Shanghai")
+    def formattedDate = date.format('yyMMddHH', timeZone)
+    return formattedDate
+}
+
+static def getDate2() {
+    def date = new Date()
+    def timeZone = TimeZone.getTimeZone("Asia/Shanghai")
+    def formattedDate = date.format('yyMMdd', timeZone)
+    return formattedDate
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    testImplementation 'junit:junit:4.12'
+    //noinspection GradleCompatible
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation project(':common')
+    implementation 'swaiotos.ui:common:+'
+    implementation 'swaiotos:sal:+'
+    implementation project(':statemanager_tv')
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    compileOnly project(':SmartHomePluginInterface')
+    implementation 'com.android.support:multidex:1.0.3'
+    //appcompat
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    //加密
+//    implementation 'commons-codec:commons-codec:1.14'
+    //二维码
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.jimmysun:ultrarecyclerview:1.1.0'
+//    implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
+//    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '27.1.1'
+                }
+            }
+        }
+    }
+
+    //ijkplayer
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation('com.github.bumptech.glide:okhttp3-integration:4.9.0') {
+        exclude group: 'glide-parent'
+        exclude group: 'com.squareup.okhttp3'
+    }
+
+    implementation 'com.github.chrisbanes:PhotoView:1.3.1'
+
+    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14'
+    implementation 'com.android.support:palette-v7:28.0.0'
+    implementation 'com.danikula:videocache:2.7.1'
+
+    //exo
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.9.6'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.9.6'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.9.6'
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.6'
+
+    implementation('com.github.svga:SVGAPlayer-Android:2.5.14') {
+        exclude group: 'com.squareup.okio'
+    }
+
+    //设备触摸事件
+    implementation "org.java-websocket:Java-WebSocket:1.3.6"
+
+    //yozo_office_depend
+    implementation 'com.android.support:design:28.0.0'
+
+    implementation 'com.umeng.umsdk:analytics:8.0.0'
+    implementation 'com.umeng.umsdk:common:2.0.0'
+}

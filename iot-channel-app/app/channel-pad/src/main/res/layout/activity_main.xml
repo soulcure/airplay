@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_200"
+        android:layout_marginTop="@dimen/px_50"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/id_bindcode_btn"
+            android:layout_width="@dimen/px_220"
+            android:layout_height="@dimen/px_120"
+            android:text="二维码页面"
+            android:background="@drawable/sel_color_bind_btn"/>
+
+        <Button
+            android:id="@+id/id_input_bindcode_btn"
+            android:layout_width="@dimen/px_300"
+            android:layout_height="@dimen/px_120"
+            android:layout_marginLeft="@dimen/px_50"
+            android:text="输入二维码页面"
+            android:background="@drawable/sel_color_bind_btn"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/init_aiot_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

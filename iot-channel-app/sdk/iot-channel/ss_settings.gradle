@@ -1,0 +1,8 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+apply from: 'iot-channel-sdk/ss_settings.gradle'
+
+include ':iot-channel:core'
+project(':iot-channel:core').projectDir = getProjectDir('core')

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/id_bind_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/init_qrcode_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="center"/>
+
+        <TextView
+            android:id="@+id/init_qrcode_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/init_qrcode_imageview"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_blue_bright"
+            android:text="@string/bind_sid_name"/>
+
+        <Button
+            android:id="@+id/tv_pad"
+            android:layout_width="@dimen/px_150"
+            android:layout_height="@dimen/px_80"
+            android:layout_below="@id/init_qrcode_textview"
+            android:text="push"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/init_open_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_bind_relative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_blue_bright"/>
+</RelativeLayout>

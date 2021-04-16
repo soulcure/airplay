@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/px_360"
+    android:layout_height="@dimen/px_100"
+    android:paddingTop="@dimen/px_20"
+    android:paddingBottom="@dimen/px_20">
+    
+    <ImageView
+        android:id="@+id/plugin_channel_devices_icon"
+        android:layout_width="@dimen/px_68"
+        android:layout_height="@dimen/px_68"
+        android:src="@drawable/icon_pad"
+        />
+
+    <TextView
+        android:id="@+id/plugin_channel_devices_show_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/px_sp_28"
+        android:layout_toEndOf="@+id/plugin_channel_devices_icon"
+        android:layout_marginStart="@dimen/px_20"
+        android:text="@string/iot_channel_devices_show_name"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/plugin_channel_devices_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/px_sp_20"
+        android:layout_toEndOf="@+id/plugin_channel_devices_icon"
+        android:layout_alignBottom="@+id/plugin_channel_devices_icon"
+        android:layout_marginStart="@dimen/px_30"
+        android:text="@string/iot_channel_type_phone"
+        android:textColor="@color/white_60" />
+
+    <TextView
+        android:id="@+id/plugin_channel_devices_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/px_sp_20"
+        android:layout_toEndOf="@+id/plugin_channel_devices_type"
+        android:layout_alignBottom="@+id/plugin_channel_devices_type"
+        android:layout_marginStart="@dimen/px_17"
+        android:text="@string/iot_channel_AIP10A"
+        android:textColor="@color/white_80" />
+
+
+</RelativeLayout>

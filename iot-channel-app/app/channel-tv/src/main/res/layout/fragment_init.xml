@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+<!--    <com.jimmysun.ultrarecyclerview.UltraRecyclerView-->
+<!--        android:id="@+id/ultra_recycler_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:orientation="vertical"-->
+<!--        app:alignGravity="start"-->
+<!--        app:alignMargin="0dp"-->
+<!--        app:infiniteLoop="true"/>-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/iot_channel_background_two"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/px_480"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_100"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:textSize="@dimen/px_sp_36"
+            android:text="@string/iot_channel_xiaowei_app"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_150"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/px_sp_22"
+            android:text="扫码下方二维码，绑定电视"
+            android:visibility="gone"
+            android:textColor="@color/white_60" />
+
+        <RelativeLayout
+            android:id="@+id/iot_channel_bind_relative"
+            android:layout_width="@dimen/px_280"
+            android:layout_height="@dimen/px_280"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px_200"
+            android:visibility="gone"
+            android:background="@color/white_20">
+
+            <ImageView
+                android:id="@+id/iot_channel_bind_Qrcode"
+                android:layout_width="@dimen/px_265"
+                android:layout_height="@dimen/px_265"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iot_channel_bind_code_imageView"
+                android:layout_width="@dimen/px_28"
+                android:layout_height="@dimen/px_28"
+                android:visibility="invisible"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_loading"/>
+
+            <TextView
+                android:id="@+id/iot_channel_bind_code_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/px_sp_24"
+                android:layout_marginTop="@dimen/px_96"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:text="@string/bind_code_load_error"/>
+
+            <TextView
+                android:id="@+id/iot_channel_bind_code_re_flush"
+                android:layout_width="@dimen/px_200"
+                android:layout_height="@dimen/px_40"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginTop="@dimen/px_145"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/px_sp_24"
+                android:gravity="center"
+                android:text="@string/loading_re_flush_code"
+                android:textColor="@color/white"
+                android:background="@drawable/selector_btn"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_540"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/px_sp_36"
+            android:text="@string/swaiot_panel"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="@dimen/px_280"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_590"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/px_sp_22"
+            android:gravity="center"
+            android:text="@string/iot_channel_tips_3"
+            android:textColor="@color/white_60"
+            />
+
+        <RelativeLayout
+            android:layout_width="@dimen/px_280"
+            android:layout_height="@dimen/px_100"
+            android:layout_marginTop="@dimen/px_670"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bind_code_background">
+
+            <swaiotos.channel.iot.tv.view.ChangeTextSpaceView
+                android:id="@+id/iot_channel_bind_code"
+                android:layout_width="@dimen/px_280"
+                android:layout_height="@dimen/px_100"
+                android:textSize="@dimen/px_sp_36"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/px_280"
+            android:layout_height="@dimen/px_100"
+            android:layout_marginTop="@dimen/px_670"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/iot_channel_bind_text_imageView"
+                android:layout_width="@dimen/px_28"
+                android:layout_height="@dimen/px_28"
+                android:visibility="invisible"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_loading"/>
+
+            <TextView
+                android:id="@+id/iot_channel_bind_text_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/px_sp_24"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                android:text="@string/load_error"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/iot_channel_btn_devices"
+            android:layout_width="@dimen/px_354"
+            android:layout_height="@dimen/px_100"
+            android:layout_marginTop="@dimen/px_880"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/px_sp_36"
+            android:gravity="center"
+            android:text="@string/iot_channel_devices"
+            android:textColor="@color/white"
+            android:background="@drawable/selector_btn"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_88"
+        android:layout_marginStart="@dimen/px_1003"
+        android:textSize="@dimen/px_sp_60"
+        android:text="@string/iot_channel_name"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/iot_channel_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_172"
+        android:layout_marginStart="@dimen/px_900"
+        android:textSize="@dimen/px_sp_34"
+        android:text="@string/iot_channel_theme_swaiotos"
+        android:textColor="@color/white_80"
+        android:textStyle="bold"
+        />
+    <ImageView
+        android:id="@+id/iot_channel_oval_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_1804"
+        android:layout_marginTop="@dimen/px_508"
+        android:visibility="gone"
+        android:background="@drawable/shape_val_white"/>
+
+    <ImageView
+        android:id="@+id/iot_channel_oval_white_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/px_1804"
+        android:layout_marginTop="@dimen/px_556"
+        android:visibility="gone"
+        android:background="@drawable/shape_val_white_40"/>
+
+</RelativeLayout>

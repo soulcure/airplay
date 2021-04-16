@@ -1,0 +1,78 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coocaa.statemanager">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <application android:allowBackup="true">
+        <service
+            android:name=".service.IotLogService"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.IotlogSubmit" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.QRService"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.iot_qrinfo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.BusinessStateService"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.BusinessStateService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.BigQRCodeService"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.BigQRCodeService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".service.BusinessStateReportService"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.BusinessStateReportService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.DisconnectService"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.DisconnectService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.DongleCMDService"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.DongleCMDService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

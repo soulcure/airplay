@@ -1,0 +1,8 @@
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+include ':iot-channel-sdk:sdk'
+project(':iot-channel-sdk:sdk').projectDir = getProjectDir('sdk')
+include ':iot-channel-sdk:sdk-admin'
+project(':iot-channel-sdk:sdk-admin').projectDir = getProjectDir('sdk-admin')

@@ -1,0 +1,3 @@
+[submodule "iot-channel-sdk"]
+	path = iot-channel-sdk
+	url = http://gitlab.skysri.com/swaiotos/iot-channel-sdk.git

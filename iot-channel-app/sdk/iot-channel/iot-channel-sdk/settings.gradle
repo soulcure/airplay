@@ -1,0 +1,7 @@
+rootProject.name='iot-channel-sdk'
+
+File getProjectDir(String dir) {
+    return new File("${buildscript.sourceFile.getParent()}/${dir}")
+}
+
+apply from: getProjectDir("ss_settings.gradle").getAbsolutePath()
